@@ -80,6 +80,7 @@
                         <instance>2</instance>
                         <oldPosition>0</oldPosition>
                         <position>2</position>
+                        <correctPosition>2</correctPosition>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -104,6 +105,7 @@
                     <instance-variables>
                         <position>3</position>
                         <oldPosition>0</oldPosition>
+                        <correctPosition>3</correctPosition>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -128,6 +130,7 @@
                     <instance-variables>
                         <position>4</position>
                         <oldPosition>0</oldPosition>
+                        <correctPosition>4</correctPosition>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -152,6 +155,7 @@
                     <instance-variables>
                         <position>5</position>
                         <oldPosition>0</oldPosition>
+                        <correctPosition>5</correctPosition>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
