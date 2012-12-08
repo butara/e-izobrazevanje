@@ -140,6 +140,7 @@
             <instance-variables>
                 <instance-variable name="instance" type="number" />
                 <instance-variable name="oldPosition" type="number" />
+                <instance-variable name="position" type="number" />
             </instance-variables>
             <animation-folder expanded="1">
                 <animation framecount="24" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">

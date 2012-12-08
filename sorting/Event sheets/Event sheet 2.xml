@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 2</name>
     <events>
-        <variable constant="0" name="state" static="0" type="number">0</variable>
+        <variable constant="0" name="state" static="0" type="text">0</variable>
         <variable constant="0" name="animating" static="0" type="number">0</variable>
         <variable constant="0" name="type" static="0" type="text">main</variable>
         <variable constant="0" name="buttonsVisible" static="0" type="number">0</variable>
@@ -96,7 +96,7 @@
                 </action>
                 <action id="-9" name="Set value" type="System">
                     <param id="0" name="Variable">state</param>
-                    <param id="1" name="Value">1</param>
+                    <param id="1" name="Value">&quot;1&quot;</param>
                 </action>
             </actions>
         </event-block>

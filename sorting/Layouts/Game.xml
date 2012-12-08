@@ -79,6 +79,7 @@
                     <instance-variables>
                         <instance>2</instance>
                         <oldPosition>0</oldPosition>
+                        <position>2</position>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
