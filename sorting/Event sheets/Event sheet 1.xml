@@ -72,12 +72,16 @@
         <variable constant="0" name="picked2" static="0" type="number">0</variable>
         <variable constant="0" name="pickedObject1" static="0" type="number">0</variable>
         <variable constant="0" name="pickedObject2" static="0" type="number">0</variable>
-        <variable constant="0" name="newPosition1X" static="0" type="number">0</variable>
         <variable constant="0" name="picked1Position" static="0" type="number">0</variable>
         <variable constant="0" name="picked2Position" static="0" type="number">0</variable>
         <variable constant="0" name="picked1PositionX" static="0" type="number">0</variable>
         <variable constant="0" name="oldPicked1PositionX" static="0" type="number">0</variable>
+        <variable constant="0" name="oldPicked1PositionY" static="0" type="number">0</variable>
+        <variable constant="0" name="oldPicked2PositionY" static="0" type="number">0</variable>
         <variable constant="0" name="oldPicked2PositionX" static="0" type="number">0</variable>
+        <variable constant="0" name="newPosition1X" static="0" type="number">0</variable>
+        <variable constant="0" name="newPosition1Y" static="0" type="number">0</variable>
+        <variable constant="0" name="newPosition2Y" static="0" type="number">0</variable>
         <variable constant="0" name="newPosition2X" static="0" type="number">0</variable>
         <variable constant="0" name="moveWeight" static="0" type="number">0</variable>
         <variable constant="0" name="is1Picked" static="0" type="number">0</variable>
@@ -365,10 +369,6 @@
                             <param id="1" name="Value">Self.X</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
-                            <param id="0" name="Variable">newPosition2X</param>
-                            <param id="1" name="Value">weight10.X</param>
-                        </action>
-                        <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">picked1PositionX</param>
                             <param id="1" name="Value">weight10.X</param>
                         </action>
@@ -379,6 +379,10 @@
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">oldPicked1PositionX</param>
                             <param id="1" name="Value">weight10.X</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">oldPicked1PositionY</param>
+                            <param id="1" name="Value">weight10.Y</param>
                         </action>
                     </actions>
                 </event-block>
@@ -401,10 +405,6 @@
                             <param id="1" name="Value">Self.X</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
-                            <param id="0" name="Variable">newPosition2X</param>
-                            <param id="1" name="Value">weight20.X</param>
-                        </action>
-                        <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">picked1PositionX</param>
                             <param id="1" name="Value">weight20.X</param>
                         </action>
@@ -415,6 +415,10 @@
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">oldPicked1PositionX</param>
                             <param id="1" name="Value">weight20.X</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">oldPicked1PositionY</param>
+                            <param id="1" name="Value">weight20.Y</param>
                         </action>
                     </actions>
                 </event-block>
@@ -437,10 +441,6 @@
                             <param id="1" name="Value">Self.X</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
-                            <param id="0" name="Variable">newPosition2X</param>
-                            <param id="1" name="Value">weight30.X</param>
-                        </action>
-                        <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">picked1PositionX</param>
                             <param id="1" name="Value">weight30.X</param>
                         </action>
@@ -451,6 +451,10 @@
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">oldPicked1PositionX</param>
                             <param id="1" name="Value">weight30.X</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">oldPicked1PositionY</param>
+                            <param id="1" name="Value">weight30.Y</param>
                         </action>
                     </actions>
                 </event-block>
@@ -473,10 +477,6 @@
                             <param id="1" name="Value">Self.X</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
-                            <param id="0" name="Variable">newPosition2X</param>
-                            <param id="1" name="Value">weight40.X</param>
-                        </action>
-                        <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">picked1PositionX</param>
                             <param id="1" name="Value">weight40.X</param>
                         </action>
@@ -487,6 +487,10 @@
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">oldPicked1PositionX</param>
                             <param id="1" name="Value">weight40.X</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">oldPicked1PositionY</param>
+                            <param id="1" name="Value">weight40.Y</param>
                         </action>
                     </actions>
                 </event-block>
@@ -509,10 +513,6 @@
                             <param id="1" name="Value">Self.X</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
-                            <param id="0" name="Variable">newPosition2X</param>
-                            <param id="1" name="Value">weight50.X</param>
-                        </action>
-                        <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">picked1PositionX</param>
                             <param id="1" name="Value">weight50.X</param>
                         </action>
@@ -523,6 +523,10 @@
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">oldPicked1PositionX</param>
                             <param id="1" name="Value">weight50.X</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">oldPicked1PositionY</param>
+                            <param id="1" name="Value">weight50.Y</param>
                         </action>
                     </actions>
                 </event-block>
@@ -545,16 +549,16 @@
                             <param id="1" name="Value">Self.X</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
-                            <param id="0" name="Variable">newPosition1X</param>
-                            <param id="1" name="Value">weight10.X</param>
+                            <param id="0" name="Variable">picked2Position</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">oldPicked2PositionX</param>
                             <param id="1" name="Value">weight10.X</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
-                            <param id="0" name="Variable">picked2Position</param>
-                            <param id="1" name="Value">1</param>
+                            <param id="0" name="Variable">oldPicked2PositionY</param>
+                            <param id="1" name="Value">weight10.Y</param>
                         </action>
                     </actions>
                 </event-block>
@@ -577,16 +581,16 @@
                             <param id="1" name="Value">Self.X</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
-                            <param id="0" name="Variable">newPosition1X</param>
-                            <param id="1" name="Value">weight20.X</param>
+                            <param id="0" name="Variable">picked2Position</param>
+                            <param id="1" name="Value">2</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">oldPicked2PositionX</param>
                             <param id="1" name="Value">weight20.X</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
-                            <param id="0" name="Variable">picked2Position</param>
-                            <param id="1" name="Value">2</param>
+                            <param id="0" name="Variable">oldPicked2PositionY</param>
+                            <param id="1" name="Value">weight20.Y</param>
                         </action>
                     </actions>
                 </event-block>
@@ -609,16 +613,16 @@
                             <param id="1" name="Value">Self.X</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
-                            <param id="0" name="Variable">newPosition1X</param>
-                            <param id="1" name="Value">weight30.X</param>
+                            <param id="0" name="Variable">picked2Position</param>
+                            <param id="1" name="Value">3</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">oldPicked2PositionX</param>
                             <param id="1" name="Value">weight30.X</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
-                            <param id="0" name="Variable">picked2Position</param>
-                            <param id="1" name="Value">3</param>
+                            <param id="0" name="Variable">oldPicked2PositionY</param>
+                            <param id="1" name="Value">weight30.Y</param>
                         </action>
                     </actions>
                 </event-block>
@@ -641,16 +645,16 @@
                             <param id="1" name="Value">Self.X</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
-                            <param id="0" name="Variable">newPosition1X</param>
-                            <param id="1" name="Value">weight40.X</param>
+                            <param id="0" name="Variable">picked2Position</param>
+                            <param id="1" name="Value">4</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">oldPicked2PositionX</param>
                             <param id="1" name="Value">weight40.X</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
-                            <param id="0" name="Variable">picked2Position</param>
-                            <param id="1" name="Value">4</param>
+                            <param id="0" name="Variable">oldPicked2PositionY</param>
+                            <param id="1" name="Value">weight40.Y</param>
                         </action>
                     </actions>
                 </event-block>
@@ -673,16 +677,16 @@
                             <param id="1" name="Value">Self.X</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
-                            <param id="0" name="Variable">newPosition1X</param>
-                            <param id="1" name="Value">weight50.X</param>
+                            <param id="0" name="Variable">picked2Position</param>
+                            <param id="1" name="Value">5</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">oldPicked2PositionX</param>
                             <param id="1" name="Value">weight50.X</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
-                            <param id="0" name="Variable">picked2Position</param>
-                            <param id="1" name="Value">5</param>
+                            <param id="0" name="Variable">oldPicked2PositionY</param>
+                            <param id="1" name="Value">weight50.Y</param>
                         </action>
                     </actions>
                 </event-block>
@@ -717,6 +721,26 @@
                 <event-block>
                     <conditions>
                         <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">picked1</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">picked2</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;swapPickedWeight1&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Value">&quot;changePosition&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-14" name="Compare variable" type="System">
                             <param id="0" name="Variable">state</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;swapPickedWeight1&quot;</param>
@@ -747,6 +771,10 @@
                             <param id="0" name="Variable">newPosition2X</param>
                             <param id="1" name="Value">oldPicked1PositionX</param>
                         </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">newPosition2Y</param>
+                            <param id="1" name="Value">oldPicked1PositionY</param>
+                        </action>
                         <action id="5" name="Push" type="stack">
                             <param id="0" name="Where">0</param>
                             <param id="1" name="Value">&quot;swapPickedWeight1&quot;</param>
@@ -770,6 +798,10 @@
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">newPosition1X</param>
                             <param id="1" name="Value">oldPicked2PositionX</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">newPosition1Y</param>
+                            <param id="1" name="Value">oldPicked2PositionY</param>
                         </action>
                         <action id="5" name="Push" type="stack">
                             <param id="0" name="Where">0</param>
@@ -801,7 +833,7 @@
                     </conditions>
                     <actions>
                         <action id="-1" name="Set X" type="weight10">
-                            <param id="0" name="X">newPosition1X &gt; Self.X ? Self.X + swappingSpeed : Self.X - swappingSpeed</param>
+                            <param id="0" name="X">newPosition1X=Self.X ? Self.X : (newPosition1X &gt; Self.X ? Self.X + swappingSpeed : Self.X - swappingSpeed)</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">picked1PositionX</param>
@@ -824,7 +856,7 @@
                     </conditions>
                     <actions>
                         <action id="-1" name="Set X" type="weight20">
-                            <param id="0" name="X">newPosition1X &gt; Self.X ? Self.X + swappingSpeed : Self.X - swappingSpeed</param>
+                            <param id="0" name="X">newPosition1X=Self.X ? Self.X : (newPosition1X &gt; Self.X ? Self.X + swappingSpeed : Self.X - swappingSpeed)</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">picked1PositionX</param>
@@ -847,7 +879,7 @@
                     </conditions>
                     <actions>
                         <action id="-1" name="Set X" type="weight30">
-                            <param id="0" name="X">newPosition1X &gt; Self.X ? Self.X + swappingSpeed : Self.X - swappingSpeed</param>
+                            <param id="0" name="X">newPosition1X=Self.X ? Self.X : (newPosition1X &gt; Self.X ? Self.X + swappingSpeed : Self.X - swappingSpeed)</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">picked1PositionX</param>
@@ -870,7 +902,7 @@
                     </conditions>
                     <actions>
                         <action id="-1" name="Set X" type="weight40">
-                            <param id="0" name="X">newPosition1X &gt; Self.X ? Self.X + swappingSpeed : Self.X - swappingSpeed</param>
+                            <param id="0" name="X">newPosition1X=Self.X ? Self.X : (newPosition1X &gt; Self.X ? Self.X + swappingSpeed : Self.X - swappingSpeed)</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">picked1PositionX</param>
@@ -893,7 +925,7 @@
                     </conditions>
                     <actions>
                         <action id="-1" name="Set X" type="weight50">
-                            <param id="0" name="X">newPosition1X &gt; Self.X ? Self.X + swappingSpeed : Self.X - swappingSpeed</param>
+                            <param id="0" name="X">newPosition1X=Self.X ? Self.X : (newPosition1X &gt; Self.X ? Self.X + swappingSpeed : Self.X - swappingSpeed)</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">picked1PositionX</param>
@@ -916,7 +948,7 @@
                     </conditions>
                     <actions>
                         <action id="-1" name="Set X" type="weight10">
-                            <param id="0" name="X">newPosition2X &gt; Self.X ? Self.X + swappingSpeed : Self.X - swappingSpeed</param>
+                            <param id="0" name="X">newPosition2X=Self.X ? Self.X : (newPosition2X &gt; Self.X ? Self.X + swappingSpeed : Self.X - swappingSpeed)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -935,7 +967,7 @@
                     </conditions>
                     <actions>
                         <action id="-1" name="Set X" type="weight20">
-                            <param id="0" name="X">newPosition2X &gt; Self.X ? Self.X + swappingSpeed : Self.X - swappingSpeed</param>
+                            <param id="0" name="X">newPosition2X=Self.X ? Self.X : (newPosition2X &gt; Self.X ? Self.X + swappingSpeed : Self.X - swappingSpeed)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -954,7 +986,7 @@
                     </conditions>
                     <actions>
                         <action id="-1" name="Set X" type="weight30">
-                            <param id="0" name="X">newPosition2X &gt; Self.X ? Self.X + swappingSpeed : Self.X - swappingSpeed</param>
+                            <param id="0" name="X">newPosition2X=Self.X ? Self.X : (newPosition2X &gt; Self.X ? Self.X + swappingSpeed : Self.X - swappingSpeed)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -973,7 +1005,7 @@
                     </conditions>
                     <actions>
                         <action id="-1" name="Set X" type="weight40">
-                            <param id="0" name="X">newPosition2X &gt; Self.X ? Self.X + swappingSpeed : Self.X - swappingSpeed</param>
+                            <param id="0" name="X">newPosition2X=Self.X ? Self.X : (newPosition2X &gt; Self.X ? Self.X + swappingSpeed : Self.X - swappingSpeed)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -992,7 +1024,7 @@
                     </conditions>
                     <actions>
                         <action id="-1" name="Set X" type="weight50">
-                            <param id="0" name="X">newPosition2X &gt; Self.X ? Self.X + swappingSpeed : Self.X - swappingSpeed</param>
+                            <param id="0" name="X">newPosition2X=Self.X ? Self.X : (newPosition2X &gt; Self.X ? Self.X + swappingSpeed : Self.X - swappingSpeed)</param>
                         </action>
                     </actions>
                 </event-block>
