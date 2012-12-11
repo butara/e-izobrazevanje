@@ -67,13 +67,14 @@
                 </action>
             </actions>
         </event-block>
-        <variable constant="0" name="swappingSpeed" static="0" type="number">40</variable>
-        <variable constant="0" name="loop" static="0" type="number">20</variable>
+        <variable constant="0" name="swappingSpeed" static="0" type="number">5</variable>
+        <variable constant="0" name="loop" static="0" type="number">2</variable>
         <variable constant="0" name="picked2" static="0" type="number">0</variable>
         <variable constant="0" name="pickedObject1" static="0" type="number">0</variable>
         <variable constant="0" name="pickedObject2" static="0" type="number">0</variable>
         <variable constant="0" name="picked1Position" static="0" type="number">0</variable>
         <variable constant="0" name="picked2Position" static="0" type="number">0</variable>
+        <variable constant="0" name="picked1PositionY" static="0" type="number">0</variable>
         <variable constant="0" name="picked1PositionX" static="0" type="number">0</variable>
         <variable constant="0" name="oldPicked1PositionX" static="0" type="number">0</variable>
         <variable constant="0" name="oldPicked1PositionY" static="0" type="number">0</variable>
@@ -348,7 +349,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" title="pick functions">
+        <event-group collapsed="1" description="" title="pick functions">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -840,6 +841,10 @@
                             <param id="0" name="Variable">picked1PositionX</param>
                             <param id="1" name="Value">weight10.X</param>
                         </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">picked1PositionY</param>
+                            <param id="1" name="Value">weight10.Y</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block>
@@ -863,6 +868,10 @@
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">picked1PositionX</param>
                             <param id="1" name="Value">weight20.X</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">picked1PositionY</param>
+                            <param id="1" name="Value">weight20.Y</param>
                         </action>
                     </actions>
                 </event-block>
@@ -888,6 +897,10 @@
                             <param id="0" name="Variable">picked1PositionX</param>
                             <param id="1" name="Value">weight30.X</param>
                         </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">picked1PositionY</param>
+                            <param id="1" name="Value">weight30.Y</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block>
@@ -912,6 +925,10 @@
                             <param id="0" name="Variable">picked1PositionX</param>
                             <param id="1" name="Value">weight40.X</param>
                         </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">picked1PositionY</param>
+                            <param id="1" name="Value">weight40.Y</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block>
@@ -935,6 +952,10 @@
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">picked1PositionX</param>
                             <param id="1" name="Value">weight50.X</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">picked1PositionY</param>
+                            <param id="1" name="Value">weight50.Y</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1287,7 +1308,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" title="triggers">
+        <event-group collapsed="1" description="" title="trigger_select_deselect">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -2181,6 +2202,308 @@
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">state</param>
                             <param id="1" name="Value">&quot;picking2&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" title="trigger_weighting">
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="0" name="On click" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                        </condition>
+                        <condition id="7" name="Cursor is over object" type="Mouse">
+                            <param id="0" name="Object">weight_measure_final_</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;selectAction&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">newPosition2X</param>
+                            <param id="1" name="Value">oldPicked2PositionX&gt;oldPicked1PositionX ? 690 : 490</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">newPosition2Y</param>
+                            <param id="1" name="Value">910</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">newPosition1X</param>
+                            <param id="1" name="Value">oldPicked2PositionX&lt;oldPicked1PositionX ? 690 : 490</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">newPosition1Y</param>
+                            <param id="1" name="Value">910</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Value">&quot;moving1ToBalance&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;moving1ToBalance&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">picked1PositionX</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">newPosition1X</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">picked1PositionY</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">newPosition1Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Value">&quot;weightAnimationSet&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;moving1ToBalance&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Push" type="stack">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">&quot;moving2ToBalance&quot;</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Value">&quot;moveWeight1&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;moving2ToBalance&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Push" type="stack">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">&quot;moving1ToBalance&quot;</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Value">&quot;moveWeight2&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;weightAnimationSet&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" type="weight_measure_final_">
+                            <param id="0" name="Frame number">24</param>
+                        </action>
+                        <action id="6" name="Set speed" type="weight_measure_final_">
+                            <param id="0" name="Speed">newPosition2X&gt;newPosition1X ? (picked2&gt;picked1 ? 5 : -5) : (picked2&gt;picked1 ? -5 : 5)</param>
+                        </action>
+                        <action id="3" name="Start" type="weight_measure_final_">
+                            <param id="0" name="From">0</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Value">&quot;weightAnimationMove1&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">newPosition2Y</param>
+                            <param id="1" name="Value">picked2&gt;picked1 ? 1010 : 810</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">newPosition1Y</param>
+                            <param id="1" name="Value">picked2&lt;picked1 ? 1010 : 810</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;weightAnimationMove1&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">picked1PositionX</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">newPosition1X</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">picked1PositionY</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">newPosition1Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Value">&quot;weightAnimationFinished&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;weightAnimationMove1&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Push" type="stack">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">&quot;weightAnimationMove2&quot;</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Value">&quot;moveWeight1&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;weightAnimationMove2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Push" type="stack">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">&quot;weightAnimationMove1&quot;</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Value">&quot;moveWeight2&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="0" name="On click" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                        </condition>
+                        <condition id="7" name="Cursor is over object" type="Mouse">
+                            <param id="0" name="Object">weight_measure_final_</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;weightAnimationFinished&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">newPosition2X</param>
+                            <param id="1" name="Value">oldPicked2PositionX</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">newPosition2Y</param>
+                            <param id="1" name="Value">oldPicked2PositionY</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">newPosition1X</param>
+                            <param id="1" name="Value">oldPicked1PositionX</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">newPosition1Y</param>
+                            <param id="1" name="Value">oldPicked1PositionY</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Value">&quot;moving1FromBalance&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;move1FromBalance&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">picked1PositionX</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">newPosition1X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Value">&quot;selectAction&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;moving1FromBalance&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Push" type="stack">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">&quot;moving2FromBalance&quot;</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Value">&quot;moveWeight1&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;moving2FromBalance&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Push" type="stack">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">&quot;moving1FromBalance&quot;</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Value">&quot;moveWeight2&quot;</param>
                         </action>
                     </actions>
                 </event-block>
