@@ -3,8 +3,8 @@
     <name>Game</name>
     <event-sheet>Event sheet 1</event-sheet>
     <size>
-        <width>1280</width>
-        <height>1024</height>
+        <width>1024</width>
+        <height>768</height>
     </size>
     <margins>
         <horizontal>500</horizontal>
@@ -34,8 +34,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>640</x>
-                        <y>850</y>
+                        <x>540</x>
+                        <y>600</y>
                         <z>0</z>
                         <width>548.206726074</width>
                         <height>372.538299561</height>
@@ -227,8 +227,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>60</x>
-                        <y>833</y>
+                        <x>5</x>
+                        <y>6</y>
                         <z>0</z>
                         <width>904</width>
                         <height>30</height>
@@ -254,8 +254,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>114</x>
-                        <y>929</y>
+                        <x>6</x>
+                        <y>26</y>
                         <z>0</z>
                         <width>200</width>
                         <height>30</height>
@@ -281,8 +281,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>195</x>
-                        <y>989</y>
+                        <x>6</x>
+                        <y>47</y>
                         <z>0</z>
                         <width>466</width>
                         <height>30</height>
