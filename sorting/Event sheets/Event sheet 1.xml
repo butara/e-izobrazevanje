@@ -832,8 +832,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-1" name="Set X" type="weight10">
+                        <action id="-3" name="Set position" type="weight10">
                             <param id="0" name="X">newPosition1X=Self.X ? Self.X : (newPosition1X &gt; Self.X ? Self.X + swappingSpeed : Self.X - swappingSpeed)</param>
+                            <param id="1" name="Y">newPosition1Y=Self.Y ? Self.Y : (newPosition1Y &gt; Self.Y ? Self.Y + swappingSpeed : Self.Y - swappingSpeed)</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">picked1PositionX</param>
@@ -855,8 +856,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-1" name="Set X" type="weight20">
+                        <action id="-3" name="Set position" type="weight20">
                             <param id="0" name="X">newPosition1X=Self.X ? Self.X : (newPosition1X &gt; Self.X ? Self.X + swappingSpeed : Self.X - swappingSpeed)</param>
+                            <param id="1" name="Y">newPosition1Y=Self.Y ? Self.Y : (newPosition1Y &gt; Self.Y ? Self.Y + swappingSpeed : Self.Y - swappingSpeed)</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">picked1PositionX</param>
@@ -878,8 +880,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-1" name="Set X" type="weight30">
+                        <action id="-3" name="Set position" type="weight30">
                             <param id="0" name="X">newPosition1X=Self.X ? Self.X : (newPosition1X &gt; Self.X ? Self.X + swappingSpeed : Self.X - swappingSpeed)</param>
+                            <param id="1" name="Y">newPosition1Y=Self.Y ? Self.Y : (newPosition1Y &gt; Self.Y ? Self.Y + swappingSpeed : Self.Y - swappingSpeed)</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">picked1PositionX</param>
@@ -901,8 +904,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-1" name="Set X" type="weight40">
+                        <action id="-3" name="Set position" type="weight40">
                             <param id="0" name="X">newPosition1X=Self.X ? Self.X : (newPosition1X &gt; Self.X ? Self.X + swappingSpeed : Self.X - swappingSpeed)</param>
+                            <param id="1" name="Y">newPosition1Y=Self.Y ? Self.Y : (newPosition1Y &gt; Self.Y ? Self.Y + swappingSpeed : Self.Y - swappingSpeed)</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">picked1PositionX</param>
@@ -924,8 +928,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-1" name="Set X" type="weight50">
+                        <action id="-3" name="Set position" type="weight50">
                             <param id="0" name="X">newPosition1X=Self.X ? Self.X : (newPosition1X &gt; Self.X ? Self.X + swappingSpeed : Self.X - swappingSpeed)</param>
+                            <param id="1" name="Y">newPosition1Y=Self.Y ? Self.Y : (newPosition1Y &gt; Self.Y ? Self.Y + swappingSpeed : Self.Y - swappingSpeed)</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">picked1PositionX</param>
@@ -947,8 +952,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-1" name="Set X" type="weight10">
+                        <action id="-3" name="Set position" type="weight10">
                             <param id="0" name="X">newPosition2X=Self.X ? Self.X : (newPosition2X &gt; Self.X ? Self.X + swappingSpeed : Self.X - swappingSpeed)</param>
+                            <param id="1" name="Y">newPosition2Y=Self.Y ? Self.Y : (newPosition2Y &gt; Self.Y ? Self.Y + swappingSpeed : Self.Y - swappingSpeed)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -966,8 +972,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-1" name="Set X" type="weight20">
+                        <action id="-3" name="Set position" type="weight20">
                             <param id="0" name="X">newPosition2X=Self.X ? Self.X : (newPosition2X &gt; Self.X ? Self.X + swappingSpeed : Self.X - swappingSpeed)</param>
+                            <param id="1" name="Y">newPosition2Y=Self.Y ? Self.Y : (newPosition2Y &gt; Self.Y ? Self.Y + swappingSpeed : Self.Y - swappingSpeed)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -985,8 +992,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-1" name="Set X" type="weight30">
+                        <action id="-3" name="Set position" type="weight30">
                             <param id="0" name="X">newPosition2X=Self.X ? Self.X : (newPosition2X &gt; Self.X ? Self.X + swappingSpeed : Self.X - swappingSpeed)</param>
+                            <param id="1" name="Y">newPosition2Y=Self.Y ? Self.Y : (newPosition2Y &gt; Self.Y ? Self.Y + swappingSpeed : Self.Y - swappingSpeed)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1004,8 +1012,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-1" name="Set X" type="weight40">
+                        <action id="-3" name="Set position" type="weight40">
                             <param id="0" name="X">newPosition2X=Self.X ? Self.X : (newPosition2X &gt; Self.X ? Self.X + swappingSpeed : Self.X - swappingSpeed)</param>
+                            <param id="1" name="Y">newPosition2Y=Self.Y ? Self.Y : (newPosition2Y &gt; Self.Y ? Self.Y + swappingSpeed : Self.Y - swappingSpeed)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1023,8 +1032,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-1" name="Set X" type="weight50">
+                        <action id="-3" name="Set position" type="weight50">
                             <param id="0" name="X">newPosition2X=Self.X ? Self.X : (newPosition2X &gt; Self.X ? Self.X + swappingSpeed : Self.X - swappingSpeed)</param>
+                            <param id="1" name="Y">newPosition2Y=Self.Y ? Self.Y : (newPosition2Y &gt; Self.Y ? Self.Y + swappingSpeed : Self.Y - swappingSpeed)</param>
                         </action>
                     </actions>
                 </event-block>
