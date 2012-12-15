@@ -8,10 +8,10 @@
     <saved-with-version>10802</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
-        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
-        <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
     </used-plugins>
     <used-behaviors />
     <used-effects />
@@ -408,15 +408,47 @@
         <object-type name="Mouse">
             <plugin id="Mouse" />
         </object-type>
+        <object-type name="btnFinalCheck">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="txtMeasures">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="txtEndChecks">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text6">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text7">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text8">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text9">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="newGame">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="btnReturnToMenu">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Text4">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
         <layout>Main.xml</layout>
         <layout>Game.xml</layout>
+        <layout>Completed.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>Event sheet 1.xml</event-sheet>
         <event-sheet>Event sheet 2.xml</event-sheet>
+        <event-sheet>Event sheet 3.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" />
