@@ -497,6 +497,12 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type global="1" name="TutorialWeightsSwapFrame">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="TutorialWeightsSwapBool">
+                <plugin id="Arr" />
+            </object-type>
         </object-folder>
         <object-type name="Mouse">
             <plugin id="Mouse" />
@@ -516,7 +522,7 @@
     </object-folder>
     <families />
     <layout-folder expanded="1">
-        <layout-folder expanded="1" name="Sorting">
+        <layout-folder expanded="0" name="Sorting">
             <layout>Main.xml</layout>
             <layout>Game.xml</layout>
             <layout>Completed.xml</layout>

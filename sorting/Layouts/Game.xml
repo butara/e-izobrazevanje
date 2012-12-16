@@ -404,8 +404,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-267</x>
-                        <y>-7</y>
+                        <x>-28</x>
+                        <y>216</y>
                         <z>0</z>
                         <width>200</width>
                         <height>160</height>
@@ -497,6 +497,20 @@
             </properties>
         </instance>
         <instance type="tutorialWeightsSwap2">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="TutorialWeightsSwapFrame">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="TutorialWeightsSwapBool">
             <properties>
                 <width>10</width>
                 <height>1</height>
