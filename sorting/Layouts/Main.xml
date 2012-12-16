@@ -70,9 +70,9 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="Button3">
+                <instance type="btnBubbles">
                     <properties>
-                        <text>Blef</text>
+                        <text>Mehurčno urejanje</text>
                         <tooltip></tooltip>
                         <initial-visibility>Invisible</initial-visibility>
                         <enabled>Yes</enabled>
@@ -86,7 +86,7 @@
                         <y>217</y>
                         <z>0</z>
                         <width>72</width>
-                        <height>24</height>
+                        <height>44</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -114,9 +114,9 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="Button5">
+                <instance type="soundTest">
                     <properties>
-                        <text>OK</text>
+                        <text>Preiskusi zvok</text>
                         <tooltip></tooltip>
                         <initial-visibility>Invisible</initial-visibility>
                         <enabled>Yes</enabled>
@@ -129,8 +129,8 @@
                         <x>305</x>
                         <y>199</y>
                         <z>0</z>
-                        <width>72</width>
-                        <height>24</height>
+                        <width>112</width>
+                        <height>55</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

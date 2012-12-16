@@ -7,11 +7,14 @@
     <unique-id>nblx4rw9lntq</unique-id>
     <saved-with-version>10802</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
-        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="ken@appMobi" id="appMobi" version="1">appMobi</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
     </used-plugins>
     <used-behaviors />
     <used-effects />
@@ -27,7 +30,7 @@
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
         <prop name="Enable WebGL">On</prop>
-        <prop name="Fullscreen in browser">Off</prop>
+        <prop name="Fullscreen in browser">Scale</prop>
         <prop name="Hide address bar">No</prop>
         <prop name="Loader style">Progress bar &amp; logo</prop>
         <prop name="Preview browser">(default)</prop>
@@ -362,13 +365,13 @@
         <object-type name="Button2">
             <plugin id="Button" />
         </object-type>
-        <object-type name="Button3">
+        <object-type name="btnBubbles">
             <plugin id="Button" />
         </object-type>
         <object-type name="Button4">
             <plugin id="Button" />
         </object-type>
-        <object-type name="Button5">
+        <object-type name="soundTest">
             <plugin id="Button" />
         </object-type>
         <object-type name="Button6">
@@ -420,10 +423,10 @@
         <object-type name="Text6">
             <plugin id="Text" />
         </object-type>
-        <object-type name="Text7">
+        <object-type name="txtCompletedChecks">
             <plugin id="Text" />
         </object-type>
-        <object-type name="Text8">
+        <object-type name="txtCompletedEndChecks">
             <plugin id="Text" />
         </object-type>
         <object-type name="Text9">
@@ -438,6 +441,76 @@
         <object-type name="Text4">
             <plugin id="Text" />
         </object-type>
+        <object-type global="1" name="pickNumbers1">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type global="1" name="pickNumbers2">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type name="downArrow2">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.195" y="0.24375" />
+                            <point x="0.5" y="0.13125" />
+                            <point x="0.715" y="0.35625" />
+                            <point x="0.83" y="0.5" />
+                            <point x="0.735" y="0.66875" />
+                            <point x="0.5" y="0.80625" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="messageBubble">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501618" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501618" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501618" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501618" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501618" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="downArrow">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.195" y="0.24375" />
+                            <point x="0.5" y="0.13125" />
+                            <point x="0.715" y="0.35625" />
+                            <point x="0.83" y="0.5" />
+                            <point x="0.735" y="0.66875" />
+                            <point x="0.5" y="0.80625" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Audio">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Touch">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="appMobi">
+            <plugin id="appMobi" />
+        </object-type>
+        <object-type global="1" name="tutorialWeightsSwap1">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type global="1" name="ap2">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type global="1" name="tutorialWeightsSwap2">
+            <plugin id="Arr" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
@@ -449,9 +522,22 @@
         <event-sheet>Event sheet 1.xml</event-sheet>
         <event-sheet>Event sheet 2.xml</event-sheet>
         <event-sheet>Event sheet 3.xml</event-sheet>
+        <event-sheet>Functions.xml</event-sheet>
+        <event-sheet>BubbleSort.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" />
+        <global-instance type="Audio">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+            </properties>
+        </global-instance>
+        <global-instance type="Touch">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="appMobi" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
