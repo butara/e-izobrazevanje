@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Event sheet 1</name>
+    <name>DogodkiErrorCorrection</name>
     <events>
         <variable constant="0" name="startDepth" static="0" type="number">110</variable>
         <variable constant="0" name="offset" static="0" type="number">40</variable>
@@ -34,13 +34,6 @@
                     <param id="2" name="X">250+offset</param>
                     <param id="3" name="Y">depth+ startDepth</param>
                 </action>
-                <action id="-10" name="Set value" type="Box">
-                    <param id="0" name="Instance variable">isParityBit</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="5" name="Set frame" type="Box">
-                    <param id="0" name="Frame number">3</param>
-                </action>
                 <action id="-3" name="Create object" type="System">
                     <param id="0" name="Object to create">Box</param>
                     <param id="1" name="Layer">0</param>
@@ -71,6 +64,10 @@
                     <param id="2" name="X">675+offset</param>
                     <param id="3" name="Y">depth+ startDepth</param>
                 </action>
+                <action id="-10" name="Set value" type="Box">
+                    <param id="0" name="Instance variable">isParityBit</param>
+                    <param id="1" name="Value">1</param>
+                </action>
                 <action id="-10" name="Add to" type="System">
                     <param id="0" name="Variable">depth</param>
                     <param id="1" name="Value">85</param>
@@ -87,7 +84,7 @@
             </conditions>
             <actions>
                 <action id="5" name="Set frame" type="Box">
-                    <param id="0" name="Frame number">self.AnimationFrame=2 ? 3: 2</param>
+                    <param id="0" name="Frame number">self.AnimationFrame=0 ? 2:0</param>
                 </action>
                 <action id="-9" name="Set value" type="System">
                     <param id="0" name="Variable">clicked</param>

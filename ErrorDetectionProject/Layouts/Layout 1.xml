@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
     <name>Layout 1</name>
-    <event-sheet>Event sheet 1</event-sheet>
+    <event-sheet>DogodkiErrorCorrection</event-sheet>
     <size>
         <width>1024</width>
         <height>768</height>
@@ -69,7 +69,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text">
+                <instance type="TextErrorCorrection">
                     <properties>
                         <text></text>
                         <initial-visibility>Visible</initial-visibility>
