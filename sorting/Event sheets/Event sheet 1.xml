@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <include>TutorialSort</include>
         <include>RealTestSort</include>
         <include>BubbleSort</include>
         <include>Functions</include>
@@ -77,7 +78,7 @@
                 </action>
                 <action id="-9" name="Set value" type="System">
                     <param id="0" name="Variable">type</param>
-                    <param id="1" name="Value">&quot;test&quot;</param>
+                    <param id="1" name="Value">&quot;bubble&quot;</param>
                 </action>
                 <action id="5" name="Set frame" type="weight_measure_final_">
                     <param id="0" name="Frame number">24</param>
@@ -332,7 +333,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" title="final_check">
+        <event-group collapsed="1" description="" title="final_check">
             <sub-events>
                 <event-block>
                     <conditions>
