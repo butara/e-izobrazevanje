@@ -18,6 +18,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet>Event sheet 3</event-sheet>
         <event-sheet>Functions</event-sheet>
         <event-sheet>BubbleSort</event-sheet>
+        <event-sheet>RealTestSort</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="Project settings" />
