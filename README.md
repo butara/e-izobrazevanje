@@ -1,3 +1,0 @@
-e-izobrazevanje
-===============
-test commit
