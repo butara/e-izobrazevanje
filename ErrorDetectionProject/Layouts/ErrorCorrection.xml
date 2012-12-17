@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Layout 1</name>
+    <name>ErrorCorrection</name>
     <event-sheet>DogodkiErrorCorrection</event-sheet>
     <size>
         <width>1024</width>
@@ -53,6 +53,7 @@
                     </properties>
                     <instance-variables>
                         <isParityBit>0</isParityBit>
+                        <isTurnedAround>0</isTurnedAround>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -71,7 +72,7 @@
                 </instance>
                 <instance type="TextErrorCorrection">
                     <properties>
-                        <text></text>
+                        <text>Debug</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-16</font>
                         <color>0,0,0</color>
@@ -84,10 +85,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>74</x>
-                        <y>704</y>
+                        <x>63</x>
+                        <y>659</y>
                         <z>0</z>
-                        <width>200</width>
+                        <width>437</width>
                         <height>30</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
