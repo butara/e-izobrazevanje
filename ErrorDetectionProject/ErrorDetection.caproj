@@ -113,6 +113,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="TextErrorCorrection2">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">

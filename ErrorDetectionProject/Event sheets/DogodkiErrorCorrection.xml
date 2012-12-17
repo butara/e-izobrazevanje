@@ -6,7 +6,18 @@
         <variable constant="0" name="startDepth" static="0" type="number">110</variable>
         <variable constant="0" name="offset" static="0" type="number">40</variable>
         <variable constant="0" name="clicked" static="0" type="number">0</variable>
+        <variable constant="0" name="state" static="0" type="text">&quot;starting&quot;</variable>
         <variable constant="0" name="depth" static="0" type="number">0</variable>
+        <event-block>
+            <conditions>
+                <condition id="-1" name="Every tick" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" type="TextErrorCorrection2">
+                    <param id="0" name="Text">&quot;State: &quot;  &amp; state</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block>
             <conditions>
                 <condition id="-1" name="Every tick" type="System" />
@@ -135,9 +146,20 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-2" name="On start of layout" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Value">&quot;userSetParityBits&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-group description="In this function user sets parity bits. User can only click on parity bits." title="UserPlaying">
+        <event-group collapsed="1" description="In this function user sets parity bits. User can only click on parity bits." title="UserSetParityBits">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -150,6 +172,11 @@
                             <param id="0" name="Instance variable">isParityBit</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;userSetParityBits&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -167,21 +194,99 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="We check if user have set parity right." disabled="1" title="ParityChecker" />
-        <event-block>
-            <conditions />
-            <actions />
-        </event-block>
-        <event-block>
-            <conditions>
-                <condition id="6" name="On object clicked" type="Mouse">
-                    <param id="0" name="Mouse button">0</param>
-                    <param id="1" name="Click type">0</param>
-                    <param id="2" name="Object clicked">CheckParityButton</param>
-                </condition>
-            </conditions>
-            <actions />
-        </event-block>
-        <event-group description="Evil zelenko breaks array and user will have to detect error." title="BreakBitArray" />
+        <event-group collapsed="1" description="We check if user have set parity right." title="ParityChecker">
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="6" name="On object clicked" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">CheckParityButton</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block>
+                            <conditions>
+                                <condition disabled="1" id="-10" name="For" type="System">
+                                    <param id="0" name="Name">&quot;&quot;</param>
+                                    <param id="1" name="Start index">1</param>
+                                    <param id="2" name="End index">10</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                        <event-block>
+                            <conditions>
+                                <condition id="-14" name="Compare variable" type="System">
+                                    <param id="0" name="Variable">state</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;userSetParityBits&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">state</param>
+                                    <param id="1" name="Value">&quot;breakBitArray&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Evil zelenko breaks array and user will have to detect error." title="BreakBitArray">
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-10" name="For" type="System">
+                            <param id="0" name="Name">&quot;&quot;</param>
+                            <param id="1" name="Start index">1</param>
+                            <param id="2" name="End index">3</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;breakBitArray&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>TODO: Works only once, change animation frame 0 ? 2:0</comment>
+                        <comment>TODO: Replace with pick Nth and random function with only boxes with isParity=0</comment>
+                        <variable comment="Iterator" constant="0" name="i" static="0" type="number">1</variable>
+                        <event-block>
+                            <conditions>
+                                <condition id="-16" name="Pick random instance" type="System">
+                                    <param id="0" name="Object">Box</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" type="Box">
+                                    <param id="0" name="Instance variable">isParityBit</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" type="Box">
+                                    <param id="0" name="Frame number">self.AnimationFrame=0 ? 3:3</param>
+                                </action>
+                                <action id="0" name="Set text" type="TextErrorCorrection">
+                                    <param id="0" name="Text">&quot;Broken Box : &quot;  &amp; Box.IID</param>
+                                </action>
+                                <action id="-10" name="Add to" type="System">
+                                    <param id="0" name="Variable">i</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">state</param>
+                                    <param id="1" name="Value">i=2 ? &quot;userDetectErrors&quot; : state</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="User shows errors with clicking on broken bits." title="UserDetectErrors" />
     </events>
 </c2eventsheet>
