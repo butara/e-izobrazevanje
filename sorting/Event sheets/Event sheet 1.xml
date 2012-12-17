@@ -333,7 +333,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" title="final_check">
+        <event-group collapsed="1" description="" title="final_check">
             <sub-events>
                 <event-block>
                     <conditions>

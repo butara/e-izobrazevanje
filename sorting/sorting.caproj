@@ -97,7 +97,10 @@
             <object-type name="messageBubble">
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
-                    <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                    <animation framecount="8" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501618" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501618" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501618" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.501618" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.501618" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.501618" />
@@ -503,7 +506,7 @@
             <object-type global="1" name="TutorialWeightsSwapBool">
                 <plugin id="Arr" />
             </object-type>
-            <object-type global="1" name="tutorialSteps">
+            <object-type global="1" name="tutorialInfo">
                 <plugin id="Arr" />
             </object-type>
             <object-type name="Text5">

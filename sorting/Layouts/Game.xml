@@ -544,9 +544,9 @@
                 <depth>1</depth>
             </properties>
         </instance>
-        <instance type="tutorialSteps">
+        <instance type="tutorialInfo">
             <properties>
-                <width>10</width>
+                <width>0</width>
                 <height>1</height>
                 <depth>1</depth>
             </properties>
