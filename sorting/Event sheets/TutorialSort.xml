@@ -1,0 +1,851 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TutorialSort</name>
+    <events>
+        <variable constant="0" name="tutorialWeighsShouldSwap" static="0" type="number">0</variable>
+        <comment>tutorial steps: swap weight 1, swap weight 2, after selection frame, after measuring frame, should swap</comment>
+        <event-group collapsed="1" description="" title="tutorialWeightsSwapping">
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;tutorialWeightsSwapping&quot;</param>
+                        </condition>
+                        <condition id="6" inverted="1" name="Is empty" type="pickNumbers1" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">picked1</param>
+                            <param id="1" name="Value">pickNumbers1.Back</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">picked2</param>
+                            <param id="1" name="Value">pickNumbers2.Back</param>
+                        </action>
+                        <action id="6" name="Pop" type="pickNumbers1">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Axis">0</param>
+                        </action>
+                        <action id="6" name="Pop" type="pickNumbers2">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" type="stack">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">&quot;tutorialWeightsSwappingCheck&quot;</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" type="stack">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">&quot;swapPickedWeight1&quot;</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" type="stack">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">&quot;pickWeight2&quot;</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Value">&quot;pickWeight1&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;tutorialWeightsSwappingCheck&quot;</param>
+                        </condition>
+                        <condition id="6" name="Is empty" type="pickNumbers1" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">picked1</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">picked2</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Value">stack.Back</param>
+                        </action>
+                        <action id="6" name="Pop" type="stack">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Axis">0</param>
+                        </action>
+                        <action id="0" name="Set text" type="Text4">
+                            <param id="0" name="Text">state</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;tutorialWeightsSwappingCheck&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Value">&quot;tutorialWeightsSwapping&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" title="tutorialPickAction">
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;tutorialPickAction&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">picked1</param>
+                            <param id="1" name="Value">tutorialWeightsSwap1.Back</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">picked2</param>
+                            <param id="1" name="Value">tutorialWeightsSwap2.Back</param>
+                        </action>
+                        <action id="6" name="Pop" type="tutorialWeightsSwap1">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Axis">0</param>
+                        </action>
+                        <action id="6" name="Pop" type="tutorialWeightsSwap2">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" type="stack">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">&quot;tutorialWeightsSwappingShowArrows&quot;</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" type="stack">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">&quot;pickWeight2&quot;</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Value">&quot;pickWeight1&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" title="tutorialSelectionActionž">
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;tutorialWeightsSwappingShowArrows&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" type="downArrow">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" type="downArrow">
+                            <param id="0" name="X">oldPicked1PositionX</param>
+                            <param id="1" name="Y">60</param>
+                        </action>
+                        <action id="-3" name="Set position" type="downArrow2">
+                            <param id="0" name="X">oldPicked2PositionX</param>
+                            <param id="1" name="Y">60</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Value">&quot;tutorialWeightsSwappingShowArrows1&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" type="Text4">
+                            <param id="0" name="Text">picked1</param>
+                        </action>
+                        <action id="5" name="Set frame" type="messageBubble">
+                            <param id="0" name="Frame number">TutorialWeightsSwapFrame.Back</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="messageBubble">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="6" name="Pop" type="TutorialWeightsSwapFrame">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Axis">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group collapsed="1" description="" title="tutorialWeightsSwappingShowArrows">
+                    <sub-events>
+                        <event-block>
+                            <conditions>
+                                <condition id="0" name="On click" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" type="System">
+                                    <param id="0" name="Variable">state</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;tutorialWeightsSwappingShowArrows1&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" type="System">
+                                    <param id="0" name="Variable">picked1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="7" name="Cursor is over object" type="Mouse">
+                                    <param id="0" name="Object">weight10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">state</param>
+                                    <param id="1" name="Value">&quot;tutorialWeightsSwappingShowArrows2&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" type="downArrow2">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="5" name="Set frame" type="weight10">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block>
+                            <conditions>
+                                <condition id="0" name="On click" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" type="System">
+                                    <param id="0" name="Variable">state</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;tutorialWeightsSwappingShowArrows1&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" type="System">
+                                    <param id="0" name="Variable">picked1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                                <condition id="7" name="Cursor is over object" type="Mouse">
+                                    <param id="0" name="Object">weight20</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">state</param>
+                                    <param id="1" name="Value">&quot;tutorialWeightsSwappingShowArrows2&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" type="downArrow2">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="5" name="Set frame" type="weight20">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block>
+                            <conditions>
+                                <condition id="0" name="On click" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" type="System">
+                                    <param id="0" name="Variable">state</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;tutorialWeightsSwappingShowArrows1&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" type="System">
+                                    <param id="0" name="Variable">picked1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                                <condition id="7" name="Cursor is over object" type="Mouse">
+                                    <param id="0" name="Object">weight30</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">state</param>
+                                    <param id="1" name="Value">&quot;tutorialWeightsSwappingShowArrows2&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" type="downArrow2">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="5" name="Set frame" type="weight30">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block>
+                            <conditions>
+                                <condition id="0" name="On click" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" type="System">
+                                    <param id="0" name="Variable">state</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;tutorialWeightsSwappingShowArrows1&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" type="System">
+                                    <param id="0" name="Variable">picked1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                                <condition id="7" name="Cursor is over object" type="Mouse">
+                                    <param id="0" name="Object">weight40</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">state</param>
+                                    <param id="1" name="Value">&quot;tutorialWeightsSwappingShowArrows2&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" type="downArrow2">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="5" name="Set frame" type="weight40">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block>
+                            <conditions>
+                                <condition id="0" name="On click" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" type="System">
+                                    <param id="0" name="Variable">state</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;tutorialWeightsSwappingShowArrows1&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" type="System">
+                                    <param id="0" name="Variable">picked1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                                <condition id="7" name="Cursor is over object" type="Mouse">
+                                    <param id="0" name="Object">weight50</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">state</param>
+                                    <param id="1" name="Value">&quot;tutorialWeightsSwappingShowArrows2&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" type="downArrow2">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="5" name="Set frame" type="weight50">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group collapsed="1" description="" title="tutorialWeightsSwappingShowArrows2">
+                    <sub-events>
+                        <event-block>
+                            <conditions>
+                                <condition id="0" name="On click" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" type="System">
+                                    <param id="0" name="Variable">state</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;tutorialWeightsSwappingShowArrows2&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" type="System">
+                                    <param id="0" name="Variable">picked2</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="7" name="Cursor is over object" type="Mouse">
+                                    <param id="0" name="Object">weight10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">state</param>
+                                    <param id="1" name="Value">&quot;selectAction&quot;</param>
+                                </action>
+                                <action id="-3" name="Set position" type="downArrow2">
+                                    <param id="0" name="X">525</param>
+                                    <param id="1" name="Y">400</param>
+                                </action>
+                                <action id="-15" name="Set visible" type="downArrow">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" type="messageBubble">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="5" name="Set frame" type="messageBubble">
+                                    <param id="0" name="Frame number">TutorialWeightsSwapFrame.Back</param>
+                                </action>
+                                <action id="6" name="Pop" type="TutorialWeightsSwapFrame">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                </action>
+                                <action id="5" name="Set frame" type="weight10">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="5" name="Push" type="stack">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">&quot;tutorialSwapOrReturn&quot;</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">tutorialWeighsShouldSwap</param>
+                                    <param id="1" name="Value">TutorialWeightsSwapBool.Back</param>
+                                </action>
+                                <action id="6" name="Pop" type="TutorialWeightsSwapBool">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block>
+                            <conditions>
+                                <condition id="0" name="On click" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" type="System">
+                                    <param id="0" name="Variable">state</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;tutorialWeightsSwappingShowArrows2&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" type="System">
+                                    <param id="0" name="Variable">picked2</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                                <condition id="7" name="Cursor is over object" type="Mouse">
+                                    <param id="0" name="Object">weight20</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">state</param>
+                                    <param id="1" name="Value">&quot;selectAction&quot;</param>
+                                </action>
+                                <action id="-3" name="Set position" type="downArrow2">
+                                    <param id="0" name="X">525</param>
+                                    <param id="1" name="Y">400</param>
+                                </action>
+                                <action id="-15" name="Set visible" type="downArrow">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" type="messageBubble">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="5" name="Set frame" type="messageBubble">
+                                    <param id="0" name="Frame number">TutorialWeightsSwapFrame.Back</param>
+                                </action>
+                                <action id="6" name="Pop" type="TutorialWeightsSwapFrame">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                </action>
+                                <action id="5" name="Set frame" type="weight20">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="5" name="Push" type="stack">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">&quot;tutorialSwapOrReturn&quot;</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">tutorialWeighsShouldSwap</param>
+                                    <param id="1" name="Value">TutorialWeightsSwapBool.Back</param>
+                                </action>
+                                <action id="6" name="Pop" type="TutorialWeightsSwapBool">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block>
+                            <conditions>
+                                <condition id="0" name="On click" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" type="System">
+                                    <param id="0" name="Variable">state</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;tutorialWeightsSwappingShowArrows2&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" type="System">
+                                    <param id="0" name="Variable">picked2</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                                <condition id="7" name="Cursor is over object" type="Mouse">
+                                    <param id="0" name="Object">weight30</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">state</param>
+                                    <param id="1" name="Value">&quot;selectAction&quot;</param>
+                                </action>
+                                <action id="-3" name="Set position" type="downArrow2">
+                                    <param id="0" name="X">525</param>
+                                    <param id="1" name="Y">400</param>
+                                </action>
+                                <action id="-15" name="Set visible" type="downArrow">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" type="messageBubble">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="5" name="Set frame" type="messageBubble">
+                                    <param id="0" name="Frame number">TutorialWeightsSwapFrame.Back</param>
+                                </action>
+                                <action id="6" name="Pop" type="TutorialWeightsSwapFrame">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                </action>
+                                <action id="5" name="Set frame" type="weight30">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="5" name="Push" type="stack">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">&quot;tutorialSwapOrReturn&quot;</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">tutorialWeighsShouldSwap</param>
+                                    <param id="1" name="Value">TutorialWeightsSwapBool.Back</param>
+                                </action>
+                                <action id="6" name="Pop" type="TutorialWeightsSwapBool">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block>
+                            <conditions>
+                                <condition id="0" name="On click" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" type="System">
+                                    <param id="0" name="Variable">state</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;tutorialWeightsSwappingShowArrows2&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" type="System">
+                                    <param id="0" name="Variable">picked2</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                                <condition id="7" name="Cursor is over object" type="Mouse">
+                                    <param id="0" name="Object">weight40</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">state</param>
+                                    <param id="1" name="Value">&quot;selectAction&quot;</param>
+                                </action>
+                                <action id="-3" name="Set position" type="downArrow2">
+                                    <param id="0" name="X">525</param>
+                                    <param id="1" name="Y">400</param>
+                                </action>
+                                <action id="-15" name="Set visible" type="downArrow">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" type="messageBubble">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="5" name="Set frame" type="messageBubble">
+                                    <param id="0" name="Frame number">TutorialWeightsSwapFrame.Back</param>
+                                </action>
+                                <action id="6" name="Pop" type="TutorialWeightsSwapFrame">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                </action>
+                                <action id="5" name="Set frame" type="weight40">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="5" name="Push" type="stack">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">&quot;tutorialSwapOrReturn&quot;</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">tutorialWeighsShouldSwap</param>
+                                    <param id="1" name="Value">TutorialWeightsSwapBool.Back</param>
+                                </action>
+                                <action id="6" name="Pop" type="TutorialWeightsSwapBool">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block>
+                            <conditions>
+                                <condition id="0" name="On click" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" type="System">
+                                    <param id="0" name="Variable">state</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;tutorialWeightsSwappingShowArrows2&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" type="System">
+                                    <param id="0" name="Variable">picked2</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                                <condition id="7" name="Cursor is over object" type="Mouse">
+                                    <param id="0" name="Object">weight50</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">state</param>
+                                    <param id="1" name="Value">&quot;selectAction&quot;</param>
+                                </action>
+                                <action id="-3" name="Set position" type="downArrow2">
+                                    <param id="0" name="X">525</param>
+                                    <param id="1" name="Y">400</param>
+                                </action>
+                                <action id="-15" name="Set visible" type="downArrow">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" type="messageBubble">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="5" name="Set frame" type="messageBubble">
+                                    <param id="0" name="Frame number">TutorialWeightsSwapFrame.Back</param>
+                                </action>
+                                <action id="6" name="Pop" type="TutorialWeightsSwapFrame">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                </action>
+                                <action id="5" name="Set frame" type="weight50">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="5" name="Push" type="stack">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">&quot;tutorialSwapOrReturn&quot;</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">tutorialWeighsShouldSwap</param>
+                                    <param id="1" name="Value">TutorialWeightsSwapBool.Back</param>
+                                </action>
+                                <action id="6" name="Pop" type="TutorialWeightsSwapBool">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" title="tutorialSwapOrReturn">
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;tutorialSwapOrReturn&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" type="messageBubble">
+                            <param id="0" name="Frame number">TutorialWeightsSwapFrame.Back</param>
+                        </action>
+                        <action id="6" name="Pop" type="TutorialWeightsSwapFrame">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Axis">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;tutorialSwapOrReturn&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">tutorialWeighsShouldSwap</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Value">&quot;tutorialReturn&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="6" name="On object clicked" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">weight_measure_final_</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;tutorialReturn&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">newPosition2X</param>
+                            <param id="1" name="Value">oldPicked2PositionX</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">newPosition2Y</param>
+                            <param id="1" name="Value">oldPicked2PositionY</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">newPosition1X</param>
+                            <param id="1" name="Value">oldPicked1PositionX</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">newPosition1Y</param>
+                            <param id="1" name="Value">oldPicked1PositionY</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Value">&quot;moving1FromBalance&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">moveSpeedX</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">moveSpeedY</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                        <action id="6" name="Set speed" type="weight_measure_final_">
+                            <param id="0" name="Speed">newPosition2X&gt;newPosition1X ? (picked2&gt;picked1 ? -balanceAnimationSpeed : balanceAnimationSpeed) : (picked2&gt;picked1 ? balanceAnimationSpeed : -balanceAnimationSpeed)</param>
+                        </action>
+                        <action id="3" name="Start" type="weight_measure_final_">
+                            <param id="0" name="From">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="downArrow">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="downArrow2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Set text" type="Text4">
+                            <param id="0" name="Text">stack.Back</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;tutorialSwapOrReturn&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">tutorialWeighsShouldSwap</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Value">&quot;tutorialSwap&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" type="downArrow2">
+                            <param id="0" name="X">850</param>
+                            <param id="1" name="Y">250</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="6" name="On object clicked" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">zelenko</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;tutorialSwap&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">newPosition2X</param>
+                            <param id="1" name="Value">oldPicked1PositionX</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">newPosition2Y</param>
+                            <param id="1" name="Value">oldPicked1PositionY</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">newPosition1X</param>
+                            <param id="1" name="Value">oldPicked2PositionX</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">newPosition1Y</param>
+                            <param id="1" name="Value">oldPicked2PositionY</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">moveSpeedX</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">moveSpeedY</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                        <action id="6" name="Set speed" type="weight_measure_final_">
+                            <param id="0" name="Speed">newPosition2X&gt;newPosition1X ? (picked2&lt;picked1 ? -balanceAnimationSpeed : balanceAnimationSpeed) : (picked2&lt;picked1 ? balanceAnimationSpeed : -balanceAnimationSpeed)</param>
+                        </action>
+                        <action id="3" name="Start" type="weight_measure_final_">
+                            <param id="0" name="From">0</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Value">&quot;moving1FromBalance&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="downArrow">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="downArrow2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Set text" type="Text4">
+                            <param id="0" name="Text">stack.Back</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
