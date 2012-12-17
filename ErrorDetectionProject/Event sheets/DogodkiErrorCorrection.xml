@@ -7,8 +7,20 @@
         <variable constant="0" name="offset" static="0" type="number">40</variable>
         <variable constant="0" name="clicked" static="0" type="number">0</variable>
         <variable constant="0" name="depth" static="0" type="number">0</variable>
-        <event-group description="" title="Initialization">
+        <event-block>
+            <conditions>
+                <condition id="-1" name="Every tick" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" type="System">
+                    <param id="0" name="Variable">clicked</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group collapsed="1" description="We initialize boxes in position." title="Initialization">
             <sub-events>
+                <variable comment="Iterator" constant="0" name="i" static="0" type="number">1</variable>
                 <event-block>
                     <conditions>
                         <condition id="-2" name="On start of layout" type="System" />
@@ -25,11 +37,19 @@
                             <param id="2" name="X">250+offset</param>
                             <param id="3" name="Y">depth+ startDepth</param>
                         </action>
+                        <action id="-10" name="Set value" type="Box">
+                            <param id="0" name="Instance variable">isParityBit</param>
+                            <param id="1" name="Value">i=6 ? 1:0</param>
+                        </action>
                         <action id="-3" name="Create object" type="System">
                             <param id="0" name="Object to create">Box</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">335+offset</param>
                             <param id="3" name="Y">depth+ startDepth</param>
+                        </action>
+                        <action id="-10" name="Set value" type="Box">
+                            <param id="0" name="Instance variable">isParityBit</param>
+                            <param id="1" name="Value">i=6 ? 1:0</param>
                         </action>
                         <action id="-3" name="Create object" type="System">
                             <param id="0" name="Object to create">Box</param>
@@ -37,17 +57,29 @@
                             <param id="2" name="X">420+offset</param>
                             <param id="3" name="Y">depth+ startDepth</param>
                         </action>
+                        <action id="-10" name="Set value" type="Box">
+                            <param id="0" name="Instance variable">isParityBit</param>
+                            <param id="1" name="Value">i=6 ? 1:0</param>
+                        </action>
                         <action id="-3" name="Create object" type="System">
                             <param id="0" name="Object to create">Box</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">505+offset</param>
                             <param id="3" name="Y">depth+ startDepth</param>
                         </action>
+                        <action id="-10" name="Set value" type="Box">
+                            <param id="0" name="Instance variable">isParityBit</param>
+                            <param id="1" name="Value">i=6 ? 1:0</param>
+                        </action>
                         <action id="-3" name="Create object" type="System">
                             <param id="0" name="Object to create">Box</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">590+offset</param>
                             <param id="3" name="Y">depth+ startDepth</param>
+                        </action>
+                        <action id="-10" name="Set value" type="Box">
+                            <param id="0" name="Instance variable">isParityBit</param>
+                            <param id="1" name="Value">i=6 ? 1:0</param>
                         </action>
                         <action id="-3" name="Create object" type="System">
                             <param id="0" name="Object to create">Box</param>
@@ -63,25 +95,61 @@
                             <param id="0" name="Variable">depth</param>
                             <param id="1" name="Value">85</param>
                         </action>
-                    </actions>
-                </event-block>
-                <event-block>
-                    <conditions>
-                        <condition id="-1" name="Every tick" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" type="System">
-                            <param id="0" name="Variable">clicked</param>
-                            <param id="1" name="Value">0</param>
+                        <action id="-10" name="Add to" type="System">
+                            <param id="0" name="Variable">i</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="We make random gaming layout for user." title="BoxStartLayoutCreator">
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-2" name="On start of layout" type="System" />
+                        <condition id="-10" name="For" type="System">
+                            <param id="0" name="Name">&quot;&quot;</param>
+                            <param id="1" name="Start index">1</param>
+                            <param id="2" name="End index">20</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block>
+                            <conditions>
+                                <condition id="-16" name="Pick random instance" type="System">
+                                    <param id="0" name="Object">Box</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" type="Box">
+                                    <param id="0" name="Instance variable">isParityBit</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" type="Box">
+                                    <param id="0" name="Frame number">self.AnimationFrame=0 ? 2:0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="In this function user sets parity bits. User can only click on parity bits." title="UserPlaying">
+            <sub-events>
                 <event-block>
                     <conditions>
                         <condition id="6" name="On object clicked" type="Mouse">
                             <param id="0" name="Mouse button">0</param>
                             <param id="1" name="Click type">0</param>
                             <param id="2" name="Object clicked">Box</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" type="Box">
+                            <param id="0" name="Instance variable">isParityBit</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -93,52 +161,27 @@
                             <param id="1" name="Value">self.isTurnedAround=0 ? 1:0</param>
                         </action>
                         <action id="0" name="Set text" type="TextErrorCorrection">
-                            <param id="0" name="Text">time &amp; &quot; &quot; &amp; self.IID &amp; &quot; &quot; &amp; Box(self.IID).isTurnedAround</param>
+                            <param id="0" name="Text">time  &amp; &quot; &quot; &amp; Box.IID &amp; &quot; &quot; &amp;  Box.isTurnedAround</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" title="BoxSelector">
-            <sub-events>
-                <event-block>
-                    <conditions>
-                        <condition id="-16" name="Pick random instance" type="System">
-                            <param id="0" name="Object">Box</param>
-                        </condition>
-                        <condition id="-16" name="Pick random instance" type="System">
-                            <param id="0" name="Object">Box</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="5" name="Set frame" type="Box">
-                            <param id="0" name="Frame number">self.AnimationFrame=0 ? 2:0</param>
-                        </action>
-                        <action id="-10" name="Set value" type="Box">
-                            <param id="0" name="Instance variable">isTurnedAround</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="5" name="Set frame" type="Box">
-                            <param id="0" name="Frame number">self.AnimationFrame=0 ? 2:0</param>
-                        </action>
-                        <action id="-10" name="Set value" type="Box">
-                            <param id="0" name="Instance variable">isTurnedAround</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" title="ParityChecker" />
+        <event-group description="We check if user have set parity right." disabled="1" title="ParityChecker" />
+        <event-block>
+            <conditions />
+            <actions />
+        </event-block>
         <event-block>
             <conditions>
-                <condition id="-24" name="For Each (ordered)" type="System">
-                    <param id="0" name="Object">Box</param>
-                    <param id="1" name="Expression">0</param>
-                    <param id="2" name="Order">0</param>
+                <condition id="6" name="On object clicked" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">CheckParityButton</param>
                 </condition>
             </conditions>
             <actions />
         </event-block>
+        <event-group description="Evil zelenko breaks array and user will have to detect error." title="BreakBitArray" />
     </events>
 </c2eventsheet>
