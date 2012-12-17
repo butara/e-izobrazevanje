@@ -330,8 +330,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>879</x>
-                        <y>528</y>
+                        <x>84</x>
+                        <y>668</y>
                         <z>0</z>
                         <width>200</width>
                         <height>30</height>
@@ -357,8 +357,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>797</x>
-                        <y>548</y>
+                        <x>2</x>
+                        <y>688</y>
                         <z>0</z>
                         <width>251</width>
                         <height>30</height>
@@ -404,8 +404,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-267</x>
-                        <y>-7</y>
+                        <x>-28</x>
+                        <y>216</y>
                         <z>0</z>
                         <width>200</width>
                         <height>160</height>
@@ -424,8 +424,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>646</x>
-                        <y>129</y>
+                        <x>640</x>
+                        <y>301</y>
                         <z>0</z>
                         <width>386</width>
                         <height>309</height>
@@ -452,6 +452,33 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Text5">
+                    <properties>
+                        <text>Text</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-16</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>6</x>
+                        <y>96</y>
+                        <z>0</z>
+                        <width>621</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -497,6 +524,27 @@
             </properties>
         </instance>
         <instance type="tutorialWeightsSwap2">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="TutorialWeightsSwapFrame">
+            <properties>
+                <width>0</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="TutorialWeightsSwapBool">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="tutorialSteps">
             <properties>
                 <width>10</width>
                 <height>1</height>
