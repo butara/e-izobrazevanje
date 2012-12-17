@@ -333,7 +333,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group collapsed="1" description="" title="final_check">
+        <event-group description="" title="final_check">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -357,6 +357,11 @@
                                     <param id="0" name="Variable">state</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;selectAction&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" type="System">
+                                    <param id="0" name="Variable">state</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;tutorialEnd&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
