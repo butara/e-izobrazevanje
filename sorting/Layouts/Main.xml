@@ -92,9 +92,9 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="Button4">
+                <instance type="btnSelection">
                     <properties>
-                        <text>OK</text>
+                        <text>Urejanje z izbiranjem</text>
                         <tooltip></tooltip>
                         <initial-visibility>Invisible</initial-visibility>
                         <enabled>Yes</enabled>
@@ -108,51 +108,7 @@
                         <y>349</y>
                         <z>0</z>
                         <width>72</width>
-                        <height>24</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                    </world>
-                </instance>
-                <instance type="soundTest">
-                    <properties>
-                        <text>Preiskusi zvok</text>
-                        <tooltip></tooltip>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <enabled>Yes</enabled>
-                        <auto-font-size>Yes</auto-font-size>
-                        <id-optional></id-optional>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>305</x>
-                        <y>199</y>
-                        <z>0</z>
-                        <width>112</width>
-                        <height>55</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                    </world>
-                </instance>
-                <instance type="Button6">
-                    <properties>
-                        <text>OK</text>
-                        <tooltip></tooltip>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <enabled>Yes</enabled>
-                        <auto-font-size>Yes</auto-font-size>
-                        <id-optional></id-optional>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>239</x>
-                        <y>497</y>
-                        <z>0</z>
-                        <width>72</width>
-                        <height>24</height>
+                        <height>51</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

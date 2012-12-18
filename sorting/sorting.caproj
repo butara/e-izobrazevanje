@@ -38,7 +38,7 @@
         <prop name="Use iOS retina display">iPhone only</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-folder expanded="1" name="Sorting">
+        <object-folder expanded="0" name="Sorting">
             <object-type name="btnBubbles">
                 <plugin id="Button" />
             </object-type>
@@ -54,7 +54,7 @@
             <object-type name="Button2">
                 <plugin id="Button" />
             </object-type>
-            <object-type name="Button4">
+            <object-type name="btnSelection">
                 <plugin id="Button" />
             </object-type>
             <object-type name="Button6">
@@ -97,7 +97,10 @@
             <object-type name="messageBubble">
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
-                    <animation framecount="8" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                    <animation framecount="11" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501618" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501618" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501618" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.501618" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.501618" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.501618" />
@@ -546,6 +549,7 @@
             <event-sheet>Functions.xml</event-sheet>
             <event-sheet>RealTestSort.xml</event-sheet>
             <event-sheet>TutorialSort.xml</event-sheet>
+            <event-sheet>SelectionSort.xml</event-sheet>
         </event-folder>
     </event-folder>
     <global-instances>

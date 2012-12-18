@@ -11,8 +11,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout>Game</layout>
-        <layout>Main</layout>
-        <layout active="1">Completed</layout>
+        <layout active="1">Main</layout>
+        <layout>Completed</layout>
         <event-sheet>Event sheet 1</event-sheet>
         <event-sheet>Event sheet 2</event-sheet>
         <event-sheet>Event sheet 3</event-sheet>
@@ -20,6 +20,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet>BubbleSort</event-sheet>
         <event-sheet>RealTestSort</event-sheet>
         <event-sheet>TutorialSort</event-sheet>
+        <event-sheet>SelectionSort</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="Project settings" />
