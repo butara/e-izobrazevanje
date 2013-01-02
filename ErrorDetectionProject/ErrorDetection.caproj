@@ -7,10 +7,11 @@
     <unique-id>327wb70d3miqs</unique-id>
     <saved-with-version>10802</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
     </used-plugins>
     <used-behaviors />
     <used-effects />
@@ -141,6 +142,12 @@
         </object-type>
         <object-type name="Success_text">
             <plugin id="Text" />
+        </object-type>
+        <object-type global="1" name="RowSum">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type global="1" name="ColumnSum">
+            <plugin id="Arr" />
         </object-type>
     </object-folder>
     <families />
