@@ -7,8 +7,8 @@
         <variable constant="0" name="offset" static="0" type="number">40</variable>
         <variable constant="0" name="clicked" static="0" type="number">0</variable>
         <variable constant="0" name="state" static="0" type="text">&quot;starting&quot;</variable>
-        <variable constant="0" name="parityRowCheckSum" static="0" type="number">0</variable>
-        <variable constant="0" name="parityColumnCheckSum" static="0" type="number">0</variable>
+        <variable constant="0" name="addToParityRowSum" static="0" type="number">0</variable>
+        <variable constant="0" name="addToParityColumnSum" static="0" type="number">0</variable>
         <variable constant="0" name="depth" static="0" type="number">0</variable>
         <variable comment="RowCounter" constant="0" name="row" static="0" type="number">0</variable>
         <event-block>
@@ -162,7 +162,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="In this function user sets parity bits. User can only click on parity bits." title="UserSetParityBits">
+        <event-group collapsed="1" description="In this function user sets parity bits. User can only click on parity bits." title="UserSetParityBits">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -197,8 +197,10 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="We check if user have set parity right." title="ParityChecker">
+        <event-group description="We check if user have set parity right." title="ParityChecker">
             <sub-events>
+                <variable constant="0" name="j" static="0" type="number">0</variable>
+                <variable constant="0" name="z" static="0" type="number">0</variable>
                 <variable comment="Iterator" constant="0" name="i" static="0" type="number">0</variable>
                 <event-block>
                     <conditions>
@@ -207,13 +209,24 @@
                             <param id="1" name="Click type">0</param>
                             <param id="2" name="Object clicked">CheckParityButton</param>
                         </condition>
-                        <condition id="-14" name="Compare variable" type="System">
+                        <condition disabled="1" id="-14" name="Compare variable" type="System">
                             <param id="0" name="Variable">state</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;userSetParityBits&quot;</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="1" name="Set size" type="ColumnSum">
+                            <param id="0" name="Width">6</param>
+                            <param id="1" name="Height">1</param>
+                            <param id="2" name="Depth">1</param>
+                        </action>
+                        <action id="1" name="Set size" type="RowSum">
+                            <param id="0" name="Width">6</param>
+                            <param id="1" name="Height">1</param>
+                            <param id="2" name="Depth">1</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block>
                             <conditions>
@@ -224,101 +237,86 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Add to" type="System">
-                                    <param id="0" name="Variable">parityRowCheckSum</param>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">addToParityColumnSum</param>
                                     <param id="1" name="Value">Box.AnimationFrame=2 ? 1 : 0</param>
                                 </action>
                                 <action id="-10" name="Add to" type="System">
-                                    <param id="0" name="Variable">i</param>
+                                    <param id="0" name="Variable">j</param>
                                     <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="2" name="Set at X" type="RowSum">
+                                    <param id="0" name="X">i</param>
+                                    <param id="1" name="Value">RowSum.At(i)+addToParityColumnSum</param>
+                                </action>
+                                <action id="2" name="Set at X" type="ColumnSum">
+                                    <param id="0" name="X">j</param>
+                                    <param id="1" name="Value">ColumnSum.At(j)+addToParityColumnSum</param>
                                 </action>
                             </actions>
                             <sub-events>
                                 <event-block>
                                     <conditions>
                                         <condition id="-14" name="Compare variable" type="System">
-                                            <param id="0" name="Variable">i</param>
+                                            <param id="0" name="Variable">j</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">6</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Set value" type="System">
-                                            <param id="0" name="Variable">i</param>
-                                            <param id="1" name="Value">0</param>
+                                        <action id="1" name="Append text" type="TextErrorCorrection3">
+                                            <param id="0" name="Text">&quot;  &quot; &amp; i &amp; j &amp; RowSum.At(i)</param>
                                         </action>
                                         <action id="-10" name="Add to" type="System">
-                                            <param id="0" name="Variable">row</param>
+                                            <param id="0" name="Variable">i</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
                                         <action id="-9" name="Set value" type="System">
-                                            <param id="0" name="Variable">state</param>
-                                            <param id="1" name="Value">&quot;checkRowParitySum&quot;</param>
+                                            <param id="0" name="Variable">j</param>
+                                            <param id="1" name="Value">0</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-group description="Function check if all parity sums are %2" title="CheckParitySums">
+                                            <sub-events>
+                                                <event-block>
+                                                    <conditions>
+                                                        <condition id="-10" name="For" type="System">
+                                                            <param id="0" name="Name">&quot;&quot;</param>
+                                                            <param id="1" name="Start index">1</param>
+                                                            <param id="2" name="End index">6</param>
+                                                        </condition>
+                                                        <condition id="-14" inverted="1" name="Compare variable" type="System">
+                                                            <param id="0" name="Variable">state</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;error&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action disabled="1" id="-9" name="Set value" type="System">
+                                                            <param id="0" name="Variable">state</param>
+                                                            <param id="1" name="Value">ColumnSum.At(z) % 2 ? &quot;continue&quot; : &quot;error&quot;</param>
+                                                        </action>
+                                                        <action id="1" name="Append text" type="TextErrorCorrection">
+                                                            <param id="0" name="Text">ColumnSum.At(z) &amp; &quot; &quot; &amp; ColumnSum.At(z) % 2 &amp; &quot; | &quot;</param>
+                                                        </action>
+                                                        <action id="-10" name="Add to" type="System">
+                                                            <param id="0" name="Variable">z</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-group>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
-                        </event-block>
-                        <event-block>
-                            <conditions>
-                                <condition id="-14" name="Compare variable" type="System">
-                                    <param id="0" name="Variable">state</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;userSetParityBits&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Set text" type="TextErrorCorrection">
-                                    <param id="0" name="Text">&quot;DEBUG parityCheckSum: &quot; &amp; parityRowCheckSum</param>
-                                </action>
-                                <action id="-9" name="Set value" type="System">
-                                    <param id="0" name="Variable">state</param>
-                                    <param id="1" name="Value">&quot;breakBitArray&quot;</param>
-                                </action>
-                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Function to check if column sum is even." title="CheckRowParitySum">
-            <sub-events>
-                <event-block>
-                    <conditions>
-                        <condition id="-14" name="Compare variable" type="System">
-                            <param id="0" name="Variable">state</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;checkRowParitySum&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" type="System">
-                            <param id="0" name="Variable">state</param>
-                            <param id="1" name="Value">parityRowCheckSum % 2 = 0 ? &quot;userSetParityBits&quot;: &quot;error&quot; </param>
-                        </action>
-                        <action id="-9" name="Set value" type="System">
-                            <param id="0" name="Variable">parityRowCheckSum</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group collapsed="1" description="Function to check if column sum is even." title="CheckColumnParitySum">
-            <sub-events>
-                <event-block>
-                    <conditions>
-                        <condition id="-14" name="Compare variable" type="System">
-                            <param id="0" name="Variable">state</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;checkColumnParitySum&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="Evil zelenko breaks array and user will have to detect error." title="BreakBitArray">
+        <event-group collapsed="1" description="Evil zelenko breaks array and user will have to detect error." title="BreakBitArray">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -341,6 +339,7 @@
                     <actions />
                     <sub-events>
                         <comment>TODO: Works only once, change animation frame 0 ? 2:0</comment>
+                        <comment>TODO: Multiple errors ?</comment>
                         <variable comment="Iterator" constant="0" name="i" static="0" type="number">1</variable>
                         <event-block>
                             <conditions>
@@ -377,8 +376,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="User shows errors with clicking on broken bits." title="UserDetectErrors">
+        <event-group collapsed="1" description="User shows errors with clicking on broken bits." title="UserDetectErrors">
             <sub-events>
+                <comment>TODO: Add multiple error detect</comment>
                 <event-block>
                     <conditions>
                         <condition id="6" name="On object clicked" type="Mouse">
@@ -454,14 +454,14 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" type="TextErrorCorrection">
+                        <action id="0" name="Set text" type="Success_text">
                             <param id="0" name="Text">&quot;Ajga čeha, to pa ni prov!&quot;</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Method for successful game ending." title="Finalize">
+        <event-group collapsed="1" description="Method for successful game ending." title="Finalize">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -479,5 +479,15 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block>
+            <conditions>
+                <condition id="-24" name="For Each (ordered)" type="System">
+                    <param id="0" name="Object">RowSum</param>
+                    <param id="1" name="Expression">0</param>
+                    <param id="2" name="Order">0</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
     </events>
 </c2eventsheet>
