@@ -149,6 +149,12 @@
         <object-type global="1" name="ColumnSum">
             <plugin id="Arr" />
         </object-type>
+        <object-type name="Text">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text2">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">

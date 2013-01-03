@@ -189,11 +189,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>377</x>
-                        <y>483</y>
+                        <x>379</x>
+                        <y>486</y>
                         <z>0</z>
-                        <width>466</width>
-                        <height>242</height>
+                        <width>514</width>
+                        <height>248</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -349,7 +349,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Correct">
+                <instance type="Check">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -413,7 +413,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>370</x>
-                        <y>494.5</y>
+                        <y>493.5</y>
                         <z>0</z>
                         <width>200</width>
                         <height>31</height>
@@ -887,19 +887,13 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Mozicelj">
+                <instance type="Zelenko">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
-                        <behavior-instance type="CustomMovement">
-                            <properties>
-                                <stepping-mode>Horizontal then vertical</stepping-mode>
-                                <pixels-per-step>5</pixels-per-step>
-                            </properties>
-                        </behavior-instance>
                         <behavior-instance type="Physics">
                             <properties>
                                 <immovable>No</immovable>
@@ -1010,8 +1004,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>231.511230469</x>
-                        <y>625.018798828</y>
+                        <x>259</x>
+                        <y>613</y>
                         <z>0</z>
                         <width>80</width>
                         <height>69</height>
@@ -1092,6 +1086,77 @@
                         <hotspotY>0.5</hotspotY>
                         <angle>-3.139338493</angle>
                         <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Procent">
+                    <properties>
+                        <text>%</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-48,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1095</x>
+                        <y>325</y>
+                        <z>0</z>
+                        <width>292</width>
+                        <height>174</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Repeat">
+                    <properties>
+                        <text>Ponovi vajo</text>
+                        <tooltip></tooltip>
+                        <initial-visibility>Visible</initial-visibility>
+                        <enabled>Yes</enabled>
+                        <auto-font-size>Yes</auto-font-size>
+                        <id-optional></id-optional>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>424</x>
+                        <y>665</y>
+                        <z>0</z>
+                        <width>118</width>
+                        <height>24</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                    </world>
+                </instance>
+                <instance type="Skip">
+                    <properties>
+                        <text>Pohiti !!!</text>
+                        <tooltip></tooltip>
+                        <initial-visibility>Visible</initial-visibility>
+                        <enabled>Yes</enabled>
+                        <auto-font-size>Yes</auto-font-size>
+                        <id-optional></id-optional>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>447</x>
+                        <y>666</y>
+                        <z>0</z>
+                        <width>72</width>
+                        <height>24</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                     </world>
                 </instance>
             </instances>
