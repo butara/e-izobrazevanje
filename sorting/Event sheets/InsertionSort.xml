@@ -115,7 +115,7 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-group description="" title="fourth iteration">
+                        <event-group collapsed="1" description="" title="fourth iteration">
                             <sub-events>
                                 <comment>fourth iteration</comment>
                                 <event-block>
@@ -260,7 +260,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" title="third iteration">
+                        <event-group collapsed="1" description="" title="third iteration">
                             <sub-events>
                                 <comment>third iteration</comment>
                                 <event-block>
@@ -370,7 +370,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" title="second iteration">
+                        <event-group collapsed="1" description="" title="second iteration">
                             <sub-events>
                                 <comment>second iteration</comment>
                                 <event-block>
@@ -445,7 +445,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" title="first iteration">
+                        <event-group collapsed="1" description="" title="first iteration">
                             <sub-events>
                                 <comment>first iteration</comment>
                                 <event-block>

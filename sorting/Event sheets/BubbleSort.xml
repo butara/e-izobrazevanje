@@ -105,7 +105,7 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-group collapsed="1" description="" title="fifth iteration">
+                        <event-group description="" title="fifth iteration">
                             <sub-events>
                                 <comment>fifth iteration</comment>
                                 <event-block>

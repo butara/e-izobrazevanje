@@ -34,6 +34,9 @@
                 <action id="0" name="Set text" type="txtCompletedChecks">
                     <param id="0" name="Text">&quot;Preverjanj uteži: &quot; &amp; comparisons</param>
                 </action>
+                <action id="0" name="Set text" type="txtCompletedScore">
+                    <param id="0" name="Text">&quot;Dosegel si &quot; &amp; (score +10 + 15 - 10*finalChecks - comparisons) &amp; &quot; točk&quot;</param>
+                </action>
             </actions>
         </event-block>
     </events>

@@ -98,7 +98,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" title="tutorialWeightsSwapping">
+        <event-group description="" title="tutorialWeightsSwapping">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -176,6 +176,10 @@
                         <action id="0" name="Set text" type="Text4">
                             <param id="0" name="Text">state</param>
                         </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">abs(Weight10.position-Weight10.correctPosition) + abs(Weight20.position-Weight20.correctPosition) + abs(Weight30.position-Weight30.correctPosition) + abs(Weight40.position-Weight40.correctPosition) + abs(Weight50.position-Weight50.correctPosition)</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block>
@@ -240,7 +244,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" title="tutorialSelectionActionž">
+        <event-group collapsed="1" description="" title="tutorialSelectionActionž">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -288,7 +292,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-group description="" title="tutorialWeightsSwappingShowArrows">
+                <event-group collapsed="1" description="" title="tutorialWeightsSwappingShowArrows">
                     <sub-events>
                         <event-block>
                             <conditions>
@@ -860,7 +864,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" title="tutorialSwapOrReturn">
+        <event-group collapsed="1" description="" title="tutorialSwapOrReturn">
             <sub-events>
                 <event-block>
                     <conditions>

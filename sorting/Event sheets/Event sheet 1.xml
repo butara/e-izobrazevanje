@@ -127,6 +127,7 @@
         <variable constant="0" name="newPosition2X" static="0" type="number">0</variable>
         <variable constant="0" name="moveWeight" static="0" type="number">0</variable>
         <variable constant="0" name="is1Picked" static="0" type="number">0</variable>
+        <variable constant="0" name="score" static="0" type="number">0</variable>
         <variable constant="0" name="picked1" static="0" type="number">0</variable>
         <event-block>
             <conditions>
