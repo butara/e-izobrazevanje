@@ -107,10 +107,10 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text9">
+                <instance type="txtCompletedScore">
                     <properties>
                         <text>Dosegel si xxx točk</text>
-                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-16</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
