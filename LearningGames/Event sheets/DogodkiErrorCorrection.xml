@@ -1,0 +1,660 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>DogodkiErrorCorrection</name>
+    <events>
+        <variable constant="0" name="startDepth" static="0" type="number">110</variable>
+        <variable constant="0" name="offset" static="0" type="number">40</variable>
+        <variable constant="0" name="clickedErrorCorrection" static="0" type="number">0</variable>
+        <variable constant="0" name="stateErrorCorrection" static="0" type="text">startingX</variable>
+        <variable constant="0" name="addToParityRowSum" static="0" type="number">0</variable>
+        <variable constant="0" name="addToParityColumnSum" static="0" type="number">0</variable>
+        <variable constant="0" name="depth" static="0" type="number">0</variable>
+        <variable comment="RowCounter" constant="0" name="row" static="0" type="number">0</variable>
+        <event-block>
+            <conditions>
+                <condition id="-1" name="Every tick" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" type="TextErrorCorrection2">
+                    <param id="0" name="Text">&quot;State: &quot;  &amp; stateErrorCorrection &amp; &quot;Row: &quot; &amp; row</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-1" name="Every tick" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" type="System">
+                    <param id="0" name="Variable">clickedErrorCorrection</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="We initialize boxes in position." title="Initialization">
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-2" name="On start of layout" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" type="Box" />
+                        <action behavior="Physics" id="13" name="Set stepping mode" type="ZelenkoCards">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="ZelenkoCards">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="ZelenkoTextErrorCorrection">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Ground">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">4</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="ZelenkoCards">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="ZelenkoTextErrorCorrection">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <variable comment="Iterator" constant="0" name="i" static="0" type="number">1</variable>
+                <event-block>
+                    <conditions>
+                        <condition id="-2" name="On start of layout" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">4</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Value">&quot;starting&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block>
+                            <conditions>
+                                <condition id="-10" name="For" type="System">
+                                    <param id="0" name="Name">&quot;i&quot;</param>
+                                    <param id="1" name="Start index">1</param>
+                                    <param id="2" name="End index">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" type="System">
+                                    <param id="0" name="Object to create">Box</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">250+offset</param>
+                                    <param id="3" name="Y">depth+ startDepth</param>
+                                </action>
+                                <action id="-10" name="Set value" type="Box">
+                                    <param id="0" name="Instance variable">isParityBit</param>
+                                    <param id="1" name="Value">i=6 ? 1:0</param>
+                                </action>
+                                <action id="-3" name="Create object" type="System">
+                                    <param id="0" name="Object to create">Box</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">335+offset</param>
+                                    <param id="3" name="Y">depth+ startDepth</param>
+                                </action>
+                                <action id="-10" name="Set value" type="Box">
+                                    <param id="0" name="Instance variable">isParityBit</param>
+                                    <param id="1" name="Value">i=6 ? 1:0</param>
+                                </action>
+                                <action id="-3" name="Create object" type="System">
+                                    <param id="0" name="Object to create">Box</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">420+offset</param>
+                                    <param id="3" name="Y">depth+ startDepth</param>
+                                </action>
+                                <action id="-10" name="Set value" type="Box">
+                                    <param id="0" name="Instance variable">isParityBit</param>
+                                    <param id="1" name="Value">i=6 ? 1:0</param>
+                                </action>
+                                <action id="-3" name="Create object" type="System">
+                                    <param id="0" name="Object to create">Box</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">505+offset</param>
+                                    <param id="3" name="Y">depth+ startDepth</param>
+                                </action>
+                                <action id="-10" name="Set value" type="Box">
+                                    <param id="0" name="Instance variable">isParityBit</param>
+                                    <param id="1" name="Value">i=6 ? 1:0</param>
+                                </action>
+                                <action id="-3" name="Create object" type="System">
+                                    <param id="0" name="Object to create">Box</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">590+offset</param>
+                                    <param id="3" name="Y">depth+ startDepth</param>
+                                </action>
+                                <action id="-10" name="Set value" type="Box">
+                                    <param id="0" name="Instance variable">isParityBit</param>
+                                    <param id="1" name="Value">i=6 ? 1:0</param>
+                                </action>
+                                <action id="-3" name="Create object" type="System">
+                                    <param id="0" name="Object to create">Box</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">675+offset</param>
+                                    <param id="3" name="Y">depth+ startDepth</param>
+                                </action>
+                                <action id="-10" name="Set value" type="Box">
+                                    <param id="0" name="Instance variable">isParityBit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Add to" type="System">
+                                    <param id="0" name="Variable">depth</param>
+                                    <param id="1" name="Value">85</param>
+                                </action>
+                                <action id="-10" name="Add to" type="System">
+                                    <param id="0" name="Variable">i</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="We make random gaming layout for user." title="BoxStartLayoutCreator">
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition disabled="1" id="-2" name="On start of layout" type="System" />
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;starting&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block>
+                            <conditions>
+                                <condition id="-10" name="For" type="System">
+                                    <param id="0" name="Name">&quot;&quot;</param>
+                                    <param id="1" name="Start index">1</param>
+                                    <param id="2" name="End index">20</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block>
+                                    <conditions>
+                                        <condition id="-16" name="Pick random instance" type="System">
+                                            <param id="0" name="Object">Box</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" type="Box">
+                                            <param id="0" name="Instance variable">isParityBit</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action disabled="1" id="5" name="Set frame" type="Box">
+                                            <param id="0" name="Frame number">self.AnimationFrame=0 ? 2:0</param>
+                                        </action>
+                                        <action id="5" name="Set frame" type="Box">
+                                            <param id="0" name="Frame number">2</param>
+                                        </action>
+                                        <action id="-10" name="Set value" type="Box">
+                                            <param id="0" name="Instance variable">isTurnedAround</param>
+                                            <param id="1" name="Value">self.AnimationFrame=2 ? 1:0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition disabled="1" id="-2" name="On start of layout" type="System" />
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;starting&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Value">&quot;userSetParityBits&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="In this function user sets parity bits. User can only click on parity bits." title="UserSetParityBits">
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="6" name="On object clicked" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Box</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" type="Box">
+                            <param id="0" name="Instance variable">isParityBit</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;userSetParityBits&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" type="Box">
+                            <param id="0" name="Frame number">self.AnimationFrame=0 ? 2:0</param>
+                        </action>
+                        <action id="-10" name="Set value" type="Box">
+                            <param id="0" name="Instance variable">isTurnedAround</param>
+                            <param id="1" name="Value">self.AnimationFrame=2 ? 1:0</param>
+                        </action>
+                        <action id="0" name="Set text" type="TextErrorCorrection">
+                            <param id="0" name="Text">time  &amp; &quot; &quot; &amp; Box.IID &amp; &quot; &quot; &amp;  Box.isTurnedAround</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="We check if user have set parity right." title="ParityChecker">
+            <sub-events>
+                <variable constant="0" name="j" static="0" type="number">0</variable>
+                <variable comment="Iterator" constant="0" name="i" static="0" type="number">0</variable>
+                <variable constant="0" name="isEven" static="0" type="number">0</variable>
+                <event-block>
+                    <conditions>
+                        <condition id="6" name="On object clicked" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">CheckParityButton</param>
+                        </condition>
+                        <condition disabled="1" id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;userSetParityBits&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set size" type="ColumnSum">
+                            <param id="0" name="Width">6</param>
+                            <param id="1" name="Height">1</param>
+                            <param id="2" name="Depth">1</param>
+                        </action>
+                        <action id="1" name="Set size" type="RowSum">
+                            <param id="0" name="Width">6</param>
+                            <param id="1" name="Height">1</param>
+                            <param id="2" name="Depth">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block>
+                            <conditions>
+                                <condition id="-24" name="For Each (ordered)" type="System">
+                                    <param id="0" name="Object">Box</param>
+                                    <param id="1" name="Expression">Box.IID</param>
+                                    <param id="2" name="Order">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">addToParityColumnSum</param>
+                                    <param id="1" name="Value">Box.AnimationFrame=2 ? 1:0</param>
+                                </action>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">addToParityColumnSum</param>
+                                    <param id="1" name="Value">Box.isTurnedAround</param>
+                                </action>
+                                <action id="2" name="Set at X" type="RowSum">
+                                    <param id="0" name="X">i</param>
+                                    <param id="1" name="Value">RowSum.At(i)+addToParityColumnSum</param>
+                                </action>
+                                <action id="2" name="Set at X" type="ColumnSum">
+                                    <param id="0" name="X">j</param>
+                                    <param id="1" name="Value">ColumnSum.At(j)+addToParityColumnSum</param>
+                                </action>
+                                <action id="-10" name="Add to" type="System">
+                                    <param id="0" name="Variable">j</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="1" name="Append text" type="TextErrorCorrection4">
+                                    <param id="0" name="Text">addToParityColumnSum</param>
+                                </action>
+                                <action id="1" name="Append text" type="TextErrorCorrection5">
+                                    <param id="0" name="Text">Box.IID &amp; &quot; &quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block>
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" type="System">
+                                            <param id="0" name="Variable">j</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">6</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Append text" type="TextErrorCorrection3">
+                                            <param id="0" name="Text">&quot;  &quot; &amp; i &amp; j &amp; RowSum.At(i)</param>
+                                        </action>
+                                        <action id="-10" name="Add to" type="System">
+                                            <param id="0" name="Variable">i</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" type="System">
+                                            <param id="0" name="Variable">j</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="1" name="Append text" type="TextErrorCorrection4">
+                                            <param id="0" name="Text">newline</param>
+                                        </action>
+                                        <action id="1" name="Append text" type="TextErrorCorrection5">
+                                            <param id="0" name="Text">newline</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-group description="Function check if all parity sums are %2" title="CheckParitySumRow">
+                                            <sub-events>
+                                                <variable constant="0" name="z" static="0" type="number">0</variable>
+                                                <event-block>
+                                                    <conditions>
+                                                        <condition id="-10" name="For" type="System">
+                                                            <param id="0" name="Name">&quot;&quot;</param>
+                                                            <param id="1" name="Start index">1</param>
+                                                            <param id="2" name="End index">6</param>
+                                                        </condition>
+                                                        <condition disabled="1" id="-14" inverted="1" name="Compare variable" type="System">
+                                                            <param id="0" name="Variable">stateErrorCorrection</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;error&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action disabled="1" id="-9" name="Set value" type="System">
+                                                            <param id="0" name="Variable">stateErrorCorrection</param>
+                                                            <param id="1" name="Value">ColumnSum.At(z) % 2 ? &quot;continue&quot; : &quot;error&quot;</param>
+                                                        </action>
+                                                        <action disabled="1" id="1" name="Append text" type="TextErrorCorrection">
+                                                            <param id="0" name="Text">ColumnSum.At(z) &amp; &quot; &quot; &amp; ColumnSum.At(z) % 2 &amp; &quot; | &quot;</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" type="System">
+                                                            <param id="0" name="Variable">isEven</param>
+                                                            <param id="1" name="Value">RowSum.At(z)%2=0 ? 1:0</param>
+                                                        </action>
+                                                        <action id="-10" name="Add to" type="System">
+                                                            <param id="0" name="Variable">z</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block>
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" type="System">
+                                                                    <param id="0" name="Variable">isEven</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">0</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Set value" type="System">
+                                                                    <param id="0" name="Variable">stateErrorCorrection</param>
+                                                                    <param id="1" name="Value">&quot;parityIsWrong&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-group>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-group description="Function check if all parity sums are %2" title="CheckParitySumColumn">
+                            <sub-events>
+                                <variable constant="0" name="z" static="0" type="number">0</variable>
+                                <event-block>
+                                    <conditions>
+                                        <condition id="-10" name="For" type="System">
+                                            <param id="0" name="Name">&quot;&quot;</param>
+                                            <param id="1" name="Start index">1</param>
+                                            <param id="2" name="End index">6</param>
+                                        </condition>
+                                        <condition disabled="1" id="-14" inverted="1" name="Compare variable" type="System">
+                                            <param id="0" name="Variable">stateErrorCorrection</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;error&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action disabled="1" id="-9" name="Set value" type="System">
+                                            <param id="0" name="Variable">stateErrorCorrection</param>
+                                            <param id="1" name="Value">ColumnSum.At(z) % 2 ? &quot;continue&quot; : &quot;error&quot;</param>
+                                        </action>
+                                        <action disabled="1" id="1" name="Append text" type="TextErrorCorrection">
+                                            <param id="0" name="Text">ColumnSum.At(z) &amp; &quot; &quot; &amp; ColumnSum.At(z) % 2 &amp; &quot; | &quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" type="System">
+                                            <param id="0" name="Variable">isEven</param>
+                                            <param id="1" name="Value">ColumnSum.At(z)%2=0 ? 1:0</param>
+                                        </action>
+                                        <action id="-10" name="Add to" type="System">
+                                            <param id="0" name="Variable">z</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block>
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" type="System">
+                                                    <param id="0" name="Variable">isEven</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" type="System">
+                                                    <param id="0" name="Variable">stateErrorCorrection</param>
+                                                    <param id="1" name="Value">&quot;parityIsWrong&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="Evil zelenko breaks array and user will have to detect error." title="BreakBitArray">
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="6" name="On object clicked" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">ZelenkoTextErrorCorrection</param>
+                        </condition>
+                        <condition id="-10" name="For" type="System">
+                            <param id="0" name="Name">&quot;&quot;</param>
+                            <param id="1" name="Start index">1</param>
+                            <param id="2" name="End index">1</param>
+                        </condition>
+                        <condition disabled="1" id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;breakBitArray&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>TODO: Works only once, change animation frame 0 ? 2:0</comment>
+                        <comment>TODO: Multiple errors ?</comment>
+                        <variable comment="Iterator" constant="0" name="i" static="0" type="number">1</variable>
+                        <event-block>
+                            <conditions>
+                                <condition id="-16" name="Pick random instance" type="System">
+                                    <param id="0" name="Object">Box</param>
+                                </condition>
+                                <condition disabled="1" id="-7" name="Compare instance variable" type="Box">
+                                    <param id="0" name="Instance variable">isParityBit</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" type="Box">
+                                    <param id="0" name="Frame number">self.AnimationFrame=0 ? 3:3</param>
+                                </action>
+                                <action id="-14" name="Toggle boolean" type="Box">
+                                    <param id="0" name="Instance variable">isBrokenBit</param>
+                                </action>
+                                <action id="0" name="Set text" type="TextErrorCorrection">
+                                    <param id="0" name="Text">&quot;Broken Box : &quot;  &amp; Box.IID &amp; &quot; isBrokenBit: &quot; &amp; Box.isBrokenBit</param>
+                                </action>
+                                <action id="-10" name="Add to" type="System">
+                                    <param id="0" name="Variable">i</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">stateErrorCorrection</param>
+                                    <param id="1" name="Value">i=2 ? &quot;userDetectErrors&quot; : stateErrorCorrection</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="User shows errors with clicking on broken bits." title="UserDetectErrors">
+            <sub-events>
+                <comment>TODO: Add multiple error detect</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="6" name="On object clicked" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Box</param>
+                        </condition>
+                        <condition disabled="1" id="-7" name="Compare instance variable" type="Box">
+                            <param id="0" name="Instance variable">isParityBit</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;userDetectErrors&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" type="Box">
+                            <param id="0" name="Frame number">self.AnimationFrame=3 ? 1:0</param>
+                        </action>
+                        <action id="-10" name="Set value" type="Box">
+                            <param id="0" name="Instance variable">isTurnedAround</param>
+                            <param id="1" name="Value">self.AnimationFrame=1 ? 1:0</param>
+                        </action>
+                        <action id="0" name="Set text" type="TextErrorCorrection">
+                            <param id="0" name="Text">time  &amp; &quot; &quot; &amp; Box.IID &amp; &quot; &quot; &amp;  Box.isTurnedAround</param>
+                        </action>
+                        <action id="0" name="Set text" type="TextErrorCorrection3">
+                            <param id="0" name="Text">&quot;userDetectError: &quot; &amp; Box.isBrokenBit</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block any="1">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" type="Box">
+                                    <param id="0" name="Instance variable">isBrokenBit</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">stateErrorCorrection</param>
+                                    <param id="1" name="Value">&quot;success&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block>
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" type="Box">
+                                    <param id="0" name="Instance variable">isBrokenBit</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">stateErrorCorrection</param>
+                                    <param id="1" name="Value">&quot;error&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="Function if user has done it wrong!" title="Error">
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;error&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" type="Success_text">
+                            <param id="0" name="Text">&quot;Ajga čeha, to pa ni prov!&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="Method for successful game ending." title="Finalize">
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;success&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" type="Success_text">
+                            <param id="0" name="Text">&quot;Cestitamo odkril si napako!&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="Go here if parity is wrong" title="ParityIsWrong">
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;parityIsWrong&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" type="Success_text">
+                            <param id="0" name="Text">&quot;Paritetos zajebov!&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

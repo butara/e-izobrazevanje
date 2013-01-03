@@ -1,0 +1,1210 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>CardGame-Events</name>
+    <events>
+        <variable constant="0" name="NextQuestion" static="0" type="number">0</variable>
+        <variable constant="0" name="SkipGame" static="0" type="number">0</variable>
+        <variable constant="0" name="ClickOnZelenko" static="0" type="number">0</variable>
+        <variable constant="0" name="IncorrectAnswer" static="0" type="number">0</variable>
+        <variable constant="0" name="CorrectAnswer" static="0" type="number">0</variable>
+        <variable constant="0" name="NumberOfQuestions" static="0" type="number">10</variable>
+        <variable constant="0" name="ScoreCards" static="0" type="number">0</variable>
+        <variable constant="0" name="QuestionNumber" static="0" type="number">0</variable>
+        <variable constant="0" name="ButtonClicked" static="0" type="number">0</variable>
+        <variable constant="0" name="EndGame" static="0" type="number">0</variable>
+        <variable constant="0" name="CardSum" static="0" type="number">0</variable>
+        <variable constant="0" name="CardsDown" static="0" type="number">0</variable>
+        <variable constant="0" name="Start" static="0" type="number">0</variable>
+        <variable constant="0" name="Clicked" static="0" type="number">0</variable>
+        <variable constant="0" name="Help" static="0" type="number">0</variable>
+        <event-group description="" title="Initialization">
+            <sub-events>
+                <comment>Skri vse elemente</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="-2" name="On start of layout" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="13" name="Set stepping mode" type="ZelenkoCards">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Ground">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="2" name="Set visible" type="Repeat">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Card">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Binary">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Talk">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="binarna_oblika">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="output_BO">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Output_rezultat">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="TextRezultat">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="ButtonCard">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Check">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Note">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Output_rezultat">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="InCorrectA">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="OutPutCorectA">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="CorrectA">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="OutPutInCorrectA">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Score">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Scoring">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Procent">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="ArrowCard">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Sponge">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="9" name="Set scale" type="ZelenkoCards">
+                            <param id="0" name="Scale">0.35</param>
+                        </action>
+                        <action id="2" name="Set visible" type="Skip">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Uvod namenjen predstavitvi igre</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="0" name="On collision with another object" type="ZelenkoCards">
+                            <param id="0" name="Object">stool</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">0.9</param>
+                        </action>
+                        <action id="9" name="Set scale" type="ZelenkoCards">
+                            <param id="0" name="Scale">0.36</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">0.07</param>
+                        </action>
+                        <action id="9" name="Set scale" type="ZelenkoCards">
+                            <param id="0" name="Scale">0.37</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">0.07</param>
+                        </action>
+                        <action id="9" name="Set scale" type="ZelenkoCards">
+                            <param id="0" name="Scale">0.38</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">0.07</param>
+                        </action>
+                        <action id="9" name="Set scale" type="ZelenkoCards">
+                            <param id="0" name="Scale">0.39</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">0.07</param>
+                        </action>
+                        <action id="9" name="Set scale" type="ZelenkoCards">
+                            <param id="0" name="Scale">0.4</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Talk">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="binarna_oblika">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" type="binarna_oblika">
+                            <param id="0" name="Text">&quot;Oj. Jaz sem Zelenko !!!&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="0" name="Set text" type="binarna_oblika">
+                            <param id="0" name="Text">&quot;S pomočjo te igre ....&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="0" name="Set text" type="binarna_oblika">
+                            <param id="0" name="Text">&quot;... ti bom poskušal pokazati ...&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="0" name="Set text" type="binarna_oblika">
+                            <param id="0" name="Text">&quot;... kako računalik vidi naravna števila ...&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="0" name="Set text" type="binarna_oblika">
+                            <param id="0" name="Text">&quot;... in jih predstavi v dvoiški obliki ...&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="0" name="Set text" type="binarna_oblika">
+                            <param id="0" name="Text">&quot;...  samo s pomočjo števila 0 in 1.&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="0" name="Set text" type="binarna_oblika">
+                            <param id="0" name="Text">&quot;Za pomoč 2x klikni na gobo v moji roki.&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Sponge">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" type="ArrowCard">
+                            <param id="0" name="X">360</param>
+                            <param id="1" name="Y">620</param>
+                        </action>
+                        <action id="-18" name="Rotate clockwise" type="ArrowCard">
+                            <param id="0" name="Degrees">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="ArrowCard">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" type="ArrowCard">
+                            <param id="0" name="&apos;On&apos; time">0.5</param>
+                            <param id="1" name="&apos;Off&apos; time">0.5</param>
+                            <param id="2" name="Duration">3</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="4" name="Set font color" type="binarna_oblika">
+                            <param id="0" name="Color">rgb(255, 51, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" type="binarna_oblika">
+                            <param id="0" name="Text">&quot;Na voljo imaš  samo 10 poskusov !!!&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="ArrowCard">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Set text" type="binarna_oblika">
+                            <param id="0" name="Text">&quot;Za začetek in nadaljno vprašanje vedno klikni name !!!&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Talk">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="binarna_oblika">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">Help</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">Start</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1">
+                    <conditions>
+                        <condition disabled="1" id="0" name="On clicked" type="Skip" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">SkipGame</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" title="Game Action">
+            <sub-events>
+                <comment>Pritisk na Zelenkota za zagon ponovnega vprašanja.</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="6" name="On object clicked" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">ZelenkoCards</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">Start</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">NextQuestion</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">Help</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">CardSum</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="2" name="Set visible" type="Skip">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-10" name="Add to" type="System">
+                            <param id="0" name="Variable">ClickOnZelenko</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="TextRezultat">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Output_rezultat">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="4" name="Set animation" type="ZelenkoCards">
+                            <param id="0" name="Animation">&quot;oci&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Card">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="4" name="Set animation" type="Binary">
+                            <param id="0" name="Animation">&quot;Null&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Talk">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="binarna_oblika">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="output_BO">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="4" name="Set font color" type="binarna_oblika">
+                            <param id="0" name="Color">rgb(0, 0, 0)</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">QuestionNumber</param>
+                            <param id="1" name="Value">int(random(31)+1)</param>
+                        </action>
+                        <action id="0" name="Set text" type="output_BO">
+                            <param id="0" name="Text">QuestionNumber</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Check">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Binary">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" type="binarna_oblika">
+                            <param id="0" name="Text">&quot;V dvojiški obliki pokaži koliko je število:&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="output_BO">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">0.6</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="ButtonCard">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block>
+                            <conditions>
+                                <condition id="-11" name="For Each" type="System">
+                                    <param id="0" name="Object">Card</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" type="Card">
+                                    <param id="0" name="Animation">&quot;CardBack&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="5" name="Set frame" type="Card">
+                                    <param id="0" name="Frame number">Card.CardFaceFrame</param>
+                                </action>
+                                <action id="-10" name="Set value" type="Card">
+                                    <param id="0" name="Instance variable">CardFaceUp</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="3" name="On button released" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">Start</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" type="ZelenkoCards">
+                            <param id="0" name="Animation">&quot;mozicelj&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Pritisk na gumb &quot;Button&quot;</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="6" name="On object clicked" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">ButtonCard</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">Start</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">NextQuestion</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" type="ButtonCard">
+                            <param id="0" name="Animation">&quot;down&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="TextRezultat">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Output_rezultat">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Check">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Note">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Score">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Scoring">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="InCorrectA">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="OutPutInCorrectA">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="CorrectA">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="OutPutCorectA">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="TextRezultat">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Output_rezultat">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block>
+                            <conditions>
+                                <condition id="-11" name="For Each" type="System">
+                                    <param id="0" name="Object">Card</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" type="System">
+                                    <param id="0" name="Variable">CardSum</param>
+                                    <param id="1" name="Value">Card.CardFaceUp = 1 ? Card.CardValue : 0</param>
+                                </action>
+                                <action id="0" name="Set text" type="Output_rezultat">
+                                    <param id="0" name="Text">CardSum</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block>
+                            <conditions>
+                                <condition id="-14" name="Compare variable" type="System">
+                                    <param id="0" name="Variable">QuestionNumber</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">CardSum</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" type="Check">
+                                    <param id="0" name="Animation">&quot;bad&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-10" name="Add to" type="System">
+                                    <param id="0" name="Variable">ScoreCards</param>
+                                    <param id="1" name="Value">-5</param>
+                                </action>
+                                <action id="0" name="Set text" type="Score">
+                                    <param id="0" name="Text">ScoreCards</param>
+                                </action>
+                                <action id="-10" name="Add to" type="System">
+                                    <param id="0" name="Variable">IncorrectAnswer</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set text" type="OutPutInCorrectA">
+                                    <param id="0" name="Text">IncorrectAnswer</param>
+                                </action>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">NextQuestion</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block>
+                            <conditions>
+                                <condition id="-14" name="Compare variable" type="System">
+                                    <param id="0" name="Variable">QuestionNumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">CardSum</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" type="Check">
+                                    <param id="0" name="Animation">&quot;good&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-10" name="Add to" type="System">
+                                    <param id="0" name="Variable">ScoreCards</param>
+                                    <param id="1" name="Value">10</param>
+                                </action>
+                                <action id="0" name="Set text" type="Score">
+                                    <param id="0" name="Text">ScoreCards</param>
+                                </action>
+                                <action id="-10" name="Add to" type="System">
+                                    <param id="0" name="Variable">CorrectAnswer</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set text" type="OutPutCorectA">
+                                    <param id="0" name="Text">CorrectAnswer</param>
+                                </action>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">NextQuestion</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="3" name="On button released" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">NextQuestion</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" type="ButtonCard">
+                            <param id="0" name="Animation">&quot;up&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Action to click on card face up card</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="6" name="On object clicked" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Card</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">NextQuestion</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" type="Card">
+                            <param id="0" name="Instance variable">CardFaceUp</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" type="Binary">
+                            <param id="0" name="Instance variable">BitPosition</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Card.CardFaceFrame</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">Clicked</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" type="Card">
+                            <param id="0" name="Animation">&quot;CardFace&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="5" name="Set frame" type="Card">
+                            <param id="0" name="Frame number">Card.CardFaceFrame</param>
+                        </action>
+                        <action id="-10" name="Set value" type="Card">
+                            <param id="0" name="Instance variable">CardFaceUp</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">Clicked</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="4" name="Set animation" type="Binary">
+                            <param id="0" name="Animation">&quot;One&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" type="Binary">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">0.3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Action to click on card face down card</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="6" name="On object clicked" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Card</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">NextQuestion</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" type="Card">
+                            <param id="0" name="Instance variable">CardFaceUp</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" type="Binary">
+                            <param id="0" name="Instance variable">BitPosition</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Card.CardFaceFrame</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">Clicked</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" type="Card">
+                            <param id="0" name="Animation">&quot;CardBack&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="5" name="Set frame" type="Card">
+                            <param id="0" name="Frame number">Card.CardFaceFrame</param>
+                        </action>
+                        <action id="-10" name="Set value" type="Card">
+                            <param id="0" name="Instance variable">CardFaceUp</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">Clicked</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="4" name="Set animation" type="Binary">
+                            <param id="0" name="Animation">&quot;Null&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" title="Help">
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="6" name="On object clicked" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">1</param>
+                            <param id="2" name="Object clicked">Sponge</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">Help</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set visible" type="Skip">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">Start</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Card">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Binary">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="output_BO">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Output_rezultat">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="TextRezultat">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="ButtonCard">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Check">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Note">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Output_rezultat">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="InCorrectA">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="OutPutCorectA">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="CorrectA">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="OutPutInCorrectA">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Score">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Scoring">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="ArrowCard">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Talk">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="binarna_oblika">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="4" name="Set font color" type="binarna_oblika">
+                            <param id="0" name="Color">rgb(0, 0, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" type="binarna_oblika">
+                            <param id="0" name="Text">&quot;Naj ti pojasnim pravila te igre.&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="0" name="Set text" type="binarna_oblika">
+                            <param id="0" name="Text">&quot;Zgornje karte so urejene po padajočih vrednostih ...&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Card">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="4" name="Set animation" type="Card">
+                            <param id="0" name="Animation">&quot;CardFace&quot;</param>
+                            <param id="1" name="From">0</param>
+                        </action>
+                        <action id="5" name="Set frame" type="Card">
+                            <param id="0" name="Frame number">Card.CardFaceFrame</param>
+                        </action>
+                        <action id="-19" name="Rotate counter-clockwise" type="ArrowCard">
+                            <param id="0" name="Degrees">0</param>
+                        </action>
+                        <action id="-3" name="Set position" type="ArrowCard">
+                            <param id="0" name="X">922</param>
+                            <param id="1" name="Y">155</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="ArrowCard">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" type="ArrowCard">
+                            <param id="0" name="&apos;On&apos; time">0.5</param>
+                            <param id="1" name="&apos;Off&apos; time">0.5</param>
+                            <param id="2" name="Duration">8</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="ArrowCard">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">4</param>
+                        </action>
+                        <action id="0" name="Set text" type="binarna_oblika">
+                            <param id="0" name="Text">&quot;... od leve proti desni (16,8,4,2,1).&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="0" name="Set text" type="binarna_oblika">
+                            <param id="0" name="Text">&quot;Tvoja naloga je izbrati pravilne karte ...&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="0" name="Set text" type="binarna_oblika">
+                            <param id="0" name="Text">&quot;... tako da bo vsota vrednosti kart  ...&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="0" name="Set text" type="binarna_oblika">
+                            <param id="0" name="Text">&quot;... enaka številu po katerem te sprašujem.&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="0" name="Set text" type="binarna_oblika">
+                            <param id="0" name="Text">&quot;Glede na izbrane karte se bo spodaj pod kartami ...&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Binary">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" type="Binary">
+                            <param id="0" name="&apos;On&apos; time">0.5</param>
+                            <param id="1" name="&apos;Off&apos; time">0.5</param>
+                            <param id="2" name="Duration">3</param>
+                        </action>
+                        <action id="-19" name="Rotate counter-clockwise" type="ArrowCard">
+                            <param id="0" name="Degrees">0</param>
+                        </action>
+                        <action id="-3" name="Set position" type="ArrowCard">
+                            <param id="0" name="X">922</param>
+                            <param id="1" name="Y">325</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="ArrowCard">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" type="ArrowCard">
+                            <param id="0" name="&apos;On&apos; time">0.5</param>
+                            <param id="1" name="&apos;Off&apos; time">0.5</param>
+                            <param id="2" name="Duration">6</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">6</param>
+                        </action>
+                        <action id="0" name="Set text" type="binarna_oblika">
+                            <param id="0" name="Text">&quot;... izpisovala binarna vrednost iskanega števila.&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">4</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="ArrowCard">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Card">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Binary">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Set text" type="binarna_oblika">
+                            <param id="0" name="Text">&quot;S pritiskom na gumb potrdiš tvojo odločitev.&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="ButtonCard">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" type="ArrowCard">
+                            <param id="0" name="X">922</param>
+                            <param id="1" name="Y">275</param>
+                        </action>
+                        <action id="-18" name="Rotate clockwise" type="ArrowCard">
+                            <param id="0" name="Degrees">90</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="ArrowCard">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" type="ArrowCard">
+                            <param id="0" name="&apos;On&apos; time">0.5</param>
+                            <param id="1" name="&apos;Off&apos; time">0.5</param>
+                            <param id="2" name="Duration">5</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="ArrowCard">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="ButtonCard">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Set text" type="binarna_oblika">
+                            <param id="0" name="Text">&quot;Če je vrednost pravilna boš dobil kljukico.&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Check">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="0" name="Set text" type="binarna_oblika">
+                            <param id="0" name="Text">&quot;Če ni pa dobiš križec.&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" type="Check">
+                            <param id="0" name="Animation">&quot;bad&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="0" name="Set text" type="binarna_oblika">
+                            <param id="0" name="Text">&quot;Želim ti veliko sreče !!!&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Check">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="4" name="Set font color" type="binarna_oblika">
+                            <param id="0" name="Color">rgb(255, 51, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" type="binarna_oblika">
+                            <param id="0" name="Text">&quot;Za vprašanje vedno klikni name !!!&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Talk">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="binarna_oblika">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">Help</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">Start</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" title="Finish">
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-8" name="Compare two values" type="System">
+                            <param id="0" name="First value">NumberOfQuestions</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">CorrectAnswer+IncorrectAnswer</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" type="Ground">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Card">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Binary">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Output_rezultat">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="TextRezultat">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="ButtonCard">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Check">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Note">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Output_rezultat">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Procent">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="InCorrectA">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="OutPutCorectA">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="CorrectA">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="OutPutInCorrectA">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Score">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Scoring">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="ArrowCard">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Sponge">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="9" name="Set scale" type="Talk">
+                            <param id="0" name="Scale">0.6</param>
+                        </action>
+                        <action id="-3" name="Set position" type="Talk">
+                            <param id="0" name="X">402</param>
+                            <param id="1" name="Y">383</param>
+                        </action>
+                        <action id="3" name="Set font size" type="binarna_oblika">
+                            <param id="0" name="Size (pt)">36</param>
+                        </action>
+                        <action id="-3" name="Set position" type="binarna_oblika">
+                            <param id="0" name="X">280</param>
+                            <param id="1" name="Y">300</param>
+                        </action>
+                        <action id="0" name="Set text" type="binarna_oblika">
+                            <param id="0" name="Text">&quot;Igre je konec! Vaša ocena je:&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" type="output_BO">
+                            <param id="0" name="X">380</param>
+                            <param id="1" name="Y">422</param>
+                        </action>
+                        <action id="3" name="Set font size" type="output_BO">
+                            <param id="0" name="Size (pt)">36</param>
+                        </action>
+                        <action disabled="1" id="0" name="Set text" type="output_BO">
+                            <param id="0" name="Text">CorrectAnswer*NumberOfQuestions</param>
+                        </action>
+                        <action id="0" name="Set text" type="output_BO">
+                            <param id="0" name="Text">ScoreCards</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Procent">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" type="Procent">
+                            <param id="0" name="X">430</param>
+                            <param id="1" name="Y">420</param>
+                        </action>
+                        <action id="3" name="Set font size" type="Procent">
+                            <param id="0" name="Size (pt)">36</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">Help</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">Start</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">EndGame</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="2" name="Set visible" type="Repeat">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">ClickOnZelenko</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">11</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" type="Ground">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Card">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Binary">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Output_rezultat">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="TextRezultat">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="ButtonCard">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Check">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Note">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Output_rezultat">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="InCorrectA">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="OutPutCorectA">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Procent">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="CorrectA">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="OutPutInCorrectA">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Score">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Scoring">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="ArrowCard">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Sponge">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="9" name="Set scale" type="Talk">
+                            <param id="0" name="Scale">0.6</param>
+                        </action>
+                        <action id="-3" name="Set position" type="Talk">
+                            <param id="0" name="X">402</param>
+                            <param id="1" name="Y">383</param>
+                        </action>
+                        <action id="3" name="Set font size" type="binarna_oblika">
+                            <param id="0" name="Size (pt)">36</param>
+                        </action>
+                        <action id="-3" name="Set position" type="binarna_oblika">
+                            <param id="0" name="X">280</param>
+                            <param id="1" name="Y">300</param>
+                        </action>
+                        <action id="0" name="Set text" type="binarna_oblika">
+                            <param id="0" name="Text">&quot;Igre je konec! Vaša ocena je:&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" type="output_BO">
+                            <param id="0" name="X">380</param>
+                            <param id="1" name="Y">422</param>
+                        </action>
+                        <action id="3" name="Set font size" type="output_BO">
+                            <param id="0" name="Size (pt)">36</param>
+                        </action>
+                        <action disabled="1" id="0" name="Set text" type="output_BO">
+                            <param id="0" name="Text">CorrectAnswer*NumberOfQuestions</param>
+                        </action>
+                        <action id="0" name="Set text" type="output_BO">
+                            <param id="0" name="Text">ScoreCards</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Procent">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" type="Procent">
+                            <param id="0" name="X">430</param>
+                            <param id="1" name="Y">420</param>
+                        </action>
+                        <action id="3" name="Set font size" type="Procent">
+                            <param id="0" name="Size (pt)">36</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">Help</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">Start</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">EndGame</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="2" name="Set visible" type="Repeat">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="0" name="On clicked" type="Repeat" />
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">EndGame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" type="System" />
+                        <action id="-21" name="Reset global variables" type="System" />
+                        <action id="-2" name="Go to layout" type="System">
+                            <param id="0" name="Layout">Games-Cards</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block>
+            <conditions>
+                <condition id="-6" name="Every X seconds" type="System">
+                    <param id="0" name="Interval (seconds)">0.05</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" type="System">
+                    <param id="0" name="Variable">Clicked</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

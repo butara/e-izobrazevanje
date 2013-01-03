@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 3</name>
+    <events>
+        <event-block>
+            <conditions>
+                <condition id="0" name="On clicked" type="newGame" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" type="System">
+                    <param id="0" name="Layout">Sorting-game</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="0" name="On clicked" type="btnReturnToMenu" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" type="System">
+                    <param id="0" name="Layout">Sorting-menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-2" name="On start of layout" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" type="txtCompletedEndChecks">
+                    <param id="0" name="Text">&quot;Končnih preverjanj: &quot; &amp; finalChecks</param>
+                </action>
+                <action id="0" name="Set text" type="txtCompletedChecks">
+                    <param id="0" name="Text">&quot;Preverjanj uteži: &quot; &amp; comparisons</param>
+                </action>
+                <action id="0" name="Set text" type="txtCompletedScore">
+                    <param id="0" name="Text">&quot;Dosegel si &quot; &amp; (score +10 + 15 - 10*finalChecks - comparisons) &amp; &quot; točk&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,583 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>InsertionSort</name>
+    <events>
+        <event-group description="" title="insertionWeightsSwapping">
+            <sub-events>
+                <variable constant="0" name="return" static="0" type="number">6</variable>
+                <variable constant="0" name="swap" static="0" type="number">5</variable>
+                <variable constant="0" name="afterSelection" static="0" type="number">4</variable>
+                <variable constant="0" name="beforeSelectionNextIteration" static="0" type="number">7</variable>
+                <variable constant="0" name="beforeSelection" static="0" type="number">3</variable>
+                <event-block>
+                    <conditions>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;insertionWeightsSwapping&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Push" type="pickNumbers1">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">1</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" type="pickNumbers2">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">2</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" type="pickNumbers1">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">3</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" type="pickNumbers2">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">5</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" type="pickNumbers1">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">4</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" type="pickNumbers2">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">2</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" type="pickNumbers1">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">5</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" type="pickNumbers2">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">2</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" type="pickNumbers1">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">1</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" type="pickNumbers2">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">3</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" type="pickNumbers1">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">3</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" type="pickNumbers2">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">2</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" type="pickNumbers1">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">3</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" type="pickNumbers2">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">2</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" type="pickNumbers1">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">5</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" type="pickNumbers2">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">4</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" type="pickNumbers1">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">4</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" type="pickNumbers2">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">2</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Value">&quot;insertionShowInfo&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-group collapsed="1" description="" title="fourth iteration">
+                            <sub-events>
+                                <comment>fourth iteration</comment>
+                                <event-block>
+                                    <conditions />
+                                    <actions>
+                                        <action id="5" name="Push" type="tutorialWeightsSwap1">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">2</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="tutorialWeightsSwap2">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">1</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapFrame">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">swap</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapFrame">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">afterSelection</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapFrame">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">beforeSelection</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapBool">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">1</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block>
+                                    <conditions />
+                                    <actions>
+                                        <action id="5" name="Push" type="tutorialWeightsSwap1">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">3</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="tutorialWeightsSwap2">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">1</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapFrame">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">swap</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapFrame">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">afterSelection</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapFrame">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">beforeSelection</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapBool">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">1</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block>
+                                    <conditions />
+                                    <actions>
+                                        <action id="5" name="Push" type="tutorialWeightsSwap1">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">4</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="tutorialWeightsSwap2">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">1</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapFrame">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">swap</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapFrame">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">afterSelection</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapFrame">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">beforeSelection</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapBool">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">1</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block>
+                                    <conditions />
+                                    <actions>
+                                        <action id="5" name="Push" type="tutorialWeightsSwap1">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">5</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="tutorialWeightsSwap2">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">1</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapFrame">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">swap</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapFrame">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">afterSelection</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapFrame">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">beforeSelection</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapBool">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">1</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group collapsed="1" description="" title="third iteration">
+                            <sub-events>
+                                <comment>third iteration</comment>
+                                <event-block>
+                                    <conditions />
+                                    <actions>
+                                        <action id="5" name="Push" type="tutorialWeightsSwap1">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">2</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="tutorialWeightsSwap2">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">3</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapFrame">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">return</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapFrame">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">afterSelection</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapFrame">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">beforeSelection</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapBool">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">0</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block>
+                                    <conditions />
+                                    <actions>
+                                        <action id="5" name="Push" type="tutorialWeightsSwap1">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">4</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="tutorialWeightsSwap2">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">3</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapFrame">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">swap</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapFrame">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">afterSelection</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapFrame">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">beforeSelection</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapBool">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">1</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block>
+                                    <conditions />
+                                    <actions>
+                                        <action id="5" name="Push" type="tutorialWeightsSwap1">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">5</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="tutorialWeightsSwap2">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">3</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapFrame">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">swap</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapFrame">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">afterSelection</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapFrame">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">beforeSelection</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapBool">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">1</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group collapsed="1" description="" title="second iteration">
+                            <sub-events>
+                                <comment>second iteration</comment>
+                                <event-block>
+                                    <conditions />
+                                    <actions>
+                                        <action id="5" name="Push" type="tutorialWeightsSwap1">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">4</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="tutorialWeightsSwap2">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">2</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapFrame">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">swap</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapFrame">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">afterSelection</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapFrame">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">beforeSelection</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapBool">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">1</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block>
+                                    <conditions />
+                                    <actions>
+                                        <action id="5" name="Push" type="tutorialWeightsSwap1">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">5</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="tutorialWeightsSwap2">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">2</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapFrame">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">swap</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapFrame">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">afterSelection</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapFrame">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">beforeSelection</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapBool">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">1</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group collapsed="1" description="" title="first iteration">
+                            <sub-events>
+                                <comment>first iteration</comment>
+                                <event-block>
+                                    <conditions />
+                                    <actions>
+                                        <action id="5" name="Push" type="tutorialWeightsSwap1">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">5</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="tutorialWeightsSwap2">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">4</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapFrame">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">swap</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapFrame">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">afterSelection</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapFrame">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">beforeSelection</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" type="TutorialWeightsSwapBool">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">1</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block>
+            <conditions>
+                <condition id="-14" name="Compare variable" type="System">
+                    <param id="0" name="Variable">state</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;insertionBeforePick&quot;</param>
+                </condition>
+                <condition id="6" inverted="1" name="Is empty" type="TutorialWeightsSwapFrame" />
+            </conditions>
+            <actions>
+                <action id="5" name="Push" type="stack">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">&quot;insertionBeforePick&quot;</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="-9" name="Set value" type="System">
+                    <param id="0" name="Variable">state</param>
+                    <param id="1" name="Value">&quot;tutorialPickAction&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-14" name="Compare variable" type="System">
+                    <param id="0" name="Variable">state</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;insertionBeforePick&quot;</param>
+                </condition>
+                <condition id="6" name="Is empty" type="TutorialWeightsSwapFrame" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" type="downArrow2">
+                    <param id="0" name="X">950</param>
+                    <param id="1" name="Y">550</param>
+                </action>
+                <action id="-15" name="Set visible" type="downArrow2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-9" name="Set value" type="System">
+                    <param id="0" name="Variable">state</param>
+                    <param id="1" name="Value">&quot;tutorialEnd&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-14" name="Compare variable" type="System">
+                    <param id="0" name="Variable">state</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;insertionShowInfo&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" type="messageBubble">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="-15" name="Set visible" type="messageBubble">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="5" name="Push" type="tutorialInfo">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">13</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" type="tutorialInfo">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">12</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" type="tutorialInfo">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">11</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" type="stack">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">&quot;insertionBeforePick&quot;</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" type="stack">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">&quot;tutorialWeightsSwapping&quot;</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="-9" name="Set value" type="System">
+                    <param id="0" name="Variable">state</param>
+                    <param id="1" name="Value">&quot;tutorialShowInfo&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

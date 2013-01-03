@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <include>InsertionSort</include>
+        <include>SelectionSort</include>
+        <include>TutorialSort</include>
+        <include>RealTestSort</include>
+        <include>BubbleSort</include>
+        <include>Functions</include>
+        <variable constant="0" name="finalChecks" static="0" type="number">0</variable>
+        <variable constant="0" name="comparisons" static="0" type="number">0</variable>
+        <event-block>
+            <conditions>
+                <condition id="-1" name="Every tick" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" type="Text3">
+                    <param id="0" name="Text">&quot;State: &quot; &amp; str(state)</param>
+                </action>
+                <action id="0" name="Set text" type="txtMeasures">
+                    <param id="0" name="Text">&quot;Število tehtanj: &quot; &amp; comparisons</param>
+                </action>
+                <action id="0" name="Set text" type="txtEndChecks">
+                    <param id="0" name="Text">&quot;Število končnih preverjanj: &quot; &amp; finalChecks</param>
+                </action>
+                <action id="0" name="Set text" type="Text">
+                    <param id="0" name="Text">weight10.position &amp; &quot; &quot; &amp; weight20.position &amp; &quot; &quot; &amp; weight30.position &amp; &quot; &quot; &amp; weight40.position &amp; &quot; &quot; &amp; weight50.position &amp; &quot; &quot; &amp; time</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-2" name="On start of layout" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Push" type="stack">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">-1</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" type="stack">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">-1</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" type="stack">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">-1</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" type="stack">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">-1</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" type="stack">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">-1</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" type="stack">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">-1</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" type="stack">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">-1</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="-9" name="Set value" type="System">
+                    <param id="0" name="Variable">state</param>
+                    <param id="1" name="Value">&quot;zelenkoOntheRun&quot;</param>
+                </action>
+                <action disabled="1" id="-9" name="Set value" type="System">
+                    <param id="0" name="Variable">animating</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action disabled="1" id="-9" name="Set value" type="System">
+                    <param id="0" name="Variable">type</param>
+                    <param id="1" name="Value">&quot;selection&quot;</param>
+                </action>
+                <action id="5" name="Set frame" type="weight_measure_final_">
+                    <param id="0" name="Frame number">24</param>
+                </action>
+                <action id="-3" name="Set position" type="weight_measure_final_">
+                    <param id="0" name="X">540</param>
+                    <param id="1" name="Y">885</param>
+                </action>
+                <action id="-9" name="Set value" type="System">
+                    <param id="0" name="Variable">finalChecks</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" type="System">
+                    <param id="0" name="Variable">comparisons</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" type="System">
+                    <param id="0" name="Variable">tutorialWeighsShouldSwap</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <variable constant="0" name="balanceAnimationSpeed" static="0" type="number">10</variable>
+        <variable constant="0" name="swappingSpeed" static="0" type="number">20</variable>
+        <variable constant="0" name="moveSpeedY" static="0" type="number">0</variable>
+        <variable constant="0" name="moveSpeedX" static="0" type="number">0</variable>
+        <variable constant="0" name="loop" static="0" type="number">3</variable>
+        <variable constant="0" name="picked2" static="0" type="number">0</variable>
+        <variable constant="0" name="pickedObject1" static="0" type="number">0</variable>
+        <variable constant="0" name="pickedObject2" static="0" type="number">0</variable>
+        <variable constant="0" name="picked1Position" static="0" type="number">0</variable>
+        <variable constant="0" name="picked2Position" static="0" type="number">0</variable>
+        <variable constant="0" name="picked1PositionY" static="0" type="number">0</variable>
+        <variable constant="0" name="picked2PositionX" static="0" type="number">0</variable>
+        <variable constant="0" name="picked2PositionY" static="0" type="number">0</variable>
+        <variable constant="0" name="picked1PositionX" static="0" type="number">0</variable>
+        <variable constant="0" name="oldPicked1PositionX" static="0" type="number">0</variable>
+        <variable constant="0" name="oldPicked1PositionY" static="0" type="number">0</variable>
+        <variable constant="0" name="oldPicked2PositionY" static="0" type="number">0</variable>
+        <variable constant="0" name="oldPicked2PositionX" static="0" type="number">0</variable>
+        <variable constant="0" name="newPosition1X" static="0" type="number">0</variable>
+        <variable constant="0" name="newPosition1Y" static="0" type="number">0</variable>
+        <variable constant="0" name="newPosition2Y" static="0" type="number">0</variable>
+        <variable constant="0" name="newPosition2X" static="0" type="number">0</variable>
+        <variable constant="0" name="moveWeight" static="0" type="number">0</variable>
+        <variable constant="0" name="is1Picked" static="0" type="number">0</variable>
+        <variable constant="0" name="score" static="0" type="number">0</variable>
+        <variable constant="0" name="picked1" static="0" type="number">0</variable>
+        <event-block>
+            <conditions>
+                <condition id="-14" name="Compare variable" type="System">
+                    <param id="0" name="Variable">state</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;zelenkoOntheRun&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" type="zelenko">
+                    <param id="0" name="X">zelenko.X+5</param>
+                    <param id="1" name="Y">zelenko.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-14" name="Compare variable" type="System">
+                    <param id="0" name="Variable">state</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;zelenkoOntheRun&quot;</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" type="zelenko">
+                    <param id="0" name="Object">Tatungeinsteincomputer</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" type="System">
+                    <param id="0" name="Variable">state</param>
+                    <param id="1" name="Value">&quot;weightsFalling&quot;</param>
+                </action>
+                <action id="5" name="Set frame" type="weight10">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="5" name="Set frame" type="weight20">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="5" name="Set frame" type="weight30">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="5" name="Set frame" type="weight40">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="5" name="Set frame" type="weight50">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="2" name="Stop" type="weight20" />
+                <action id="2" name="Stop" type="weight30" />
+                <action id="2" name="Stop" type="weight40" />
+                <action id="2" name="Stop" type="weight50" />
+                <action id="2" name="Stop" type="weight10" />
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-14" name="Compare variable" type="System">
+                    <param id="0" name="Variable">state</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;weightsFalling&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" type="weight10">
+                    <param id="0" name="X">140</param>
+                    <param id="1" name="Y">weight10.Y+5</param>
+                </action>
+                <action id="-3" name="Set position" type="weight20">
+                    <param id="0" name="X">340</param>
+                    <param id="1" name="Y">weight20.Y+5</param>
+                </action>
+                <action id="-3" name="Set position" type="weight30">
+                    <param id="0" name="X">540</param>
+                    <param id="1" name="Y">weight30.Y+5</param>
+                </action>
+                <action id="-3" name="Set position" type="weight40">
+                    <param id="0" name="X">740</param>
+                    <param id="1" name="Y">weight40.Y+5</param>
+                </action>
+                <action id="-3" name="Set position" type="weight50">
+                    <param id="0" name="X">940</param>
+                    <param id="1" name="Y">weight50.Y+5</param>
+                </action>
+                <action id="-3" name="Set position" type="weight_measure_final_">
+                    <param id="0" name="X">540</param>
+                    <param id="1" name="Y">weight_measure_final_.Y &lt; 600 ? 600 : weight_measure_final_.Y - 5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-14" name="Compare variable" type="System">
+                    <param id="0" name="Variable">state</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;weightsFalling&quot;</param>
+                </condition>
+                <condition id="-2" name="Compare Y" type="weight10">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Y co-ordinate">150</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" type="System">
+                    <param id="0" name="Variable">state</param>
+                    <param id="1" name="Value">&quot;weightsRotation&quot;</param>
+                </action>
+                <action id="6" name="Set speed" type="weight10">
+                    <param id="0" name="Speed">5</param>
+                </action>
+                <action id="6" name="Set speed" type="weight20">
+                    <param id="0" name="Speed">5</param>
+                </action>
+                <action id="6" name="Set speed" type="weight30">
+                    <param id="0" name="Speed">5</param>
+                </action>
+                <action id="6" name="Set speed" type="weight40">
+                    <param id="0" name="Speed">5</param>
+                </action>
+                <action id="6" name="Set speed" type="weight50">
+                    <param id="0" name="Speed">5</param>
+                </action>
+                <action id="3" name="Start" type="weight10">
+                    <param id="0" name="From">0</param>
+                </action>
+                <action id="3" name="Start" type="weight20">
+                    <param id="0" name="From">0</param>
+                </action>
+                <action id="3" name="Start" type="weight30">
+                    <param id="0" name="From">0</param>
+                </action>
+                <action id="3" name="Start" type="weight40">
+                    <param id="0" name="From">0</param>
+                </action>
+                <action id="3" name="Start" type="weight50">
+                    <param id="0" name="From">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="5" name="On any finished" type="weight10" />
+                <condition id="-14" name="Compare variable" type="System">
+                    <param id="0" name="Variable">state</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;weightsRotation&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" type="weight10">
+                    <param id="0" name="Animation">&quot;basicViews&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" type="weight20">
+                    <param id="0" name="Animation">&quot;basicViews&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" type="weight30">
+                    <param id="0" name="Animation">&quot;basicViews&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" type="weight40">
+                    <param id="0" name="Animation">&quot;basicViews&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" type="weight50">
+                    <param id="0" name="Animation">&quot;basicViews&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="5" name="On any finished" type="weight10" />
+                <condition id="-14" name="Compare variable" type="System">
+                    <param id="0" name="Variable">state</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;weightsRotation&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" type="System">
+                    <param id="0" name="Variable">type</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;test&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" type="System">
+                    <param id="0" name="Variable">state</param>
+                    <param id="1" name="Value">&quot;weightsSwapping&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="5" name="On any finished" type="weight10" />
+                <condition id="-14" name="Compare variable" type="System">
+                    <param id="0" name="Variable">state</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;weightsRotation&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" type="System">
+                    <param id="0" name="Variable">type</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;bubble&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" type="System">
+                    <param id="0" name="Variable">state</param>
+                    <param id="1" name="Value">&quot;bubbleWeightsSwapping&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="5" name="On any finished" type="weight10" />
+                <condition id="-14" name="Compare variable" type="System">
+                    <param id="0" name="Variable">state</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;weightsRotation&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" type="System">
+                    <param id="0" name="Variable">type</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;selection&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" type="System">
+                    <param id="0" name="Variable">state</param>
+                    <param id="1" name="Value">&quot;selectionWeightsSwapping&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="5" name="On any finished" type="weight10" />
+                <condition id="-14" name="Compare variable" type="System">
+                    <param id="0" name="Variable">state</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;weightsRotation&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" type="System">
+                    <param id="0" name="Variable">type</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;insertion&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" type="System">
+                    <param id="0" name="Variable">state</param>
+                    <param id="1" name="Value">&quot;insertionWeightsSwapping&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group collapsed="1" description="" title="final_check">
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="0" name="On clicked" type="btnFinalCheck" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" type="System">
+                                    <param id="0" name="Variable">state</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;picking1&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" type="System">
+                                    <param id="0" name="Variable">state</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;picking2&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" type="System">
+                                    <param id="0" name="Variable">state</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;selectAction&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" type="System">
+                                    <param id="0" name="Variable">state</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;tutorialEnd&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" type="System">
+                                    <param id="0" name="Variable">finalChecks</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block>
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" type="weight10">
+                                            <param id="0" name="Instance variable">position</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" type="weight20">
+                                            <param id="0" name="Instance variable">position</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" type="weight30">
+                                            <param id="0" name="Instance variable">position</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" type="weight40">
+                                            <param id="0" name="Instance variable">position</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" type="weight50">
+                                            <param id="0" name="Instance variable">position</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" type="System">
+                                            <param id="0" name="Variable">state</param>
+                                            <param id="1" name="Value">&quot;completed&quot;</param>
+                                        </action>
+                                        <action id="-2" name="Go to layout" type="System">
+                                            <param id="0" name="Layout">Sorting-Completed</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
