@@ -8,7 +8,11 @@
         <variable constant="0" name="clickedErrorCorrection" static="0" type="number">0</variable>
         <variable constant="0" name="stateErrorCorrection" static="0" type="text">startingX</variable>
         <variable constant="0" name="addToParityRowSum" static="0" type="number">0</variable>
+        <variable constant="0" name="RoundCount" static="0" type="number">0</variable>
         <variable constant="0" name="addToParityColumnSum" static="0" type="number">0</variable>
+        <variable constant="0" name="Grade" static="0" type="number">0</variable>
+        <variable constant="0" name="Incorrect" static="0" type="number">0</variable>
+        <variable constant="0" name="Correct" static="0" type="number">0</variable>
         <variable constant="0" name="depth" static="0" type="number">0</variable>
         <variable comment="RowCounter" constant="0" name="row" static="0" type="number">0</variable>
         <event-block>
@@ -40,6 +44,9 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" type="Box" />
+                        <action id="-15" name="Set visible" type="CheckError">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                         <action behavior="Physics" id="13" name="Set stepping mode" type="ZelenkoCards">
                             <param id="0" name="Mode">1</param>
                         </action>
@@ -61,20 +68,43 @@
                         <action id="-15" name="Set visible" type="ZelenkoTextErrorCorrection">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                    </actions>
-                </event-block>
-                <variable comment="Iterator" constant="0" name="i" static="0" type="number">1</variable>
-                <event-block>
-                    <conditions>
-                        <condition id="-2" name="On start of layout" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-16" name="Wait" type="System">
-                            <param id="0" name="Seconds">4</param>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Value">&quot;startRound&quot;</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">stateErrorCorrection</param>
-                            <param id="1" name="Value">&quot;starting&quot;</param>
+                            <param id="1" name="Value">&quot;startGame&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Sets playground at the start of new round." title="ShowPlayGround">
+            <sub-events>
+                <variable comment="Iterator" constant="0" name="i" static="0" type="number">1</variable>
+                <event-block>
+                    <conditions>
+                        <condition disabled="1" id="-2" name="On start of layout" type="System" />
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;startRound&quot;</param>
+                        </condition>
+                        <condition disabled="1" id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;starting&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">4</param>
+                        </action>
+                        <action id="-9" name="Destroy" type="Box" />
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">depth</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -158,6 +188,26 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;startRound&quot;</param>
+                        </condition>
+                        <condition disabled="1" id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">i</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Value">&quot;starting&quot;</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -275,7 +325,7 @@
                         <condition id="6" name="On object clicked" type="Mouse">
                             <param id="0" name="Mouse button">0</param>
                             <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">CheckParityButton</param>
+                            <param id="2" name="Object clicked">ButtonError</param>
                         </condition>
                         <condition disabled="1" id="-14" name="Compare variable" type="System">
                             <param id="0" name="Variable">stateErrorCorrection</param>
@@ -293,6 +343,10 @@
                             <param id="0" name="Width">6</param>
                             <param id="1" name="Height">1</param>
                             <param id="2" name="Depth">1</param>
+                        </action>
+                        <action id="4" name="Set animation" type="ButtonError">
+                            <param id="0" name="Animation">&quot;down&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -395,7 +449,7 @@
                                                         </action>
                                                     </actions>
                                                     <sub-events>
-                                                        <event-block>
+                                                        <event-block any="1">
                                                             <conditions>
                                                                 <condition id="-14" name="Compare variable" type="System">
                                                                     <param id="0" name="Variable">isEven</param>
@@ -407,6 +461,26 @@
                                                                 <action id="-9" name="Set value" type="System">
                                                                     <param id="0" name="Variable">stateErrorCorrection</param>
                                                                     <param id="1" name="Value">&quot;parityIsWrong&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block>
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" type="System">
+                                                                    <param id="0" name="Variable">z</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">6</param>
+                                                                </condition>
+                                                                <condition id="-14" name="Compare variable" type="System">
+                                                                    <param id="0" name="Variable">stateErrorCorrection</param>
+                                                                    <param id="1" name="Comparison">1</param>
+                                                                    <param id="2" name="Value">&quot;parityIsWrong&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Set value" type="System">
+                                                                    <param id="0" name="Variable">stateErrorCorrection</param>
+                                                                    <param id="1" name="Value">&quot;parityIsCorrect&quot;</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -452,7 +526,7 @@
                                         </action>
                                     </actions>
                                     <sub-events>
-                                        <event-block>
+                                        <event-block any="1">
                                             <conditions>
                                                 <condition id="-14" name="Compare variable" type="System">
                                                     <param id="0" name="Variable">isEven</param>
@@ -464,6 +538,41 @@
                                                 <action id="-9" name="Set value" type="System">
                                                     <param id="0" name="Variable">stateErrorCorrection</param>
                                                     <param id="1" name="Value">&quot;parityIsWrong&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block>
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" type="System">
+                                                    <param id="0" name="Variable">z</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">6</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" type="System">
+                                                    <param id="0" name="Variable">stateErrorCorrection</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Value">&quot;parityIsWrong&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" type="System">
+                                                    <param id="0" name="Variable">stateErrorCorrection</param>
+                                                    <param id="1" name="Value">&quot;parityIsCorrect&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block disabled="1">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" type="System">
+                                                    <param id="0" name="Variable">isEven</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" type="System">
+                                                    <param id="0" name="Variable">stateErrorCorrection</param>
+                                                    <param id="1" name="Value">&quot;parityIsCorrect&quot;</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -602,7 +711,123 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Function if user has done it wrong!" title="Error">
+        <event-group description="" title="ParityIsCorrect">
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;parityIsCorrect&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" type="Success_text">
+                            <param id="0" name="Text">&quot;Cestitam pravilno si nastavil pariteto&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" type="CheckError">
+                            <param id="0" name="Animation">&quot;good&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="CheckError">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Buble">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" type="BubleText">
+                            <param id="0" name="Text">&quot;Bravo! Pravilno si nastavil paritetne bite.&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Value">&quot;hiddeBubbleParityIsCorrect&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="0" name="On click" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;hiddeBubbleParityIsCorrect&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" type="Buble">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Set text" type="BubleText">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Go here if parity is wrong" title="ParityIsWrong">
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;parityIsWrong&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" type="Success_text">
+                            <param id="0" name="Text">&quot;Paritetos zajebov!&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" type="CheckError">
+                            <param id="0" name="Animation">&quot;bad&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="CheckError">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Buble">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" type="BubleText">
+                            <param id="0" name="Text">&quot;Joj! Narobe si nastavil paritetne bite!&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Value">&quot;hiddeBubbleParityIsWrong&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="0" name="On click" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;hiddeBubbleParityIsWrong&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" type="Buble">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Set text" type="BubleText">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Value">&quot;startGame&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Function if user has done it wrong!" title="Error">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -616,11 +841,67 @@
                         <action id="0" name="Set text" type="Success_text">
                             <param id="0" name="Text">&quot;Ajga čeha, to pa ni prov!&quot;</param>
                         </action>
+                        <action id="4" name="Set animation" type="CheckError">
+                            <param id="0" name="Animation">&quot;bad&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="CheckError">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Add to" type="System">
+                            <param id="0" name="Variable">Incorrect</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" type="Incorrect">
+                            <param id="0" name="Text">Incorrect</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Buble">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" type="BubleText">
+                            <param id="0" name="Text">&quot;Joj! Ta bit sploh ni bil pokvarjen.&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">Grade</param>
+                            <param id="1" name="Value">Grade-5</param>
+                        </action>
+                        <action id="0" name="Set text" type="GradeText">
+                            <param id="0" name="Text">Grade</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Value">&quot;hiddeBubbleError&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="0" name="On click" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;hiddeBubbleError&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" type="Buble">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Set text" type="BubleText">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Value">&quot;startGame&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Method for successful game ending." title="Finalize">
+        <event-group description="Method for successful game round ending." title="Finalize">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -634,23 +915,85 @@
                         <action id="0" name="Set text" type="Success_text">
                             <param id="0" name="Text">&quot;Cestitamo odkril si napako!&quot;</param>
                         </action>
+                        <action id="4" name="Set animation" type="CheckError">
+                            <param id="0" name="Animation">&quot;good&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="CheckError">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Add to" type="System">
+                            <param id="0" name="Variable">Correct</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" type="Correct">
+                            <param id="0" name="Text">Correct</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Buble">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" type="BubleText">
+                            <param id="0" name="Text">&quot;Bravo! Uspešno si odkril pokvarjen bit.&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">Grade</param>
+                            <param id="1" name="Value">Grade+10</param>
+                        </action>
+                        <action id="0" name="Set text" type="GradeText">
+                            <param id="0" name="Text">Grade</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Value">&quot;hiddeBubbleSuccess&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="0" name="On click" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;hiddeBubbleSuccess&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" type="Buble">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Set text" type="BubleText">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Value">&quot;startGame&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Go here if parity is wrong" title="ParityIsWrong">
+        <event-group description="Help, game tutorial." title="Help" />
+        <event-group description="Game with 10 rounds." title="GameLoop">
             <sub-events>
                 <event-block>
                     <conditions>
                         <condition id="-14" name="Compare variable" type="System">
                             <param id="0" name="Variable">stateErrorCorrection</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;parityIsWrong&quot;</param>
+                            <param id="2" name="Value">&quot;startGame&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" type="Success_text">
-                            <param id="0" name="Text">&quot;Paritetos zajebov!&quot;</param>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Value">&quot;startRound&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" type="System">
+                            <param id="0" name="Variable">RoundCount</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
