@@ -1076,7 +1076,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Game with 10 rounds." title="GameLoop">
+        <event-group description="Game with 10 rounds." title="GameLoop">
             <sub-events>
                 <event-group collapsed="1" description="" title="StartGreeting">
                     <sub-events>
@@ -1178,7 +1178,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Help, game tutorial." title="Help">
+        <event-group collapsed="1" description="Help, game tutorial." title="Help">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -1250,7 +1250,7 @@
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-3" name="Set position" type="Arrow3">
-                            <param id="0" name="X">700</param>
+                            <param id="0" name="X">710</param>
                             <param id="1" name="Y">29</param>
                         </action>
                         <action behavior="Flash" id="0" name="Flash" type="Arrow3">
@@ -1266,6 +1266,9 @@
                         </action>
                         <action id="-16" name="Wait" type="System">
                             <param id="0" name="Seconds">6</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Arrow3">
+                            <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-15" name="Set visible" type="Arrow2">
                             <param id="0" name="Visibility">0</param>
@@ -1302,9 +1305,6 @@
                         </action>
                         <action id="-16" name="Wait" type="System">
                             <param id="0" name="Seconds">6</param>
-                        </action>
-                        <action id="-15" name="Set visible" type="Arrow3">
-                            <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-15" name="Set visible" type="Arrow2">
                             <param id="0" name="Visibility">0</param>
