@@ -257,7 +257,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" title="Game Action">
+        <event-group collapsed="1" description="" title="Game Action">
             <sub-events>
                 <comment>Pritisk na Zelenkota za zagon ponovnega vprašanja.</comment>
                 <event-block>
@@ -662,7 +662,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" title="Help">
+        <event-group collapsed="1" description="" title="Help">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -932,7 +932,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" title="Finish">
+        <event-group collapsed="1" description="" title="Finish">
             <sub-events>
                 <event-block>
                     <conditions>
