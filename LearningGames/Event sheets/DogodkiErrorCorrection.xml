@@ -12,6 +12,7 @@
         <variable constant="0" name="addToParityColumnSum" static="0" type="number">0</variable>
         <variable constant="0" name="Grade" static="0" type="number">0</variable>
         <variable constant="0" name="Incorrect" static="0" type="number">0</variable>
+        <variable constant="0" name="WrongParitys" static="0" type="number">0</variable>
         <variable constant="0" name="Correct" static="0" type="number">0</variable>
         <variable constant="0" name="depth" static="0" type="number">0</variable>
         <variable comment="RowCounter" constant="0" name="row" static="0" type="number">0</variable>
@@ -28,6 +29,22 @@
                     <actions>
                         <action id="-2" name="Go to layout" type="System">
                             <param id="0" name="Layout">Menu</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="6" name="On object clicked" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">errorGameRetry</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-21" name="Reset global variables" type="System" />
+                        <action id="-26" name="Restart layout" type="System" />
+                        <action id="-2" name="Go to layout" type="System">
+                            <param id="0" name="Layout">ErrorCorrection</param>
                         </action>
                     </actions>
                 </event-block>
@@ -298,7 +315,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="In this function user sets parity bits. User can only click on parity bits." title="UserSetParityBits">
+        <event-group description="In this function user sets parity bits. User can only click on parity bits." title="UserSetParityBits">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -345,13 +362,15 @@
                             <param id="1" name="Click type">0</param>
                             <param id="2" name="Object clicked">ButtonError</param>
                         </condition>
-                        <condition disabled="1" id="-14" name="Compare variable" type="System">
+                        <condition id="-14" name="Compare variable" type="System">
                             <param id="0" name="Variable">stateErrorCorrection</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;userSetParityBits&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Clear" type="ColumnSum" />
+                        <action id="0" name="Clear" type="RowSum" />
                         <action id="1" name="Set size" type="ColumnSum">
                             <param id="0" name="Width">6</param>
                             <param id="1" name="Height">1</param>
@@ -623,10 +642,15 @@
                             <param id="1" name="Start index">1</param>
                             <param id="2" name="End index">1</param>
                         </condition>
-                        <condition disabled="1" id="-14" name="Compare variable" type="System">
+                        <condition id="-14" name="Compare variable" type="System">
                             <param id="0" name="Variable">stateErrorCorrection</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;breakBitArray&quot;</param>
+                        </condition>
+                        <condition disabled="1" id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;userSetParityBits&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -791,6 +815,10 @@
                         <action id="-15" name="Set visible" type="CheckError">
                             <param id="0" name="Visibility">0</param>
                         </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Value">&quot;breakBitArray&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -822,6 +850,13 @@
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">Grade</param>
                             <param id="1" name="Value">Grade-5</param>
+                        </action>
+                        <action id="0" name="Set text" type="GradeText">
+                            <param id="0" name="Text">Grade</param>
+                        </action>
+                        <action id="-10" name="Add to" type="System">
+                            <param id="0" name="Variable">WrongParitys</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                         <action id="0" name="Set text" type="BubleText">
                             <param id="0" name="Text">&quot;Joj! Narobe si nastavil paritetne bite!&quot;</param>
@@ -862,7 +897,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Function if user has done it wrong!" title="Error">
+        <event-group collapsed="1" description="Function if user has done it wrong!" title="Error">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -1065,7 +1100,7 @@
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="0" name="Set text" type="BubleText">
-                            <param id="0" name="Text">&quot;Igre je konec!&quot; &amp; newline &amp; &quot;Odkril si &quot; &amp; Correct &amp; &quot; napak,&quot; &amp; Incorrect &amp; &quot; pa ti jih je ušlo.&quot; &amp; newline &amp; &quot;Tvoja končna ocena je &quot; &amp; Grade &amp; &quot;%.&quot;</param>
+                            <param id="0" name="Text">&quot;Igre je konec!&quot; &amp; newline &amp; &quot;Odkril si &quot; &amp; Correct &amp; &quot; napak,&quot; &amp; Incorrect &amp; &quot; pa ti jih je ušlo. Pariteto si narobe nastavil &quot; &amp; WrongParitys &amp; &quot;x.&quot;&amp; newline &amp; &quot;Tvoja končna ocena je &quot; &amp; Grade &amp; &quot;%.&quot;</param>
                         </action>
                     </actions>
                 </event-block>
