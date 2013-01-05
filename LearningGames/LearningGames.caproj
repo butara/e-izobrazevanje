@@ -7,28 +7,28 @@
     <unique-id>nblx4rw9lntq</unique-id>
     <saved-with-version>11400</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Button" version="1">Button</plugin>
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
-        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
-        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
-        <plugin author="ken@appMobi" id="appMobi" version="1">appMobi</plugin>
-        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
-        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
-        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="ken@appMobi" id="appMobi" version="1">appMobi</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
     </used-behaviors>
     <used-effects>
+        <effect author="Brad Larson" id="sketch">Sketch</effect>
         <effect author="Scirra" id="overlay">Overlay</effect>
         <effect author="Scirra" id="screen">Screen</effect>
-        <effect author="Brad Larson" id="sketch">Sketch</effect>
         <effect author="Scirra" id="hardlight">Hard Light</effect>
     </used-effects>
     <configurations>

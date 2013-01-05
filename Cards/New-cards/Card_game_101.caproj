@@ -7,11 +7,11 @@
     <unique-id>1i87ccyyux9ng</unique-id>
     <saved-with-version>11100</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
-        <plugin author="Scirra" id="Button" version="1">Button</plugin>
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
@@ -20,10 +20,10 @@
         <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
     </used-behaviors>
     <used-effects>
-        <effect author="Scirra" id="overlay">Overlay</effect>
+        <effect author="Scirra" id="hardlight">Hard Light</effect>
         <effect author="Scirra" id="screen">Screen</effect>
         <effect author="Brad Larson" id="sketch">Sketch</effect>
-        <effect author="Scirra" id="hardlight">Hard Light</effect>
+        <effect author="Scirra" id="overlay">Overlay</effect>
     </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -464,11 +464,11 @@
         </object-type>
     </object-folder>
     <families />
-    <layout-folder expanded="0">
-        <layout>Games-desk.xml</layout>
+    <layout-folder expanded="1">
+        <layout>Games-Cards.xml</layout>
     </layout-folder>
-    <event-folder expanded="0">
-        <event-sheet>GameEvents.xml</event-sheet>
+    <event-folder expanded="1">
+        <event-sheet>GameCards-Events.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" />
