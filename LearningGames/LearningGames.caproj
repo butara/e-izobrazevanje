@@ -7,29 +7,29 @@
     <unique-id>nblx4rw9lntq</unique-id>
     <saved-with-version>11400</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Function" version="1">Function</plugin>
-        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
-        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
-        <plugin author="ken@appMobi" id="appMobi" version="1">appMobi</plugin>
-        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="ken@appMobi" id="appMobi" version="1">appMobi</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
-        <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+        <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
     </used-behaviors>
     <used-effects>
-        <effect author="Scirra" id="hardlight">Hard Light</effect>
         <effect author="Scirra" id="overlay">Overlay</effect>
-        <effect author="Brad Larson" id="sketch">Sketch</effect>
         <effect author="Scirra" id="screen">Screen</effect>
+        <effect author="Brad Larson" id="sketch">Sketch</effect>
+        <effect author="Scirra" id="hardlight">Hard Light</effect>
     </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -51,7 +51,7 @@
         <prop name="Use iOS retina display">iPhone only</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-folder expanded="1" name="Sorting">
+        <object-folder expanded="0" name="Sorting">
             <object-type name="btnReturnToMenu">
                 <plugin id="Button" />
             </object-type>
@@ -1134,7 +1134,7 @@
                 <plugin id="Text" />
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="ErrorDetection">
+        <object-folder expanded="1" name="ErrorDetection">
             <object-type name="BlackBoardErrorCorrection">
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
@@ -1434,6 +1434,43 @@
             <object-type name="GradeText">
                 <plugin id="Text" />
             </object-type>
+            <object-type name="errorGameRetry">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.179688" y="0.179688" />
+                                <point x="0.5" y="0.0898438" />
+                                <point x="0.796875" y="0.203125" />
+                                <point x="0.929688" y="0.5" />
+                                <point x="0.832031" y="0.832031" />
+                                <point x="0.5" y="0.820313" />
+                                <point x="0.269531" y="0.730469" />
+                                <point x="0.597656" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="errorMenuBack">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504951">
+                            <collision-poly>
+                                <point x="0.5" y="0" />
+                                <point x="0.86" y="0.138614" />
+                                <point x="1" y="0.49505" />
+                                <point x="0.93" y="0.930693" />
+                                <point x="0.5" y="1" />
+                                <point x="0.07" y="0.930693" />
+                                <point x="0" y="0.49505" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder expanded="0" name="Menu">
             <object-type name="Sprite2">
@@ -1545,7 +1582,7 @@
         <event-folder expanded="0" name="Menu">
             <event-sheet>Menu-Events.xml</event-sheet>
         </event-folder>
-        <event-folder expanded="0" name="ErrorDetection">
+        <event-folder expanded="1" name="ErrorDetection">
             <event-sheet>DogodkiErrorCorrection.xml</event-sheet>
         </event-folder>
     </event-folder>

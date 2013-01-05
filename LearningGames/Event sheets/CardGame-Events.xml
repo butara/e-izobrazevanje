@@ -932,7 +932,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" title="Finish">
+        <event-group description="" title="Finish">
             <sub-events>
                 <event-block>
                     <conditions>
