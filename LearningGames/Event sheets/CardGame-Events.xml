@@ -18,7 +18,7 @@
         <variable constant="0" name="Start" static="0" type="number">0</variable>
         <variable constant="0" name="Clicked" static="0" type="number">0</variable>
         <variable constant="0" name="Help" static="0" type="number">0</variable>
-        <event-group description="" title="Initialization">
+        <event-group collapsed="1" description="" title="Initialization">
             <sub-events>
                 <comment>Skri vse elemente</comment>
                 <event-block>
@@ -257,7 +257,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" title="Game Action">
+        <event-group description="" title="Game Action">
             <sub-events>
                 <comment>Pritisk na Zelenkota za zagon ponovnega vprašanja.</comment>
                 <event-block>

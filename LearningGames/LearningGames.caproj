@@ -1263,6 +1263,177 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="NoteError">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.909091" hotspotY="0.451667">
+                            <collision-poly>
+                                <point x="0.973064" y="0.0266667" />
+                                <point x="0.991583" y="0.5" />
+                                <point x="0.888889" y="0.89" />
+                                <point x="0.5" y="0.865" />
+                                <point x="0.0925926" y="0.908333" />
+                                <point x="0.12963" y="0.5" />
+                                <point x="0.102694" y="0.101667" />
+                                <point x="0.5" y="0.0233333" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ButtonError">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="up" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.146667" y="0.146667" />
+                                <point x="0.5" y="0" />
+                                <point x="0.853333" y="0.146667" />
+                                <point x="1" y="0.5" />
+                                <point x="0.853333" y="0.853333" />
+                                <point x="0.5" y="1" />
+                                <point x="0.146667" y="0.853333" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="down" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.146667" y="0.146667" />
+                                <point x="0.5" y="0" />
+                                <point x="0.853333" y="0.146667" />
+                                <point x="1" y="0.5" />
+                                <point x="0.853333" y="0.853333" />
+                                <point x="0.5" y="1" />
+                                <point x="0.146667" y="0.853333" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="CorrectOutput">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="WrongOutput">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="Arrow2">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Flash">
+                        <behavior id="Flash" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.261719" y="0.261719" />
+                                <point x="0.5" y="0.347656" />
+                                <point x="0.652344" y="0.347656" />
+                                <point x="0.878906" y="0.5" />
+                                <point x="0.632813" y="0.632813" />
+                                <point x="0.5" y="0.632813" />
+                                <point x="0.28125" y="0.71875" />
+                                <point x="0.0625" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="CheckError">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="good" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.527132" y="0.457912" />
+                                <point x="0.5" y="0.493266" />
+                                <point x="0.998062" y="0.0016835" />
+                                <point x="0.575581" y="0.631313" />
+                                <point x="0.5" y="0.760943" />
+                                <point x="0.127907" y="0.888889" />
+                                <point x="0.496124" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="bad" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.500952" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.297143" y="0.26" />
+                                <point x="0.499048" y="0.143333" />
+                                <point x="0.931429" y="0.06" />
+                                <point x="0.67619" y="0.5" />
+                                <point x="0.782857" y="0.81" />
+                                <point x="0.499048" y="0.773333" />
+                                <point x="0.0914286" y="0.92" />
+                                <point x="0.325714" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SpongeError">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.500864" hotspotY="0.501176">
+                            <collision-poly>
+                                <point x="0.499136" y="0.265882" />
+                                <point x="0.80829" y="0.261176" />
+                                <point x="0.977547" y="0.498824" />
+                                <point x="0.785838" y="0.708235" />
+                                <point x="0.499136" y="0.875294" />
+                                <point x="0.146805" y="0.8" />
+                                <point x="0.0949914" y="0.498824" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="OcenaError">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="Correct">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="Incorrect">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="Buble">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.196875" y="0.246094" />
+                                <point x="0.5" y="0.114258" />
+                                <point x="0.802344" y="0.24707" />
+                                <point x="0.878906" y="0.5" />
+                                <point x="0.761719" y="0.702148" />
+                                <point x="0.5" y="0.793945" />
+                                <point x="0.238281" y="0.702148" />
+                                <point x="0.119531" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BubleText">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="GradeText">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-folder expanded="0" name="Menu">
             <object-type name="Sprite2">
