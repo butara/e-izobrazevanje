@@ -11,7 +11,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout>ErrorCorrection</layout>
-        <layout active="1">Sorting-game</layout>
+        <layout>Sorting-game</layout>
         <layout>Menu</layout>
         <layout>Sorting-menu</layout>
         <layout>Games-Cards</layout>
@@ -20,6 +20,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet>Menu-Events</event-sheet>
         <event-sheet>Event sheet 2</event-sheet>
         <event-sheet>RealTestSort</event-sheet>
+        <event-sheet active="1">CardGame-Events</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="Project settings" />

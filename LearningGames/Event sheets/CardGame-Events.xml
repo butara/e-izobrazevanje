@@ -642,13 +642,13 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" title="Help">
+        <event-group description="" title="Help">
             <sub-events>
                 <event-block>
                     <conditions>
                         <condition id="6" name="On object clicked" type="Mouse">
                             <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">1</param>
+                            <param id="1" name="Click type">0</param>
                             <param id="2" name="Object clicked">Sponge</param>
                         </condition>
                         <condition id="-14" name="Compare variable" type="System">

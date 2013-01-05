@@ -7,28 +7,28 @@
     <unique-id>nblx4rw9lntq</unique-id>
     <saved-with-version>11400</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
-        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
-        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
-        <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="ken@appMobi" id="appMobi" version="1">appMobi</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
-        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
-        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
+        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
     </used-behaviors>
     <used-effects>
         <effect author="Brad Larson" id="sketch">Sketch</effect>
         <effect author="Scirra" id="overlay">Overlay</effect>
-        <effect author="Scirra" id="screen">Screen</effect>
         <effect author="Scirra" id="hardlight">Hard Light</effect>
+        <effect author="Scirra" id="screen">Screen</effect>
     </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -38,6 +38,7 @@
         <height>768</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
+    <first-layout>Menu</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -1826,7 +1827,7 @@
             <event-sheet>SelectionSort.xml</event-sheet>
             <event-sheet>InsertionSort.xml</event-sheet>
         </event-folder>
-        <event-folder expanded="0" name="CardGame">
+        <event-folder expanded="1" name="CardGame">
             <event-sheet>CardGame-Events.xml</event-sheet>
         </event-folder>
         <event-folder expanded="1" name="Menu">
