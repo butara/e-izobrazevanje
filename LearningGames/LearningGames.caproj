@@ -7,27 +7,29 @@
     <unique-id>nblx4rw9lntq</unique-id>
     <saved-with-version>11400</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="ken@appMobi" id="appMobi" version="1">appMobi</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
-        <plugin author="ken@appMobi" id="appMobi" version="1">appMobi</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
-        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
-        <plugin author="Scirra" id="Button" version="1">Button</plugin>
-        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
-        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
-        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
+        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
     </used-behaviors>
     <used-effects>
         <effect author="Scirra" id="hardlight">Hard Light</effect>
         <effect author="Scirra" id="overlay">Overlay</effect>
-        <effect author="Scirra" id="screen">Screen</effect>
         <effect author="Brad Larson" id="sketch">Sketch</effect>
+        <effect author="Scirra" id="screen">Screen</effect>
     </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -41,7 +43,7 @@
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
         <prop name="Enable WebGL">On</prop>
-        <prop name="Fullscreen in browser">Crop</prop>
+        <prop name="Fullscreen in browser">Off</prop>
         <prop name="Hide address bar">No</prop>
         <prop name="Loader style">Progress bar &amp; logo</prop>
         <prop name="Preview browser">(default)</prop>
@@ -49,23 +51,11 @@
         <prop name="Use iOS retina display">iPhone only</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-folder expanded="0" name="Sorting">
-            <object-type name="btnBubbles">
-                <plugin id="Button" />
-            </object-type>
-            <object-type name="btnFinalCheck">
-                <plugin id="Button" />
-            </object-type>
+        <object-folder expanded="1" name="Sorting">
             <object-type name="btnReturnToMenu">
                 <plugin id="Button" />
             </object-type>
             <object-type name="Button">
-                <plugin id="Button" />
-            </object-type>
-            <object-type name="Button2">
-                <plugin id="Button" />
-            </object-type>
-            <object-type name="btnSelection">
                 <plugin id="Button" />
             </object-type>
             <object-type name="Button6">
@@ -108,7 +98,8 @@
             <object-type name="messageBubble">
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
-                    <animation framecount="14" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                    <animation framecount="15" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501618" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.501618" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.501618" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.501618" />
@@ -500,6 +491,11 @@
             </object-type>
             <object-type name="zelenko">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="CustomMovement">
+                        <behavior id="custom" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
                         <frame duration="1" hotspotX="0.500785" hotspotY="0.5">
@@ -529,11 +525,200 @@
             <object-type name="Text5">
                 <plugin id="Text" />
             </object-type>
+            <object-type name="btnBubbles">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.502857" hotspotY="0.503497" />
+                        <frame duration="1" hotspotX="0.502857" hotspotY="0.503497" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="sortingMenuBlackboard">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.500536" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.0364416" y="0.0485714" />
+                                <point x="0.963558" y="0.0485714" />
+                                <point x="0.986066" y="0.5" />
+                                <point x="0.965702" y="0.954286" />
+                                <point x="0.0332262" y="0.955714" />
+                                <point x="0.0160772" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btnRealSort">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.502857" hotspotY="0.502564">
+                            <collision-poly>
+                                <point x="0.16" y="0.14359" />
+                                <point x="0.497143" y="0.158974" />
+                                <point x="0.902857" y="0.0871795" />
+                                <point x="0.754286" y="0.497436" />
+                                <point x="0.702857" y="0.733333" />
+                                <point x="0.497143" y="1" />
+                                <point x="0.36" y="0.676923" />
+                                <point x="0.32" y="0.497436" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.502857" hotspotY="0.502564" />
+                        <frame duration="1" hotspotX="0.502857" hotspotY="0.502564" />
+                    </animation>
+                </animation-folder>
+            </object-type>
             <object-type name="btnInsertion">
-                <plugin id="Button" />
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.502857" hotspotY="0.503497" />
+                        <frame duration="1" hotspotX="0.502857" hotspotY="0.503497" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btnSelection">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.502857" hotspotY="0.503497" />
+                        <frame duration="1" hotspotX="0.502857" hotspotY="0.503497" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btnFinalCheck">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500888">
+                            <collision-poly>
+                                <point x="0.141667" y="0.150977" />
+                                <point x="0.5" y="0" />
+                                <point x="0.858333" y="0.150977" />
+                                <point x="1" y="0.499112" />
+                                <point x="0.858333" y="0.849023" />
+                                <point x="0.5" y="1" />
+                                <point x="0.141667" y="0.849023" />
+                                <point x="0" y="0.499112" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btnSortingInfo">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.502857" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.16" y="0.127273" />
+                                <point x="0.497143" y="0.00909091" />
+                                <point x="0.811429" y="0.15" />
+                                <point x="0.725714" y="0.5" />
+                                <point x="0.588571" y="0.672727" />
+                                <point x="0.497143" y="0.904545" />
+                                <point x="0.342857" y="0.727273" />
+                                <point x="0.342857" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.502857" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="sortingBubble">
+                <plugin id="Sprite" />
+                <container>
+                    <type>sortingBubble</type>
+                    <type>sortingBubbleText</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.196875" y="0.246094" />
+                                <point x="0.5" y="0.114258" />
+                                <point x="0.802344" y="0.24707" />
+                                <point x="0.878906" y="0.5" />
+                                <point x="0.761719" y="0.702148" />
+                                <point x="0.5" y="0.793945" />
+                                <point x="0.238281" y="0.702148" />
+                                <point x="0.119531" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="sortingBubbleText">
+                <plugin id="Text" />
+                <container>
+                    <type>sortingBubble</type>
+                    <type>sortingBubbleText</type>
+                </container>
+            </object-type>
+            <object-type name="sortingGameBack">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504951">
+                            <collision-poly>
+                                <point x="0.5" y="0" />
+                                <point x="0.86" y="0.138614" />
+                                <point x="1" y="0.49505" />
+                                <point x="0.93" y="0.930693" />
+                                <point x="0.5" y="1" />
+                                <point x="0.07" y="0.930693" />
+                                <point x="0" y="0.49505" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="sortingGameBubbleText">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="sortingGameRetry">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.179688" y="0.179688" />
+                                <point x="0.5" y="0.0898438" />
+                                <point x="0.796875" y="0.203125" />
+                                <point x="0.929688" y="0.5" />
+                                <point x="0.832031" y="0.832031" />
+                                <point x="0.5" y="0.820313" />
+                                <point x="0.269531" y="0.730469" />
+                                <point x="0.597656" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="sortingMenuBack">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504951">
+                            <collision-poly>
+                                <point x="0.5" y="0" />
+                                <point x="0.86" y="0.138614" />
+                                <point x="1" y="0.49505" />
+                                <point x="0.93" y="0.930693" />
+                                <point x="0.5" y="1" />
+                                <point x="0.07" y="0.930693" />
+                                <point x="0" y="0.49505" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="CardGame">
+        <object-folder expanded="0" name="CardGame">
             <object-type name="Arrow">
                 <plugin id="Sprite" />
                 <behaviors>
@@ -1147,10 +1332,16 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Button2">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Function">
+            <plugin id="Function" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
-        <layout-folder expanded="0" name="Sorting">
+        <layout-folder expanded="1" name="Sorting">
             <layout>Sorting-menu.xml</layout>
             <layout>Sorting-game.xml</layout>
             <layout>Sorting-Completed.xml</layout>
@@ -1166,7 +1357,7 @@
         </layout-folder>
     </layout-folder>
     <event-folder expanded="1">
-        <event-folder expanded="0" name="Sorting">
+        <event-folder expanded="1" name="Sorting">
             <event-sheet>BubbleSort.xml</event-sheet>
             <event-sheet>Event sheet 1.xml</event-sheet>
             <event-sheet>Event sheet 2.xml</event-sheet>
@@ -1200,6 +1391,7 @@
             </properties>
         </global-instance>
         <global-instance type="appMobi" />
+        <global-instance type="Function" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />

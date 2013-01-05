@@ -101,13 +101,26 @@
                     <param id="0" name="Variable">tutorialWeighsShouldSwap</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="-3" name="Set position" type="zelenko">
+                    <param id="0" name="X">78</param>
+                    <param id="1" name="Y">487</param>
+                </action>
+                <action id="-15" name="Set visible" type="messageBubble">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" type="sortingGameBubbleText">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action disabled="1" id="5" name="Set frame" type="messageBubble">
+                    <param id="0" name="Frame number">14</param>
+                </action>
             </actions>
         </event-block>
         <variable constant="0" name="balanceAnimationSpeed" static="0" type="number">10</variable>
-        <variable constant="0" name="swappingSpeed" static="0" type="number">20</variable>
+        <variable constant="0" name="swappingSpeed" static="0" type="number">25</variable>
         <variable constant="0" name="moveSpeedY" static="0" type="number">0</variable>
         <variable constant="0" name="moveSpeedX" static="0" type="number">0</variable>
-        <variable constant="0" name="loop" static="0" type="number">3</variable>
+        <variable constant="0" name="loop" static="0" type="number">10</variable>
         <variable constant="0" name="picked2" static="0" type="number">0</variable>
         <variable constant="0" name="pickedObject1" static="0" type="number">0</variable>
         <variable constant="0" name="pickedObject2" static="0" type="number">0</variable>
@@ -382,11 +395,15 @@
                 </action>
             </actions>
         </event-block>
-        <event-group collapsed="1" description="" title="final_check">
+        <event-group description="" title="final_check">
             <sub-events>
                 <event-block>
                     <conditions>
-                        <condition id="0" name="On clicked" type="btnFinalCheck" />
+                        <condition id="6" name="On object clicked" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">btnFinalCheck</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
@@ -453,8 +470,91 @@
                                             <param id="0" name="Variable">state</param>
                                             <param id="1" name="Value">&quot;completed&quot;</param>
                                         </action>
-                                        <action id="-2" name="Go to layout" type="System">
+                                        <action disabled="1" id="-2" name="Go to layout" type="System">
                                             <param id="0" name="Layout">Sorting-Completed</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" type="messageBubble">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" type="sortingGameBubbleText">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="0" name="Set text" type="sortingGameBubbleText">
+                                            <param id="0" name="Text">&quot;Čestitam! Upselo ti je!&quot; &amp; newline</param>
+                                        </action>
+                                        <action id="1" name="Append text" type="sortingGameBubbleText">
+                                            <param id="0" name="Text">&quot;Končnih preverjanj: &quot; &amp; finalChecks &amp; newline</param>
+                                        </action>
+                                        <action id="1" name="Append text" type="sortingGameBubbleText">
+                                            <param id="0" name="Text">&quot;Preverjanj uteži: &quot; &amp; comparisons &amp; newline</param>
+                                        </action>
+                                        <action id="1" name="Append text" type="sortingGameBubbleText">
+                                            <param id="0" name="Text">&quot;Dosegel si &quot; &amp; (score +10 + 15 - 10*finalChecks - comparisons) &amp; &quot; točk&quot;</param>
+                                        </action>
+                                        <action id="4" name="Set animation" type="weight10">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" type="weight20">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" type="weight30">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" type="weight40">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" type="weight50">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="5" name="Set frame" type="weight10">
+                                            <param id="0" name="Frame number">weight10.AnimationFrameCount</param>
+                                        </action>
+                                        <action id="5" name="Set frame" type="weight20">
+                                            <param id="0" name="Frame number">weight20.AnimationFrameCount</param>
+                                        </action>
+                                        <action id="5" name="Set frame" type="weight30">
+                                            <param id="0" name="Frame number">weight30.AnimationFrameCount</param>
+                                        </action>
+                                        <action id="5" name="Set frame" type="weight40">
+                                            <param id="0" name="Frame number">weight40.AnimationFrameCount</param>
+                                        </action>
+                                        <action id="5" name="Set frame" type="weight50">
+                                            <param id="0" name="Frame number">weight50.AnimationFrameCount</param>
+                                        </action>
+                                        <action id="6" name="Set speed" type="weight10">
+                                            <param id="0" name="Speed">-5</param>
+                                        </action>
+                                        <action id="6" name="Set speed" type="weight20">
+                                            <param id="0" name="Speed">-5</param>
+                                        </action>
+                                        <action id="6" name="Set speed" type="weight30">
+                                            <param id="0" name="Speed">-5</param>
+                                        </action>
+                                        <action id="6" name="Set speed" type="weight40">
+                                            <param id="0" name="Speed">-5</param>
+                                        </action>
+                                        <action id="6" name="Set speed" type="weight50">
+                                            <param id="0" name="Speed">-5</param>
+                                        </action>
+                                        <action id="3" name="Start" type="weight10">
+                                            <param id="0" name="From">0</param>
+                                        </action>
+                                        <action id="3" name="Start" type="weight20">
+                                            <param id="0" name="From">0</param>
+                                        </action>
+                                        <action id="3" name="Start" type="weight30">
+                                            <param id="0" name="From">0</param>
+                                        </action>
+                                        <action id="3" name="Start" type="weight40">
+                                            <param id="0" name="From">0</param>
+                                        </action>
+                                        <action id="3" name="Start" type="weight50">
+                                            <param id="0" name="From">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -464,5 +564,31 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block>
+            <conditions>
+                <condition id="6" name="On object clicked" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">sortingGameBack</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" type="System">
+                    <param id="0" name="Layout">Sorting-menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="6" name="On object clicked" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">sortingGameRetry</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" type="System" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

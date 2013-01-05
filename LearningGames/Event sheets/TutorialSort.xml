@@ -5,7 +5,7 @@
     <events>
         <variable constant="0" name="tutorialWeighsShouldSwap" static="0" type="number">0</variable>
         <comment>tutorial steps: swap weight 1, swap weight 2, before selection frame, after selection frame, after measuring frame, should swap</comment>
-        <event-group collapsed="1" description="" title="tutorialShowInfo">
+        <event-group description="" title="tutorialShowInfo">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -17,7 +17,10 @@
                         <condition id="6" inverted="1" name="Is empty" type="tutorialInfo" />
                     </conditions>
                     <actions>
-                        <action id="5" name="Set frame" type="messageBubble">
+                        <action id="0" name="Set text" type="sortingGameBubbleText">
+                            <param id="0" name="Text">TutorialInfo.Back</param>
+                        </action>
+                        <action disabled="1" id="5" name="Set frame" type="messageBubble">
                             <param id="0" name="Frame number">TutorialInfo.Back</param>
                         </action>
                         <action id="6" name="Pop" type="tutorialInfo">
@@ -25,6 +28,9 @@
                             <param id="1" name="Axis">0</param>
                         </action>
                         <action id="-15" name="Set visible" type="messageBubble">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="sortingGameBubbleText">
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
@@ -98,7 +104,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" title="tutorialWeightsSwapping">
+        <event-group collapsed="1" description="" title="tutorialWeightsSwapping">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -199,7 +205,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" title="tutorialPickAction">
+        <event-group description="" title="tutorialPickAction">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -244,7 +250,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" title="tutorialSelectionActionž">
+        <event-group description="" title="tutorialSelectionActionž">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -276,10 +282,16 @@
                         <action id="0" name="Set text" type="Text4">
                             <param id="0" name="Text">oldPicked2PositionX</param>
                         </action>
-                        <action id="5" name="Set frame" type="messageBubble">
+                        <action disabled="1" id="5" name="Set frame" type="messageBubble">
                             <param id="0" name="Frame number">TutorialWeightsSwapFrame.Back</param>
                         </action>
+                        <action id="0" name="Set text" type="sortingGameBubbleText">
+                            <param id="0" name="Text">TutorialWeightsSwapFrame.Back</param>
+                        </action>
                         <action id="-15" name="Set visible" type="messageBubble">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="sortingGameBubbleText">
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="6" name="Pop" type="TutorialWeightsSwapFrame">
@@ -518,8 +530,14 @@
                                 <action id="-15" name="Set visible" type="messageBubble">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
-                                <action id="5" name="Set frame" type="messageBubble">
+                                <action id="-15" name="Set visible" type="sortingGameBubbleText">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action disabled="1" id="5" name="Set frame" type="messageBubble">
                                     <param id="0" name="Frame number">TutorialWeightsSwapFrame.Back</param>
+                                </action>
+                                <action id="0" name="Set text" type="sortingGameBubbleText">
+                                    <param id="0" name="Text">TutorialWeightsSwapFrame.Back</param>
                                 </action>
                                 <action id="6" name="Pop" type="TutorialWeightsSwapFrame">
                                     <param id="0" name="Where">0</param>
@@ -595,8 +613,14 @@
                                 <action id="-15" name="Set visible" type="messageBubble">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
-                                <action id="5" name="Set frame" type="messageBubble">
+                                <action id="-15" name="Set visible" type="sortingGameBubbleText">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action disabled="1" id="5" name="Set frame" type="messageBubble">
                                     <param id="0" name="Frame number">TutorialWeightsSwapFrame.Back</param>
+                                </action>
+                                <action id="0" name="Set text" type="sortingGameBubbleText">
+                                    <param id="0" name="Text">TutorialWeightsSwapFrame.Back</param>
                                 </action>
                                 <action id="6" name="Pop" type="TutorialWeightsSwapFrame">
                                     <param id="0" name="Where">0</param>
@@ -670,8 +694,14 @@
                                 <action id="-15" name="Set visible" type="messageBubble">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
-                                <action id="5" name="Set frame" type="messageBubble">
+                                <action id="-15" name="Set visible" type="sortingGameBubbleText">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action disabled="1" id="5" name="Set frame" type="messageBubble">
                                     <param id="0" name="Frame number">TutorialWeightsSwapFrame.Back</param>
+                                </action>
+                                <action id="0" name="Set text" type="sortingGameBubbleText">
+                                    <param id="0" name="Text">TutorialWeightsSwapFrame.Back</param>
                                 </action>
                                 <action id="6" name="Pop" type="TutorialWeightsSwapFrame">
                                     <param id="0" name="Where">0</param>
@@ -745,8 +775,14 @@
                                 <action id="-15" name="Set visible" type="messageBubble">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
-                                <action id="5" name="Set frame" type="messageBubble">
+                                <action id="-15" name="Set visible" type="sortingGameBubbleText">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action disabled="1" id="5" name="Set frame" type="messageBubble">
                                     <param id="0" name="Frame number">TutorialWeightsSwapFrame.Back</param>
+                                </action>
+                                <action id="0" name="Set text" type="sortingGameBubbleText">
+                                    <param id="0" name="Text">TutorialWeightsSwapFrame.Back</param>
                                 </action>
                                 <action id="6" name="Pop" type="TutorialWeightsSwapFrame">
                                     <param id="0" name="Where">0</param>
@@ -820,8 +856,14 @@
                                 <action id="-15" name="Set visible" type="messageBubble">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
-                                <action id="5" name="Set frame" type="messageBubble">
+                                <action id="-15" name="Set visible" type="sortingGameBubbleText">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action disabled="1" id="5" name="Set frame" type="messageBubble">
                                     <param id="0" name="Frame number">TutorialWeightsSwapFrame.Back</param>
+                                </action>
+                                <action id="0" name="Set text" type="sortingGameBubbleText">
+                                    <param id="0" name="Text">TutorialWeightsSwapFrame.Back</param>
                                 </action>
                                 <action id="6" name="Pop" type="TutorialWeightsSwapFrame">
                                     <param id="0" name="Where">0</param>
@@ -864,7 +906,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" title="tutorialSwapOrReturn">
+        <event-group description="" title="tutorialSwapOrReturn">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -875,8 +917,11 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="5" name="Set frame" type="messageBubble">
+                        <action disabled="1" id="5" name="Set frame" type="messageBubble">
                             <param id="0" name="Frame number">TutorialWeightsSwapFrame.Back</param>
+                        </action>
+                        <action id="0" name="Set text" type="sortingGameBubbleText">
+                            <param id="0" name="Text">TutorialWeightsSwapFrame.Back</param>
                         </action>
                         <action id="6" name="Pop" type="TutorialWeightsSwapFrame">
                             <param id="0" name="Where">0</param>
@@ -940,11 +985,11 @@
                         </action>
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">moveSpeedX</param>
-                            <param id="1" name="Value">5</param>
+                            <param id="1" name="Value">15</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">moveSpeedY</param>
-                            <param id="1" name="Value">5</param>
+                            <param id="1" name="Value">15</param>
                         </action>
                         <action id="6" name="Set speed" type="weight_measure_final_">
                             <param id="0" name="Speed">newPosition2X&gt;newPosition1X ? (picked2&gt;picked1 ? -balanceAnimationSpeed : balanceAnimationSpeed) : (picked2&gt;picked1 ? balanceAnimationSpeed : -balanceAnimationSpeed)</param>
@@ -1019,11 +1064,11 @@
                         </action>
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">moveSpeedX</param>
-                            <param id="1" name="Value">5</param>
+                            <param id="1" name="Value">15</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">moveSpeedY</param>
-                            <param id="1" name="Value">5</param>
+                            <param id="1" name="Value">15</param>
                         </action>
                         <action id="6" name="Set speed" type="weight_measure_final_">
                             <param id="0" name="Speed">newPosition2X&gt;newPosition1X ? (picked2&lt;picked1 ? -balanceAnimationSpeed : balanceAnimationSpeed) : (picked2&lt;picked1 ? balanceAnimationSpeed : -balanceAnimationSpeed)</param>

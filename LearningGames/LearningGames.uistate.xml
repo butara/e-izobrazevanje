@@ -10,15 +10,17 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
+        <layout active="1">Sorting-menu</layout>
         <layout>Sorting-game</layout>
-        <layout>Sorting-menu</layout>
-        <layout>Sorting-Completed</layout>
         <layout>Games-Cards</layout>
-        <layout>Menu</layout>
-        <layout active="1">ErrorCorrection</layout>
+        <event-sheet>Event sheet 2</event-sheet>
+        <event-sheet>Event sheet 1</event-sheet>
+        <event-sheet>Functions</event-sheet>
         <event-sheet>CardGame-Events</event-sheet>
-        <event-sheet>Menu-Events</event-sheet>
-        <event-sheet>DogodkiErrorCorrection</event-sheet>
+        <event-sheet>TutorialSort</event-sheet>
+        <event-sheet>SelectionSort</event-sheet>
+        <event-sheet>InsertionSort</event-sheet>
+        <event-sheet>BubbleSort</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="Project settings" />

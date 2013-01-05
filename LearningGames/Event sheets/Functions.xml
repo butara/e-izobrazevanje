@@ -2108,7 +2108,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" title="triggerSwap">
+        <event-group collapsed="1" description="" title="triggerSwap">
             <sub-events>
                 <event-block disabled="1">
                     <conditions>
@@ -2241,7 +2241,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" title="trigger_weighting">
+        <event-group description="" title="trigger_weighting">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -2286,11 +2286,11 @@
                         </action>
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">moveSpeedX</param>
-                            <param id="1" name="Value">5</param>
+                            <param id="1" name="Value">15</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">moveSpeedY</param>
-                            <param id="1" name="Value">5</param>
+                            <param id="1" name="Value">15</param>
                         </action>
                         <action id="-10" name="Add to" type="System">
                             <param id="0" name="Variable">comparisons</param>
@@ -2534,11 +2534,11 @@
                         </action>
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">moveSpeedX</param>
-                            <param id="1" name="Value">5</param>
+                            <param id="1" name="Value">15</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">moveSpeedY</param>
-                            <param id="1" name="Value">5</param>
+                            <param id="1" name="Value">15</param>
                         </action>
                         <action id="6" name="Set speed" type="weight_measure_final_">
                             <param id="0" name="Speed">newPosition2X&gt;newPosition1X ? (picked2&gt;picked1 ? -balanceAnimationSpeed : balanceAnimationSpeed) : (picked2&gt;picked1 ? balanceAnimationSpeed : -balanceAnimationSpeed)</param>
@@ -2582,11 +2582,11 @@
                         </action>
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">moveSpeedX</param>
-                            <param id="1" name="Value">5</param>
+                            <param id="1" name="Value">15</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">moveSpeedY</param>
-                            <param id="1" name="Value">5</param>
+                            <param id="1" name="Value">15</param>
                         </action>
                         <action id="6" name="Set speed" type="weight_measure_final_">
                             <param id="0" name="Speed">newPosition2X&gt;newPosition1X ? (picked2&lt;picked1 ? -balanceAnimationSpeed : balanceAnimationSpeed) : (picked2&lt;picked1 ? balanceAnimationSpeed : -balanceAnimationSpeed)</param>
@@ -2611,6 +2611,41 @@
                             <param id="0" name="Variable">state</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;moving2FromBalance&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;picking1&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;picking2&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;selectAction&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;tutorialWeightsSwappingShowArrows&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;tutorialWeightsSwappingShowArrows1&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;tutorialWeightsSwappingShowArrows2&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">state</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;tutorialEnd&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
