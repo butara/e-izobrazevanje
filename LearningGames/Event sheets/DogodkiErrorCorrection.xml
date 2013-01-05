@@ -86,7 +86,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="We initialize boxes in position." title="Initialization">
+        <event-group description="We initialize boxes in position." title="Initialization">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -681,53 +681,67 @@
         </event-group>
         <event-group description="Evil zelenko breaks array and user will have to detect error." title="BreakBitArray">
             <sub-events>
-                <event-block>
+                <variable constant="0" name="movement" static="0" type="number">2</variable>
+                <event-block disabled="1">
                     <conditions>
                         <condition id="6" name="On object clicked" type="Mouse">
                             <param id="0" name="Mouse button">0</param>
                             <param id="1" name="Click type">0</param>
                             <param id="2" name="Object clicked">ZelenkoTextErrorCorrection</param>
                         </condition>
-                        <condition id="-14" name="Compare variable" type="System">
+                        <condition disabled="1" id="-14" name="Compare variable" type="System">
                             <param id="0" name="Variable">stateErrorCorrection</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;breakBitArray&quot;</param>
+                        </condition>
+                        <condition disabled="1" id="2" name="Mouse button is down" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-15" name="Set visible" type="Curtain">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action disabled="1" id="-3" name="Set position" type="Curtain">
-                            <param id="0" name="X">511</param>
-                            <param id="1" name="Y">384</param>
+                        <action id="-3" name="Set position" type="Curtain">
+                            <param id="0" name="X">512</param>
+                            <param id="1" name="Y">-380</param>
                         </action>
-                        <action behavior="CustomMovement" id="5" name="Accelerate toward position" type="Curtain">
-                            <param id="0" name="Acceleration">2</param>
-                            <param id="1" name="X">511</param>
+                        <action behavior="CustomMovement" id="2" name="Set speed" type="Curtain">
+                            <param id="0" name="Which">2</param>
+                            <param id="1" name="Speed">384</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">movement</param>
+                        </action>
+                        <action behavior="CustomMovement" id="2" name="Set speed" type="Curtain">
+                            <param id="0" name="Which">2</param>
+                            <param id="1" name="Speed">0</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">movement</param>
+                        </action>
+                        <action behavior="CustomMovement" id="2" name="Set speed" type="Curtain">
+                            <param id="0" name="Which">2</param>
+                            <param id="1" name="Speed">-384</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">movement</param>
+                        </action>
+                        <action behavior="CustomMovement" id="2" name="Set speed" type="Curtain">
+                            <param id="0" name="Which">2</param>
+                            <param id="1" name="Speed">0</param>
+                        </action>
+                        <action behavior="CustomMovement" disabled="1" id="5" name="Accelerate toward position" type="Curtain">
+                            <param id="0" name="Acceleration">512</param>
+                            <param id="1" name="X">512</param>
                             <param id="2" name="Y">386</param>
                         </action>
-                        <action behavior="CustomMovement" id="12" name="Set enabled" type="Curtain">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action disabled="1" id="-16" name="Wait" type="System">
-                            <param id="0" name="Seconds">3</param>
-                        </action>
-                        <action behavior="CustomMovement" id="5" name="Accelerate toward position" type="Curtain">
-                            <param id="0" name="Acceleration">2</param>
-                            <param id="1" name="X">511</param>
-                            <param id="2" name="Y">-385</param>
-                        </action>
-                        <action behavior="CustomMovement" id="12" name="Set enabled" type="Curtain">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action disabled="1" id="-24" name="Move to top" type="Curtain" />
                         <action id="-15" name="Set visible" type="Curtain">
                             <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block collapsed="1">
+                <event-block>
                     <conditions>
                         <condition id="6" name="On object clicked" type="Mouse">
                             <param id="0" name="Mouse button">0</param>
@@ -750,7 +764,44 @@
                             <param id="2" name="Value">&quot;userSetParityBits&quot;</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-15" name="Set visible" type="Curtain">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" type="Curtain">
+                            <param id="0" name="X">512</param>
+                            <param id="1" name="Y">-380</param>
+                        </action>
+                        <action behavior="CustomMovement" id="2" name="Set speed" type="Curtain">
+                            <param id="0" name="Which">2</param>
+                            <param id="1" name="Speed">384</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">movement</param>
+                        </action>
+                        <action behavior="CustomMovement" id="2" name="Set speed" type="Curtain">
+                            <param id="0" name="Which">2</param>
+                            <param id="1" name="Speed">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Buble">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" type="BubleText">
+                            <param id="0" name="Text">&quot;Mwuhahahahahaha!!!! Tvoja tabela bitov je pogubljena!&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="0" name="Set text" type="BubleText">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Buble">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">movement</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <comment>TODO: Works only once, change animation frame 0 ? 2:0</comment>
                         <comment>TODO: Multiple errors ?</comment>
@@ -767,8 +818,11 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="5" name="Set frame" type="Box">
+                                <action disabled="1" id="5" name="Set frame" type="Box">
                                     <param id="0" name="Frame number">self.AnimationFrame=0 ? 3:3</param>
+                                </action>
+                                <action id="5" name="Set frame" type="Box">
+                                    <param id="0" name="Frame number">self.AnimationFrame=0 ? 2:0</param>
                                 </action>
                                 <action id="-14" name="Toggle boolean" type="Box">
                                     <param id="0" name="Instance variable">isBrokenBit</param>
@@ -784,13 +838,32 @@
                                     <param id="0" name="Variable">stateErrorCorrection</param>
                                     <param id="1" name="Value">i=2 ? &quot;userDetectErrors&quot; : stateErrorCorrection</param>
                                 </action>
+                                <action behavior="CustomMovement" id="2" name="Set speed" type="Curtain">
+                                    <param id="0" name="Which">2</param>
+                                    <param id="1" name="Speed">-384</param>
+                                </action>
+                                <action id="-16" name="Wait" type="System">
+                                    <param id="0" name="Seconds">movement</param>
+                                </action>
+                                <action behavior="CustomMovement" id="2" name="Set speed" type="Curtain">
+                                    <param id="0" name="Which">2</param>
+                                    <param id="1" name="Speed">0</param>
+                                </action>
+                                <action behavior="CustomMovement" disabled="1" id="5" name="Accelerate toward position" type="Curtain">
+                                    <param id="0" name="Acceleration">512</param>
+                                    <param id="1" name="X">512</param>
+                                    <param id="2" name="Y">386</param>
+                                </action>
+                                <action id="-15" name="Set visible" type="Curtain">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="User shows errors with clicking on broken bits." title="UserDetectErrors">
+        <event-group description="User shows errors with clicking on broken bits." title="UserDetectErrors">
             <sub-events>
                 <comment>TODO: Add multiple error detect</comment>
                 <event-block>
@@ -838,6 +911,9 @@
                                     <param id="0" name="Variable">stateErrorCorrection</param>
                                     <param id="1" name="Value">&quot;success&quot;</param>
                                 </action>
+                                <action id="5" name="Set frame" type="Box">
+                                    <param id="0" name="Frame number">4</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block>
@@ -850,6 +926,9 @@
                                 <action id="-9" name="Set value" type="System">
                                     <param id="0" name="Variable">stateErrorCorrection</param>
                                     <param id="1" name="Value">&quot;error&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" type="Box">
+                                    <param id="0" name="Frame number">5</param>
                                 </action>
                             </actions>
                         </event-block>

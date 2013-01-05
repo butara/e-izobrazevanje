@@ -28,8 +28,12 @@
                 <action id="0" name="Set text" type="Text">
                     <param id="0" name="Text">weight10.position &amp; &quot; &quot; &amp; weight20.position &amp; &quot; &quot; &amp; weight30.position &amp; &quot; &quot; &amp; weight40.position &amp; &quot; &quot; &amp; weight50.position &amp; &quot; &quot; &amp; time</param>
                 </action>
+                <action id="0" name="Set text" type="Text5">
+                    <param id="0" name="Text">type</param>
+                </action>
             </actions>
         </event-block>
+        <variable constant="0" name="loop" static="0" type="number">10</variable>
         <event-block>
             <conditions>
                 <condition id="-2" name="On start of layout" type="System" />
@@ -114,13 +118,16 @@
                 <action disabled="1" id="5" name="Set frame" type="messageBubble">
                     <param id="0" name="Frame number">14</param>
                 </action>
+                <action id="-9" name="Set value" type="System">
+                    <param id="0" name="Variable">loop</param>
+                    <param id="1" name="Value">10</param>
+                </action>
             </actions>
         </event-block>
         <variable constant="0" name="balanceAnimationSpeed" static="0" type="number">10</variable>
         <variable constant="0" name="swappingSpeed" static="0" type="number">25</variable>
         <variable constant="0" name="moveSpeedY" static="0" type="number">0</variable>
         <variable constant="0" name="moveSpeedX" static="0" type="number">0</variable>
-        <variable constant="0" name="loop" static="0" type="number">10</variable>
         <variable constant="0" name="picked2" static="0" type="number">0</variable>
         <variable constant="0" name="pickedObject1" static="0" type="number">0</variable>
         <variable constant="0" name="pickedObject2" static="0" type="number">0</variable>
@@ -397,6 +404,7 @@
         </event-block>
         <event-group description="" title="final_check">
             <sub-events>
+                <variable constant="0" name="calculatedScore" static="0" type="number">0</variable>
                 <event-block>
                     <conditions>
                         <condition id="6" name="On object clicked" type="Mouse">
@@ -480,7 +488,7 @@
                                             <param id="0" name="Visibility">1</param>
                                         </action>
                                         <action id="0" name="Set text" type="sortingGameBubbleText">
-                                            <param id="0" name="Text">&quot;Čestitam! Upselo ti je!&quot; &amp; newline</param>
+                                            <param id="0" name="Text">&quot;Čestitam! Uspelo ti je!&quot; &amp; newline</param>
                                         </action>
                                         <action id="1" name="Append text" type="sortingGameBubbleText">
                                             <param id="0" name="Text">&quot;Končnih preverjanj: &quot; &amp; finalChecks &amp; newline</param>
@@ -488,8 +496,26 @@
                                         <action id="1" name="Append text" type="sortingGameBubbleText">
                                             <param id="0" name="Text">&quot;Preverjanj uteži: &quot; &amp; comparisons &amp; newline</param>
                                         </action>
-                                        <action id="1" name="Append text" type="sortingGameBubbleText">
+                                        <action disabled="1" id="1" name="Append text" type="sortingGameBubbleText">
                                             <param id="0" name="Text">&quot;Dosegel si &quot; &amp; (score +10 + 15 - 10*finalChecks - comparisons) &amp; &quot; točk&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" type="System">
+                                            <param id="0" name="Variable">calculatedScore</param>
+                                            <param id="1" name="Value">round( 100 * (1.7*score +10 + 15 - 10*finalChecks - comparisons) / (score + 15) )</param>
+                                        </action>
+                                        <action id="-9" name="Set value" type="System">
+                                            <param id="0" name="Variable">calculatedScore</param>
+                                            <param id="1" name="Value">calculatedScore&lt;0 ? 0:calculatedScore</param>
+                                        </action>
+                                        <action id="-9" name="Set value" type="System">
+                                            <param id="0" name="Variable">calculatedScore</param>
+                                            <param id="1" name="Value">calculatedScore&gt;100 ? 100:calculatedScore</param>
+                                        </action>
+                                        <action disabled="1" id="1" name="Append text" type="sortingGameBubbleText">
+                                            <param id="0" name="Text">&quot;Dosegel si &quot; &amp; round( 100 * (1.7*score +10 + 15 - 10*finalChecks - comparisons) / (score + 15) ) &amp; &quot;%&quot;</param>
+                                        </action>
+                                        <action id="1" name="Append text" type="sortingGameBubbleText">
+                                            <param id="0" name="Text">&quot;Dosegel si &quot; &amp; calculatedScore &amp; &quot;%&quot;</param>
                                         </action>
                                         <action id="4" name="Set animation" type="weight10">
                                             <param id="0" name="Animation">&quot;Default&quot;</param>

@@ -221,7 +221,7 @@
                     <conditions>
                         <condition id="6" name="On object clicked" type="Mouse">
                             <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">1</param>
+                            <param id="1" name="Click type">0</param>
                             <param id="2" name="Object clicked">BoxButton</param>
                         </condition>
                         <condition id="-7" name="Compare instance variable" type="BoxButton">
@@ -240,7 +240,7 @@
                     <conditions>
                         <condition id="6" name="On object clicked" type="Mouse">
                             <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">1</param>
+                            <param id="1" name="Click type">0</param>
                             <param id="2" name="Object clicked">BoxButton</param>
                         </condition>
                         <condition id="-7" name="Compare instance variable" type="BoxButton">
@@ -259,7 +259,7 @@
                     <conditions>
                         <condition id="6" name="On object clicked" type="Mouse">
                             <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">1</param>
+                            <param id="1" name="Click type">0</param>
                             <param id="2" name="Object clicked">BoxButton</param>
                         </condition>
                         <condition id="-7" name="Compare instance variable" type="BoxButton">
