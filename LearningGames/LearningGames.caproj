@@ -8,28 +8,27 @@
     <saved-with-version>11400</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
-        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
-        <plugin author="Scirra" id="Button" version="1">Button</plugin>
-        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
-        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
-        <plugin author="ken@appMobi" id="appMobi" version="1">appMobi</plugin>
-        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="ken@appMobi" id="appMobi" version="1">appMobi</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
-        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
     </used-behaviors>
     <used-effects>
         <effect author="Brad Larson" id="sketch">Sketch</effect>
+        <effect author="Scirra" id="overlay">Overlay</effect>
         <effect author="Scirra" id="screen">Screen</effect>
         <effect author="Scirra" id="hardlight">Hard Light</effect>
-        <effect author="Scirra" id="overlay">Overlay</effect>
     </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -717,6 +716,29 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="stool2">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.56" hotspotY="0.0633333">
+                            <image-point name="Imagepoint 1" x="0.263333" y="0.0466667" />
+                            <image-point name="Imagepoint 2" x="0.13" y="0.0533333" />
+                            <image-point name="Imagepoint 3" x="0.57" y="0.0433333" />
+                            <image-point name="Imagepoint 4" x="0.78" y="0.06" />
+                            <collision-poly>
+                                <point x="0.303333" y="0.103333" />
+                                <point x="0.71" y="0.103333" />
+                                <point x="0.743333" y="0.413333" />
+                                <point x="0.743333" y="0.5" />
+                                <point x="0.74" y="0.74" />
+                                <point x="0.5" y="0.703333" />
+                                <point x="0.25" y="0.75" />
+                                <point x="0.246667" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder expanded="0" name="CardGame">
             <object-type name="Arrow">
@@ -1005,9 +1027,6 @@
             <object-type name="OutPutInCorrectA">
                 <plugin id="Text" />
             </object-type>
-            <object-type name="Repeat">
-                <plugin id="Button" />
-            </object-type>
             <object-type name="Score">
                 <plugin id="Text" />
             </object-type>
@@ -1031,9 +1050,6 @@
             </object-type>
             <object-type name="Scoring">
                 <plugin id="Text" />
-            </object-type>
-            <object-type name="Skip">
-                <plugin id="Button" />
             </object-type>
             <object-type name="Sprite">
                 <plugin id="Sprite" />
@@ -1132,6 +1148,43 @@
             </object-type>
             <object-type name="TextRezultat">
                 <plugin id="Text" />
+            </object-type>
+            <object-type name="errorGameRetry2">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.179688" y="0.179688" />
+                                <point x="0.5" y="0.0898438" />
+                                <point x="0.796875" y="0.203125" />
+                                <point x="0.929688" y="0.5" />
+                                <point x="0.832031" y="0.832031" />
+                                <point x="0.5" y="0.820313" />
+                                <point x="0.269531" y="0.730469" />
+                                <point x="0.597656" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="errorMenuBack2">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504951">
+                            <collision-poly>
+                                <point x="0.5" y="0" />
+                                <point x="0.86" y="0.138614" />
+                                <point x="1" y="0.49505" />
+                                <point x="0.93" y="0.930693" />
+                                <point x="0.5" y="1" />
+                                <point x="0.07" y="0.930693" />
+                                <point x="0" y="0.49505" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-folder expanded="1" name="ErrorDetection">
@@ -1510,17 +1563,138 @@
             </object-type>
         </object-folder>
         <object-folder expanded="0" name="Menu">
-            <object-type name="Sprite2">
+            <object-type name="BoxButton">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="BoxNumber" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Fade">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                    <behavior-type name="Physics">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="MenuComputer">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500462">
+                            <collision-poly>
+                                <point x="0.27451" y="0.310249" />
+                                <point x="0.5" y="0.0674054" />
+                                <point x="0.861928" y="0.156048" />
+                                <point x="0.90768" y="0.499538" />
+                                <point x="0.772059" y="0.742382" />
+                                <point x="0.5" y="0.927054" />
+                                <point x="0.215686" y="0.756233" />
+                                <point x="0.195261" y="0.499538" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SortText">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Fade">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="Pile1">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Pile2">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501961" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Pile3">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Mozicelj">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.500977" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.40918" y="0.545573" />
+                                <point x="0.5" y="0.302083" />
+                                <point x="0.797852" y="0.269531" />
+                                <point x="0.745117" y="0.5" />
+                                <point x="0.982422" y="0.976563" />
+                                <point x="0.5" y="0.575521" />
+                                <point x="0.52832" y="0.295573" />
+                                <point x="0.646484" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Screen1">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Screen2">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.500634" />
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="TiledBackground">
-                <plugin id="TiledBg" />
-                <texture />
+            <object-type name="Screen3">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
             </object-type>
             <object-type name="OblacekMenu">
                 <plugin id="Sprite" />
@@ -1541,8 +1715,32 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="BinarnaStevilagumb">
+            <object-type name="TextCloud">
                 <plugin id="Text" />
+            </object-type>
+            <object-type name="PileOfComputers">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                        <frame duration="1" hotspotX="0.50059" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="CRCText">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Fade">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="BiText">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Fade">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
             </object-type>
         </object-folder>
         <object-type name="Mouse">
@@ -1605,7 +1803,7 @@
         </layout-folder>
     </layout-folder>
     <event-folder expanded="1">
-        <event-folder expanded="1" name="Sorting">
+        <event-folder expanded="0" name="Sorting">
             <event-sheet>BubbleSort.xml</event-sheet>
             <event-sheet>Event sheet 1.xml</event-sheet>
             <event-sheet>Event sheet 2.xml</event-sheet>

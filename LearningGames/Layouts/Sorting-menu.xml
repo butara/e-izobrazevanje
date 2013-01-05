@@ -26,6 +26,27 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="stool2">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>503</x>
+                        <y>685</y>
+                        <z>0</z>
+                        <width>300</width>
+                        <height>196</height>
+                        <depth>0</depth>
+                        <hotspotX>0.560000002</hotspotX>
+                        <hotspotY>0.063333333</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="sortingMenuBlackboard">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -238,11 +259,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>67</x>
-                        <y>702</y>
+                        <x>998</x>
+                        <y>720</y>
                         <z>0</z>
-                        <width>100</width>
-                        <height>101</height>
+                        <width>50</width>
+                        <height>50</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.504950523</hotspotY>

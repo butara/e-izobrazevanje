@@ -205,7 +205,7 @@
                 <instance type="TextErrorCorrection">
                     <properties>
                         <text>Debug</text>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-16</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
@@ -232,7 +232,7 @@
                 <instance type="TextErrorCorrection2">
                     <properties>
                         <text>Debug2:</text>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-16</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
@@ -259,7 +259,7 @@
                 <instance type="TextErrorCorrection3">
                     <properties>
                         <text>Debug3</text>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-16</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
@@ -286,7 +286,7 @@
                 <instance type="Success_text">
                     <properties>
                         <text>Success_text</text>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-16</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
@@ -313,7 +313,7 @@
                 <instance type="TextErrorCorrection4">
                     <properties>
                         <text></text>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-16</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
@@ -340,7 +340,7 @@
                 <instance type="TextErrorCorrection5">
                     <properties>
                         <text></text>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-16</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>

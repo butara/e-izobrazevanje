@@ -18,7 +18,7 @@
         <variable constant="0" name="Start" static="0" type="number">0</variable>
         <variable constant="0" name="Clicked" static="0" type="number">0</variable>
         <variable constant="0" name="Help" static="0" type="number">0</variable>
-        <event-group collapsed="1" description="" title="Initialization">
+        <event-group description="" title="Initialization">
             <sub-events>
                 <comment>Skri vse elemente</comment>
                 <event-block>
@@ -30,9 +30,6 @@
                             <param id="0" name="Mode">1</param>
                         </action>
                         <action id="-15" name="Set visible" type="Ground">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="2" name="Set visible" type="Repeat">
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-15" name="Set visible" type="Card">
@@ -97,9 +94,6 @@
                         </action>
                         <action id="9" name="Set scale" type="ZelenkoCards">
                             <param id="0" name="Scale">0.35</param>
-                        </action>
-                        <action id="2" name="Set visible" type="Skip">
-                            <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -244,17 +238,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1">
-                    <conditions>
-                        <condition disabled="1" id="0" name="On clicked" type="Skip" />
-                    </conditions>
-                    <actions>
-                        <action disabled="1" id="-9" name="Set value" type="System">
-                            <param id="0" name="Variable">SkipGame</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
             </sub-events>
         </event-group>
         <event-group collapsed="1" description="" title="Game Action">
@@ -285,9 +268,6 @@
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">CardSum</param>
                             <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="2" name="Set visible" type="Skip">
-                            <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-10" name="Add to" type="System">
                             <param id="0" name="Variable">ClickOnZelenko</param>
@@ -678,9 +658,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="2" name="Set visible" type="Skip">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">Start</param>
                             <param id="1" name="Value">0</param>
@@ -932,7 +909,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" title="Finish">
+        <event-group description="" title="Finish">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -1048,9 +1025,6 @@
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">EndGame</param>
                             <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="2" name="Set visible" type="Repeat">
-                            <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1169,15 +1143,16 @@
                             <param id="0" name="Variable">EndGame</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="2" name="Set visible" type="Repeat">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block>
                     <conditions>
-                        <condition id="0" name="On clicked" type="Repeat" />
-                        <condition id="-14" name="Compare variable" type="System">
+                        <condition id="6" name="On object clicked" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">errorGameRetry2</param>
+                        </condition>
+                        <condition disabled="1" id="-14" name="Compare variable" type="System">
                             <param id="0" name="Variable">EndGame</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
@@ -1188,6 +1163,25 @@
                         <action id="-21" name="Reset global variables" type="System" />
                         <action id="-2" name="Go to layout" type="System">
                             <param id="0" name="Layout">Games-Cards</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="6" name="On object clicked" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">errorMenuBack2</param>
+                        </condition>
+                        <condition disabled="1" id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">EndGame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" type="System">
+                            <param id="0" name="Layout">Menu</param>
                         </action>
                     </actions>
                 </event-block>

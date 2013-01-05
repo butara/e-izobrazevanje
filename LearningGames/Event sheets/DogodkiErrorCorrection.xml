@@ -16,7 +16,7 @@
         <variable constant="0" name="Correct" static="0" type="number">0</variable>
         <variable constant="0" name="depth" static="0" type="number">0</variable>
         <variable comment="RowCounter" constant="0" name="row" static="0" type="number">0</variable>
-        <event-group description="Action to go to menu, or retry." title="Standard Actions">
+        <event-group collapsed="1" description="Action to go to menu, or retry." title="Standard Actions">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -68,7 +68,7 @@
                         <condition id="-1" name="Every tick" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" type="TextErrorCorrection2">
+                        <action disabled="1" id="0" name="Set text" type="TextErrorCorrection2">
                             <param id="0" name="Text">&quot;State: &quot;  &amp; stateErrorCorrection &amp; &quot;Row: &quot; &amp; row</param>
                         </action>
                     </actions>
@@ -394,7 +394,7 @@
                             <param id="0" name="Instance variable">isTurnedAround</param>
                             <param id="1" name="Value">self.AnimationFrame=2 ? 1:0</param>
                         </action>
-                        <action id="0" name="Set text" type="TextErrorCorrection">
+                        <action disabled="1" id="0" name="Set text" type="TextErrorCorrection">
                             <param id="0" name="Text">time  &amp; &quot; &quot; &amp; Box.IID &amp; &quot; &quot; &amp;  Box.isTurnedAround</param>
                         </action>
                     </actions>
@@ -491,7 +491,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="1" name="Append text" type="TextErrorCorrection3">
+                                        <action disabled="1" id="1" name="Append text" type="TextErrorCorrection3">
                                             <param id="0" name="Text">&quot;  &quot; &amp; i &amp; j &amp; RowSum.At(i)</param>
                                         </action>
                                         <action id="-10" name="Add to" type="System">
@@ -681,7 +681,7 @@
         </event-group>
         <event-group description="Evil zelenko breaks array and user will have to detect error." title="BreakBitArray">
             <sub-events>
-                <event-block disabled="1">
+                <event-block>
                     <conditions>
                         <condition id="6" name="On object clicked" type="Mouse">
                             <param id="0" name="Mouse button">0</param>
@@ -702,16 +702,26 @@
                             <param id="0" name="X">511</param>
                             <param id="1" name="Y">384</param>
                         </action>
-                        <action id="-25" name="Move to bottom" type="Curtain" />
-                        <action behavior="CustomMovement" disabled="1" id="5" name="Accelerate toward position" type="Curtain">
+                        <action behavior="CustomMovement" id="5" name="Accelerate toward position" type="Curtain">
                             <param id="0" name="Acceleration">2</param>
                             <param id="1" name="X">511</param>
                             <param id="2" name="Y">386</param>
                         </action>
-                        <action id="-16" name="Wait" type="System">
+                        <action behavior="CustomMovement" id="12" name="Set enabled" type="Curtain">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action disabled="1" id="-16" name="Wait" type="System">
                             <param id="0" name="Seconds">3</param>
                         </action>
-                        <action id="-24" name="Move to top" type="Curtain" />
+                        <action behavior="CustomMovement" id="5" name="Accelerate toward position" type="Curtain">
+                            <param id="0" name="Acceleration">2</param>
+                            <param id="1" name="X">511</param>
+                            <param id="2" name="Y">-385</param>
+                        </action>
+                        <action behavior="CustomMovement" id="12" name="Set enabled" type="Curtain">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action disabled="1" id="-24" name="Move to top" type="Curtain" />
                         <action id="-15" name="Set visible" type="Curtain">
                             <param id="0" name="Visibility">0</param>
                         </action>
@@ -809,10 +819,10 @@
                             <param id="0" name="Instance variable">isTurnedAround</param>
                             <param id="1" name="Value">self.AnimationFrame=1 ? 1:0</param>
                         </action>
-                        <action id="0" name="Set text" type="TextErrorCorrection">
+                        <action disabled="1" id="0" name="Set text" type="TextErrorCorrection">
                             <param id="0" name="Text">time  &amp; &quot; &quot; &amp; Box.IID &amp; &quot; &quot; &amp;  Box.isTurnedAround</param>
                         </action>
-                        <action id="0" name="Set text" type="TextErrorCorrection3">
+                        <action disabled="1" id="0" name="Set text" type="TextErrorCorrection3">
                             <param id="0" name="Text">&quot;userDetectError: &quot; &amp; Box.isBrokenBit</param>
                         </action>
                     </actions>
@@ -1145,7 +1155,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Game with 10 rounds." title="GameLoop">
+        <event-group collapsed="1" description="Game with 10 rounds." title="GameLoop">
             <sub-events>
                 <event-group description="" title="StartGreeting">
                     <sub-events>
@@ -1521,7 +1531,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="End of the game, displaying the result." title="End">
+        <event-group collapsed="1" description="End of the game, displaying the result." title="End">
             <sub-events>
                 <event-block>
                     <conditions>
