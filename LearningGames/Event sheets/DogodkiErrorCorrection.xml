@@ -32,6 +32,21 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block disabled="1">
+                    <conditions>
+                        <condition id="6" name="On object clicked" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">SpongeError</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Value">&quot;help&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block>
                     <conditions>
                         <condition id="6" name="On object clicked" type="Mouse">
@@ -101,6 +116,9 @@
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-15" name="Set visible" type="ZelenkoTextErrorCorrection">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="SpongeError">
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
@@ -246,7 +264,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="We make random gaming layout for user." title="BoxStartLayoutCreator">
+        <event-group collapsed="1" description="We make random gaming layout for user." title="BoxStartLayoutCreator">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -315,7 +333,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="In this function user sets parity bits. User can only click on parity bits." title="UserSetParityBits">
+        <event-group collapsed="1" description="In this function user sets parity bits. User can only click on parity bits." title="UserSetParityBits">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -350,7 +368,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="We check if user have set parity right." title="ParityChecker">
+        <event-group collapsed="1" description="We check if user have set parity right." title="ParityChecker">
             <sub-events>
                 <variable constant="0" name="j" static="0" type="number">0</variable>
                 <variable comment="Iterator" constant="0" name="i" static="0" type="number">0</variable>
@@ -628,7 +646,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Evil zelenko breaks array and user will have to detect error." title="BreakBitArray">
+        <event-group collapsed="1" description="Evil zelenko breaks array and user will have to detect error." title="BreakBitArray">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -760,7 +778,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" title="ParityIsCorrect">
+        <event-group collapsed="1" description="" title="ParityIsCorrect">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -783,6 +801,13 @@
                         </action>
                         <action id="-15" name="Set visible" type="Buble">
                             <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">Grade</param>
+                            <param id="1" name="Value">Grade+5</param>
+                        </action>
+                        <action id="0" name="Set text" type="GradeText">
+                            <param id="0" name="Text">Grade</param>
                         </action>
                         <action id="0" name="Set text" type="BubleText">
                             <param id="0" name="Text">&quot;Bravo! Pravilno si nastavil paritetne bite.&quot;</param>
@@ -823,7 +848,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Go here if parity is wrong" title="ParityIsWrong">
+        <event-group collapsed="1" description="Go here if parity is wrong" title="ParityIsWrong">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -849,7 +874,7 @@
                         </action>
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">Grade</param>
-                            <param id="1" name="Value">Grade-5</param>
+                            <param id="1" name="Value">Grade</param>
                         </action>
                         <action id="0" name="Set text" type="GradeText">
                             <param id="0" name="Text">Grade</param>
@@ -974,7 +999,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Method for successful game round ending." title="Finalize">
+        <event-group collapsed="1" description="Method for successful game round ending." title="Finalize">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -1010,7 +1035,7 @@
                         </action>
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">Grade</param>
-                            <param id="1" name="Value">Grade+10</param>
+                            <param id="1" name="Value">Grade+5</param>
                         </action>
                         <action id="0" name="Set text" type="GradeText">
                             <param id="0" name="Text">Grade</param>
@@ -1051,9 +1076,51 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Help, game tutorial." title="Help" />
-        <event-group description="Game with 10 rounds." title="GameLoop">
+        <event-group collapsed="1" description="Game with 10 rounds." title="GameLoop">
             <sub-events>
+                <event-group collapsed="1" description="" title="StartGreeting">
+                    <sub-events>
+                        <event-block disabled="1">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" type="System">
+                                    <param id="0" name="Variable">stateErrorCorrection</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;startGame&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" type="System">
+                                    <param id="0" name="Variable">RoundCount</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" type="Buble">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Set text" type="BubleText">
+                                    <param id="0" name="Text">&quot;Živjo jaz sem robot Zelenko, prihajam iz galaksije daleč daleč proč.&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" type="System">
+                                    <param id="0" name="Seconds">3</param>
+                                </action>
+                                <action id="0" name="Set text" type="BubleText">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" type="Buble">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">stateErrorCorrection</param>
+                                    <param id="1" name="Value">&quot;startRound&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" type="System">
+                                    <param id="0" name="Variable">RoundCount</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-block>
                     <conditions>
                         <condition id="-14" name="Compare variable" type="System">
@@ -1065,6 +1132,11 @@
                             <param id="0" name="Variable">RoundCount</param>
                             <param id="1" name="Comparison">2</param>
                             <param id="2" name="Value">10</param>
+                        </condition>
+                        <condition disabled="1" id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">RoundCount</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -1106,17 +1178,302 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="Help, game tutorial." title="Help">
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="6" name="On object clicked" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">SpongeError</param>
+                        </condition>
+                        <condition disabled="1" id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;help&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Value">&quot;help&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Buble">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" type="BubleText">
+                            <param id="0" name="Text">&quot;V igri se bomo naučili kako računalnik zaznava in popravlja napake.&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">6</param>
+                        </action>
+                        <action id="0" name="Set text" type="BubleText">
+                            <param id="0" name="Text">&quot;Računalnik podatke predstavlja z biti. Ničlami in enicami. Za predstavitev bitov bomo uporabili karte dveh barv.&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">6</param>
+                        </action>
+                        <action id="0" name="Set text" type="BubleText">
+                            <param id="0" name="Text">&quot;Polje velikosti 5x5 predstavlja naše podatke. Sestavljeno je iz kart dveh barv. &quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">6</param>
+                        </action>
+                        <action id="0" name="Set text" type="BubleText">
+                            <param id="0" name="Text">&quot;Bele karte predstavljajo število 0, oranžne pa število 1&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">6</param>
+                        </action>
+                        <action id="0" name="Set text" type="BubleText">
+                            <param id="0" name="Text">&quot;Polju smo dodali še 6 stolpec in 6 vrstico.&quot;</param>
+                        </action>
+                        <action disabled="1" id="-19" name="Rotate counter-clockwise" type="Arrow2">
+                            <param id="0" name="Degrees">180</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Arrow2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" type="Arrow2">
+                            <param id="0" name="X">817</param>
+                            <param id="1" name="Y">540</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" type="Arrow2">
+                            <param id="0" name="&apos;On&apos; time">0.5</param>
+                            <param id="1" name="&apos;Off&apos; time">0.5</param>
+                            <param id="2" name="Duration">12</param>
+                        </action>
+                        <action id="-19" name="Rotate counter-clockwise" type="Arrow3">
+                            <param id="0" name="Degrees">90</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Arrow3">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" type="Arrow3">
+                            <param id="0" name="X">700</param>
+                            <param id="1" name="Y">29</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" type="Arrow3">
+                            <param id="0" name="&apos;On&apos; time">0.5</param>
+                            <param id="1" name="&apos;Off&apos; time">0.5</param>
+                            <param id="2" name="Duration">12</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">6</param>
+                        </action>
+                        <action id="0" name="Set text" type="BubleText">
+                            <param id="0" name="Text">&quot;Karte v 6 vrstici in stolpcu imenujemo paritetne karte.&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">6</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Arrow2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Set text" type="BubleText">
+                            <param id="0" name="Text">&quot;S temi kartami si računalnik pomaga pri zaznavanju in popravljanju napak.&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">6</param>
+                        </action>
+                        <action id="0" name="Set text" type="BubleText">
+                            <param id="0" name="Text">&quot;V tem stolpcu in vrstici bomo izbrali takšno vrednost kart, da bo vsota vseh vrstic in stolpcev soda.&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">6</param>
+                        </action>
+                        <action id="0" name="Set text" type="BubleText">
+                            <param id="0" name="Text">&quot;Ko boš nastavil paritetne karte klikni na gumb, da preveris, če si jih pravilno nastavil.&quot;</param>
+                        </action>
+                        <action id="-19" name="Rotate counter-clockwise" type="Arrow2">
+                            <param id="0" name="Degrees">180</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Arrow2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" type="Arrow2">
+                            <param id="0" name="X">790</param>
+                            <param id="1" name="Y">109</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" type="Arrow2">
+                            <param id="0" name="&apos;On&apos; time">0.5</param>
+                            <param id="1" name="&apos;Off&apos; time">0.5</param>
+                            <param id="2" name="Duration">6</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">6</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Arrow3">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Arrow2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Set text" type="BubleText">
+                            <param id="0" name="Text">&quot;Nato boš kliknil name (zlobnega robota) in jaz ti bom pokvaril 1 karto. Mwuhahahah!&quot;</param>
+                        </action>
+                        <action id="-18" name="Rotate clockwise" type="Arrow2">
+                            <param id="0" name="Degrees">90</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Arrow2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" type="Arrow2">
+                            <param id="0" name="X">109</param>
+                            <param id="1" name="Y">367</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" type="Arrow2">
+                            <param id="0" name="&apos;On&apos; time">0.5</param>
+                            <param id="1" name="&apos;Off&apos; time">0.5</param>
+                            <param id="2" name="Duration">6</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">6</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Arrow2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Set text" type="BubleText">
+                            <param id="0" name="Text">&quot;Parnost nekje zato ne bo več pravilna, a ker si nastavil paritetne karte jo boš lahko zaznal. Pokvarjeno karto boš pokazal s klikom nanjo.&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">6</param>
+                        </action>
+                        <action id="0" name="Set text" type="BubleText">
+                            <param id="0" name="Text">&quot;Jaz te bom ocenjeval. Za pravilno nastavljene paritetne karte dobiš 5 točk, za pravilno zaznano pokvarjeno karto prav tako 5 točk.&quot;</param>
+                        </action>
+                        <action disabled="1" id="-19" name="Rotate counter-clockwise" type="Arrow2">
+                            <param id="0" name="Degrees">90</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Arrow2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" type="Arrow2">
+                            <param id="0" name="X">837</param>
+                            <param id="1" name="Y">336</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" type="Arrow2">
+                            <param id="0" name="&apos;On&apos; time">0.5</param>
+                            <param id="1" name="&apos;Off&apos; time">0.5</param>
+                            <param id="2" name="Duration">6</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">6</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Arrow2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Set text" type="BubleText">
+                            <param id="0" name="Text">&quot;Igra bo trajala 10 potez.&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">6</param>
+                        </action>
+                        <action id="0" name="Set text" type="BubleText">
+                            <param id="0" name="Text">&quot;V spodnjem desnem kotu lahko igro začneš ponovno ali se vrneš v menu in poskusiš še druge igre.&quot;</param>
+                        </action>
+                        <action id="-19" name="Rotate counter-clockwise" type="Arrow2">
+                            <param id="0" name="Degrees">90</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Arrow2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" type="Arrow2">
+                            <param id="0" name="X">855</param>
+                            <param id="1" name="Y">723</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" type="Arrow2">
+                            <param id="0" name="&apos;On&apos; time">0.5</param>
+                            <param id="1" name="&apos;Off&apos; time">0.5</param>
+                            <param id="2" name="Duration">6</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">6</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Arrow2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Set text" type="BubleText">
+                            <param id="0" name="Text">&quot;Če si pripravljen klikni name! :)&quot;</param>
+                        </action>
+                        <action id="-18" name="Rotate clockwise" type="Arrow2">
+                            <param id="0" name="Degrees">90</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Arrow2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" type="Arrow2">
+                            <param id="0" name="X">109</param>
+                            <param id="1" name="Y">367</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" type="Arrow2">
+                            <param id="0" name="&apos;On&apos; time">0.5</param>
+                            <param id="1" name="&apos;Off&apos; time">0.5</param>
+                            <param id="2" name="Duration">999</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">6</param>
+                        </action>
+                        <action id="0" name="Set text" type="BubleText">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Buble">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="Arrow2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action disabled="1" id="-21" name="Reset global variables" type="System" />
+                        <action disabled="1" id="-26" name="Restart layout" type="System" />
+                        <action disabled="1" id="-2" name="Go to layout" type="System">
+                            <param id="0" name="Layout">ErrorCorrection</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="0" name="On click" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">stateErrorCorrection</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;help&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-21" name="Reset global variables" type="System" />
+                        <action id="-26" name="Restart layout" type="System" />
+                        <action id="-2" name="Go to layout" type="System">
+                            <param id="0" name="Layout">ErrorCorrection</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="End of the game, displaying the result." title="End">
             <sub-events>
                 <event-block>
                     <conditions>
+                        <condition id="0" name="On click" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                        </condition>
                         <condition id="-14" name="Compare variable" type="System">
                             <param id="0" name="Variable">stateErrorCorrection</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;end&quot;</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-15" name="Set visible" type="Buble">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" type="BubleText">
+                            <param id="0" name="Text">&quot;Poskusi ponovno s klikom na gumb osveži desno spodaj. Druge igre lahko preizkusiš s klikom na hiško.&quot;</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

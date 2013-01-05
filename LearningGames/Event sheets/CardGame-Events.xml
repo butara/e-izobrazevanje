@@ -662,7 +662,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" title="Help">
+        <event-group description="" title="Help">
             <sub-events>
                 <event-block>
                     <conditions>
