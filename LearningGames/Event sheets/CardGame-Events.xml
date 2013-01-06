@@ -145,13 +145,13 @@
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="0" name="Set text" type="binarna_oblika">
-                            <param id="0" name="Text">&quot;Oj. Jaz sem Zelenko !!!&quot;</param>
+                            <param id="0" name="Text">&quot;Oj. Jaz sem Zelenko iz galaksije daleč daleč proč!&quot;</param>
                         </action>
                         <action id="-16" name="Wait" type="System">
                             <param id="0" name="Seconds">2</param>
                         </action>
                         <action id="0" name="Set text" type="binarna_oblika">
-                            <param id="0" name="Text">&quot;S pomočjo te igre ....&quot;</param>
+                            <param id="0" name="Text">&quot;S pomočjo te igre ...&quot;</param>
                         </action>
                         <action id="-16" name="Wait" type="System">
                             <param id="0" name="Seconds">2</param>
@@ -163,13 +163,13 @@
                             <param id="0" name="Seconds">2</param>
                         </action>
                         <action id="0" name="Set text" type="binarna_oblika">
-                            <param id="0" name="Text">&quot;... kako računalik vidi naravna števila ...&quot;</param>
+                            <param id="0" name="Text">&quot;... kako računalnik vidi naravna števila ...&quot;</param>
                         </action>
                         <action id="-16" name="Wait" type="System">
                             <param id="0" name="Seconds">3</param>
                         </action>
                         <action id="0" name="Set text" type="binarna_oblika">
-                            <param id="0" name="Text">&quot;... in jih predstavi v dvoiški obliki ...&quot;</param>
+                            <param id="0" name="Text">&quot;... in jih predstavi v dvojiški obliki ...&quot;</param>
                         </action>
                         <action id="-16" name="Wait" type="System">
                             <param id="0" name="Seconds">3</param>
@@ -181,7 +181,7 @@
                             <param id="0" name="Seconds">3</param>
                         </action>
                         <action id="0" name="Set text" type="binarna_oblika">
-                            <param id="0" name="Text">&quot;Za pomoč 2x klikni na gobo v moji roki.&quot;</param>
+                            <param id="0" name="Text">&quot;Za pomoč dvakrat klikni na gobo v moji roki.&quot;</param>
                         </action>
                         <action id="-15" name="Set visible" type="Sponge">
                             <param id="0" name="Visibility">1</param>
@@ -208,7 +208,7 @@
                             <param id="0" name="Color">rgb(255, 51, 0)</param>
                         </action>
                         <action id="0" name="Set text" type="binarna_oblika">
-                            <param id="0" name="Text">&quot;Na voljo imaš  samo 10 poskusov !!!&quot;</param>
+                            <param id="0" name="Text">&quot;Na voljo imaš samo deset poskusov!&quot;</param>
                         </action>
                         <action id="-16" name="Wait" type="System">
                             <param id="0" name="Seconds">3</param>
@@ -217,7 +217,7 @@
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="0" name="Set text" type="binarna_oblika">
-                            <param id="0" name="Text">&quot;Za začetek in nadaljno vprašanje vedno klikni name !!!&quot;</param>
+                            <param id="0" name="Text">&quot;Za začetek ali dodatno vprašanje vedno klikni name!&quot;</param>
                         </action>
                         <action id="-16" name="Wait" type="System">
                             <param id="0" name="Seconds">5</param>
@@ -760,13 +760,13 @@
                             <param id="0" name="Seconds">4</param>
                         </action>
                         <action id="0" name="Set text" type="binarna_oblika">
-                            <param id="0" name="Text">&quot;... od leve proti desni (16,8,4,2,1).&quot;</param>
+                            <param id="0" name="Text">&quot;... od leve proti desni (16, 8, 4, 2, 1).&quot;</param>
                         </action>
                         <action id="-16" name="Wait" type="System">
                             <param id="0" name="Seconds">3</param>
                         </action>
                         <action id="0" name="Set text" type="binarna_oblika">
-                            <param id="0" name="Text">&quot;Tvoja naloga je izbrati pravilne karte ...&quot;</param>
+                            <param id="0" name="Text">&quot;Tvoja naloga je izbrati prave karte ...&quot;</param>
                         </action>
                         <action id="-16" name="Wait" type="System">
                             <param id="0" name="Seconds">1.0</param>
@@ -781,7 +781,7 @@
                             <param id="0" name="Seconds">3</param>
                         </action>
                         <action id="0" name="Set text" type="binarna_oblika">
-                            <param id="0" name="Text">&quot;... enaka številu po katerem te sprašujem.&quot;</param>
+                            <param id="0" name="Text">&quot;... enaka številu, po katerem te sprašujem.&quot;</param>
                         </action>
                         <action id="-16" name="Wait" type="System">
                             <param id="0" name="Seconds">3</param>
@@ -831,7 +831,7 @@
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="0" name="Set text" type="binarna_oblika">
-                            <param id="0" name="Text">&quot;S pritiskom na gumb potrdiš tvojo odločitev.&quot;</param>
+                            <param id="0" name="Text">&quot;S pritiskom na gumb potrdiš svojo odločitev.&quot;</param>
                         </action>
                         <action id="-15" name="Set visible" type="ButtonCard">
                             <param id="0" name="Visibility">1</param>
@@ -861,7 +861,7 @@
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="0" name="Set text" type="binarna_oblika">
-                            <param id="0" name="Text">&quot;Če je vrednost pravilna boš dobil kljukico.&quot;</param>
+                            <param id="0" name="Text">&quot;Če je vrednost pravilna, boš dobil kljukico.&quot;</param>
                         </action>
                         <action id="-15" name="Set visible" type="Check">
                             <param id="0" name="Visibility">1</param>
@@ -870,7 +870,7 @@
                             <param id="0" name="Seconds">3</param>
                         </action>
                         <action id="0" name="Set text" type="binarna_oblika">
-                            <param id="0" name="Text">&quot;Če ni pa dobiš križec.&quot;</param>
+                            <param id="0" name="Text">&quot;Če ni, pa dobiš križec.&quot;</param>
                         </action>
                         <action id="4" name="Set animation" type="Check">
                             <param id="0" name="Animation">&quot;bad&quot;</param>
@@ -880,7 +880,19 @@
                             <param id="0" name="Seconds">3</param>
                         </action>
                         <action id="0" name="Set text" type="binarna_oblika">
-                            <param id="0" name="Text">&quot;Želim ti veliko sreče !!!&quot;</param>
+                            <param id="0" name="Text">&quot;Jaz te bom ocenjeval. Za pravilno izbrane karte dobiš deset točk ...&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">4</param>
+                        </action>
+                        <action id="0" name="Set text" type="binarna_oblika">
+                            <param id="0" name="Text">&quot;... za napačno izbiro pa dobiš minus pet točk.&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">4</param>
+                        </action>
+                        <action id="0" name="Set text" type="binarna_oblika">
+                            <param id="0" name="Text">&quot;Želim ti veliko sreče!!!&quot;</param>
                         </action>
                         <action id="-15" name="Set visible" type="Check">
                             <param id="0" name="Visibility">0</param>
@@ -889,7 +901,7 @@
                             <param id="0" name="Color">rgb(255, 51, 0)</param>
                         </action>
                         <action id="0" name="Set text" type="binarna_oblika">
-                            <param id="0" name="Text">&quot;Za vprašanje vedno klikni name !!!&quot;</param>
+                            <param id="0" name="Text">&quot;Za dodatno vprašanje vedno klikni name!!!&quot;</param>
                         </action>
                         <action id="-15" name="Set visible" type="Talk">
                             <param id="0" name="Visibility">0</param>
@@ -904,6 +916,9 @@
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">Start</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-19" name="Rotate counter-clockwise" type="ArrowCard">
+                            <param id="0" name="Degrees">90</param>
                         </action>
                     </actions>
                 </event-block>
@@ -989,7 +1004,7 @@
                             <param id="1" name="Y">300</param>
                         </action>
                         <action id="0" name="Set text" type="binarna_oblika">
-                            <param id="0" name="Text">&quot;Igre je konec! Vaša ocena je:&quot;</param>
+                            <param id="0" name="Text">&quot;Igre je konec! Tvoja ocena je:&quot;</param>
                         </action>
                         <action id="-3" name="Set position" type="output_BO">
                             <param id="0" name="X">380</param>
@@ -1106,7 +1121,7 @@
                             <param id="1" name="Y">300</param>
                         </action>
                         <action id="0" name="Set text" type="binarna_oblika">
-                            <param id="0" name="Text">&quot;Igre je konec! Vaša ocena je:&quot;</param>
+                            <param id="0" name="Text">&quot;Igre je konec! Tvoja ocena je:&quot;</param>
                         </action>
                         <action id="-3" name="Set position" type="output_BO">
                             <param id="0" name="X">380</param>

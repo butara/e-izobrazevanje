@@ -343,25 +343,25 @@
                     <param id="0" name="Seconds">2.0</param>
                 </action>
                 <action id="0" name="Set text" type="sortingBubbleText">
-                    <param id="0" name="Text">&quot;Sortiranje je en izmed pomembnih postopkov v računalnikih, saj jih le ti veliko uporabljajo.&quot;</param>
+                    <param id="0" name="Text">&quot;Razvrščanje je eden izmed pomembnih postopkov pri delovanju računalnika, saj jih ti veliko uporabljajo.&quot;</param>
                 </action>
                 <action id="-16" name="Wait" type="System">
                     <param id="0" name="Seconds">3.5</param>
                 </action>
                 <action id="0" name="Set text" type="sortingBubbleText">
-                    <param id="0" name="Text">&quot;Uporabljeni so na primer pri sortiranju imen, datumov ali zgolj števil.&quot;</param>
+                    <param id="0" name="Text">&quot;Uporabljeni so na primer pri razvrščanju imen, datumov ali zgolj števil.&quot;</param>
                 </action>
                 <action id="-16" name="Wait" type="System">
                     <param id="0" name="Seconds">3</param>
                 </action>
                 <action id="0" name="Set text" type="sortingBubbleText">
-                    <param id="0" name="Text">&quot;Sortiranje nam med drugim omogoča hitro iskanje ali hitro izvajanje operacij na urejenih seznamih.&quot;</param>
+                    <param id="0" name="Text">&quot;Razvrščanje nam med drugim omogoča hitro iskanje ali  izvajanje operacij na urejenih seznamih.&quot;</param>
                 </action>
                 <action id="-16" name="Wait" type="System">
                     <param id="0" name="Seconds">3.5</param>
                 </action>
                 <action id="0" name="Set text" type="sortingBubbleText">
-                    <param id="0" name="Text">&quot;Samo sortiranje je lahko zelo zahteven in dolgotrajen proces znotraj računalnika.&quot;</param>
+                    <param id="0" name="Text">&quot;Samo razvrščanje je lahko zelo zahteven in dolgotrajen proces znotraj računalnika.&quot;</param>
                 </action>
                 <action id="-16" name="Wait" type="System">
                     <param id="0" name="Seconds">3</param>
@@ -373,19 +373,19 @@
                     <param id="0" name="Seconds">2.0</param>
                 </action>
                 <action id="0" name="Set text" type="sortingBubbleText">
-                    <param id="0" name="Text">&quot;Med katerimi na levi lahko izbereš tri, ki te vodijo skozi postopek.&quot;</param>
+                    <param id="0" name="Text">&quot;Izbiraš lahko med tremi,  ki te vodijo skozi postopek.&quot;</param>
                 </action>
                 <action id="-16" name="Wait" type="System">
                     <param id="0" name="Seconds">3</param>
                 </action>
                 <action id="0" name="Set text" type="sortingBubbleText">
-                    <param id="0" name="Text">&quot;Po vrsti so to Mehurčno urejanje, urejanje z izbiranjem ter urejanje z vstavljanjem.&quot;</param>
+                    <param id="0" name="Text">&quot;Po vrsti so to Mehurčno urejanje, Urejanje z izbiranjem in Urejanje z vstavljanjem.&quot;</param>
                 </action>
                 <action id="-16" name="Wait" type="System">
                     <param id="0" name="Seconds">3</param>
                 </action>
                 <action id="0" name="Set text" type="sortingBubbleText">
-                    <param id="0" name="Text">&quot;Zgoraj desno si že našel gumb za pomoč pod njim pa se nahaja še &quot;&quot;Preizkusi se!&quot;&quot; pri katerem lahko preizkusiš kako dober si.&quot;</param>
+                    <param id="0" name="Text">&quot;Desno zgoraj najdeš gumb za pomoč, pod njim pa se nahaja še &quot;&quot;Preizkusi se!&quot;&quot;, prek katerega se lahko preizkusiš tudi sam.&quot;</param>
                 </action>
                 <action id="-16" name="Wait" type="System">
                     <param id="0" name="Seconds">4</param>

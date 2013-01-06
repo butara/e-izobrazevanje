@@ -131,19 +131,19 @@
                             <param id="0" name="Seconds">3</param>
                         </action>
                         <action id="0" name="Set text" type="BubleText">
-                            <param id="0" name="Text">&quot;V tej igri te bom poskusil naučiti kako računalniki zaznavajo in popravljajo napake:&quot;</param>
+                            <param id="0" name="Text">&quot;V tej igri te bom poskusil naučiti, kako računalniki zaznavajo in popravljajo napake:&quot;</param>
                         </action>
                         <action id="-16" name="Wait" type="System">
                             <param id="0" name="Seconds">3</param>
                         </action>
                         <action id="0" name="Set text" type="BubleText">
-                            <param id="0" name="Text">&quot;Če potrebuješ pomoč in razlago igre lahko kadarkoli klikneš na gobo v moji roki.&quot;</param>
+                            <param id="0" name="Text">&quot;Če potrebuješ pomoč in razlago igre, lahko kadarkoli klikneš na gobo v moji roki.&quot;</param>
                         </action>
                         <action id="-16" name="Wait" type="System">
                             <param id="0" name="Seconds">3</param>
                         </action>
                         <action id="0" name="Set text" type="BubleText">
-                            <param id="0" name="Text">&quot;Spodaj v desnem kotu imaš gumba, s katerima se lahko vrneš v menu ali pa ponovno pričneš z igro.&quot;</param>
+                            <param id="0" name="Text">&quot;V desnem kotu spodaj imaš gumba, s pomočjo katerih se lahko vrneš v menu ali pa ponovno pričneš igro.&quot;</param>
                         </action>
                         <action id="-16" name="Wait" type="System">
                             <param id="0" name="Seconds">3</param>
@@ -936,7 +936,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" title="ParityIsCorrect">
+        <event-group description="" title="ParityIsCorrect">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -948,7 +948,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" type="Success_text">
-                            <param id="0" name="Text">&quot;Cestitam pravilno si nastavil pariteto&quot;</param>
+                            <param id="0" name="Text">&quot;Čestitam, pravilno si nastavil pariteto&quot;</param>
                         </action>
                         <action id="4" name="Set animation" type="CheckError">
                             <param id="0" name="Animation">&quot;good&quot;</param>
@@ -1006,7 +1006,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Go here if parity is wrong" title="ParityIsWrong">
+        <event-group description="Go here if parity is wrong" title="ParityIsWrong">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -1080,7 +1080,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Function if user has done it wrong!" title="Error">
+        <event-group description="Function if user has done it wrong!" title="Error">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -1336,7 +1336,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Help, game tutorial." title="Help">
+        <event-group description="Help, game tutorial." title="Help">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -1360,13 +1360,13 @@
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="0" name="Set text" type="BubleText">
-                            <param id="0" name="Text">&quot;V igri se bomo naučili kako računalnik zaznava in popravlja napake.&quot;</param>
+                            <param id="0" name="Text">&quot;V igri se bomo naučili, kako računalnik zaznava in popravlja napake.&quot;</param>
                         </action>
                         <action id="-16" name="Wait" type="System">
                             <param id="0" name="Seconds">6</param>
                         </action>
                         <action id="0" name="Set text" type="BubleText">
-                            <param id="0" name="Text">&quot;Računalnik podatke predstavlja z biti. Ničlami in enicami. Za predstavitev bitov bomo uporabili karte dveh barv.&quot;</param>
+                            <param id="0" name="Text">&quot;Računalnik podatke predstavlja z biti, ničlami in enicami. Za predstavitev bitov bomo uporabili karte dveh barv.&quot;</param>
                         </action>
                         <action id="-16" name="Wait" type="System">
                             <param id="0" name="Seconds">6</param>
@@ -1378,7 +1378,7 @@
                             <param id="0" name="Seconds">6</param>
                         </action>
                         <action id="0" name="Set text" type="BubleText">
-                            <param id="0" name="Text">&quot;Bele karte predstavljajo število 0, oranžne pa število 1&quot;</param>
+                            <param id="0" name="Text">&quot;Bele karte predstavljajo številko 0, oranžne pa številko 1&quot;</param>
                         </action>
                         <action id="-16" name="Wait" type="System">
                             <param id="0" name="Seconds">6</param>
@@ -1420,7 +1420,7 @@
                             <param id="0" name="Seconds">6</param>
                         </action>
                         <action id="0" name="Set text" type="BubleText">
-                            <param id="0" name="Text">&quot;Karte v 6 vrstici in stolpcu imenujemo paritetne karte.&quot;</param>
+                            <param id="0" name="Text">&quot;Karte v šesti vrstici in stolpcu imenujemo paritetne karte.&quot;</param>
                         </action>
                         <action id="-16" name="Wait" type="System">
                             <param id="0" name="Seconds">6</param>
@@ -1438,13 +1438,13 @@
                             <param id="0" name="Seconds">6</param>
                         </action>
                         <action id="0" name="Set text" type="BubleText">
-                            <param id="0" name="Text">&quot;V tem stolpcu in vrstici bomo izbrali takšno vrednost kart, da bo vsota vseh vrstic in stolpcev soda.&quot;</param>
+                            <param id="0" name="Text">&quot;V tem stolpcu in vrstici bomo izbrali takšno vrednost kart, da bo vsota v vseh vrsticah in stolpcih soda.&quot;</param>
                         </action>
                         <action id="-16" name="Wait" type="System">
                             <param id="0" name="Seconds">6</param>
                         </action>
                         <action id="0" name="Set text" type="BubleText">
-                            <param id="0" name="Text">&quot;Ko boš nastavil paritetne karte klikni na gumb, da preveris, če si jih pravilno nastavil.&quot;</param>
+                            <param id="0" name="Text">&quot;Ko boš nastavil paritetne karte, klikni na gumb, da preveriš, če si jih pravilno nastavil.&quot;</param>
                         </action>
                         <action id="-19" name="Rotate counter-clockwise" type="Arrow2">
                             <param id="0" name="Degrees">180</param>
@@ -1492,13 +1492,13 @@
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="0" name="Set text" type="BubleText">
-                            <param id="0" name="Text">&quot;Parnost nekje zato ne bo več pravilna, a ker si nastavil paritetne karte jo boš lahko zaznal. Pokvarjeno karto boš pokazal s klikom nanjo.&quot;</param>
+                            <param id="0" name="Text">&quot;Parnost nekje zato ne bo več pravilna, a ker si nastavil paritetne karte, jo boš lahko zaznal. Pokvarjeno karto boš pokazal s klikom nanjo.&quot;</param>
                         </action>
                         <action id="-16" name="Wait" type="System">
                             <param id="0" name="Seconds">6</param>
                         </action>
                         <action id="0" name="Set text" type="BubleText">
-                            <param id="0" name="Text">&quot;Jaz te bom ocenjeval. Za pravilno nastavljene paritetne karte dobiš 5 točk, za pravilno zaznano pokvarjeno karto prav tako 5 točk.&quot;</param>
+                            <param id="0" name="Text">&quot;Jaz te bom ocenjeval. Za pravilno nastavljene paritetne karte dobiš pet točk, za pravilno zaznano pokvarjeno karto prav tako pet točk.&quot;</param>
                         </action>
                         <action disabled="1" id="-19" name="Rotate counter-clockwise" type="Arrow2">
                             <param id="0" name="Degrees">90</param>
@@ -1528,7 +1528,7 @@
                             <param id="0" name="Seconds">6</param>
                         </action>
                         <action id="0" name="Set text" type="BubleText">
-                            <param id="0" name="Text">&quot;V spodnjem desnem kotu lahko igro začneš ponovno ali se vrneš v menu in poskusiš še druge igre.&quot;</param>
+                            <param id="0" name="Text">&quot;V spodnjem desnem kotu lahko igro začneš ponovno, ali se vrneš v menu in poskusiš še druge igre.&quot;</param>
                         </action>
                         <action id="-19" name="Rotate counter-clockwise" type="Arrow2">
                             <param id="0" name="Degrees">90</param>
@@ -1552,7 +1552,7 @@
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="0" name="Set text" type="BubleText">
-                            <param id="0" name="Text">&quot;Če si pripravljen klikni name! :)&quot;</param>
+                            <param id="0" name="Text">&quot;Če si pripravljen, klikni name! :)&quot;</param>
                         </action>
                         <action id="-18" name="Rotate clockwise" type="Arrow2">
                             <param id="0" name="Degrees">90</param>
@@ -1610,7 +1610,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="End of the game, displaying the result." title="End">
+        <event-group description="End of the game, displaying the result." title="End">
             <sub-events>
                 <event-block>
                     <conditions>

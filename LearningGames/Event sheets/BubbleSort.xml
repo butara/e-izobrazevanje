@@ -7,8 +7,8 @@
             <sub-events>
                 <variable constant="0" name="return" static="0" type="text">Uteži na prvotno pozicijo vrni s klikom na tehnico.</variable>
                 <variable constant="0" name="swap" static="0" type="text">Za zamenjavo pozicij uteži klikni name.</variable>
-                <variable constant="0" name="afterSelection" static="0" type="text">Za primerjavo teže kliknite na tehtnico.</variable>
-                <variable constant="0" name="beforeSelectionNextIteration" static="0" type="text">Ker v prejšnji iteraciji nismo bili brez zamenjav moramo postopek ponoviti, saj obstaja možnost, da ni vse urejeno.</variable>
+                <variable constant="0" name="afterSelection" static="0" type="text">Za primerjavo teže klikni na tehtnico.</variable>
+                <variable constant="0" name="beforeSelectionNextIteration" static="0" type="text">Ker v prejšnji iteraciji nismo bili brez zamenjav, moramo postopek ponoviti, saj obstaja možnost, da ni vse urejeno.</variable>
                 <variable constant="0" name="beforeSelection" static="0" type="text">Izberite dve uteži, ki ju želite primerjati.</variable>
                 <event-block>
                     <conditions>
@@ -898,17 +898,17 @@
                 </action>
                 <action id="5" name="Push" type="tutorialInfo">
                     <param id="0" name="Where">0</param>
-                    <param id="1" name="Value">&quot;Računalnik za vse dokumente ve, da so urejeni, ko se v iteraciji ne zgodi nobena zamenjava.&quot;</param>
+                    <param id="1" name="Value">&quot;Računalnik za vse podatke (oz. uteži) ve, da so urejeni, če se v iteraciji ne zgodi nobena zamenjava.&quot;</param>
                     <param id="2" name="Axis">0</param>
                 </action>
                 <action id="5" name="Push" type="tutorialInfo">
                     <param id="0" name="Where">0</param>
-                    <param id="1" name="Value">&quot;Deluje tako, da v več iteracijah zaporedno pregleduje sosednje elemente ter jih zamenja, če je to potrebno.&quot;</param>
+                    <param id="1" name="Value">&quot;Deluje tako, da v več iteracijah zaporedno pregleduje sosednje elemente in jih zamenja, če je to potrebno.&quot;</param>
                     <param id="2" name="Axis">0</param>
                 </action>
                 <action id="5" name="Push" type="tutorialInfo">
                     <param id="0" name="Where">0</param>
-                    <param id="1" name="Value">&quot;Eden izmed načinov po katerih računalniki urejajo stvari se imenuje mehurčkasto urejanje.&quot;</param>
+                    <param id="1" name="Value">&quot;Eden izmed načinov, po katerih računalniki urejajo stvari, se imenuje mehurčkasto urejanje.&quot;</param>
                     <param id="2" name="Axis">0</param>
                 </action>
                 <action id="5" name="Push" type="stack">

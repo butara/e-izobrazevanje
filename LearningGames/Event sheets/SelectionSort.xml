@@ -658,17 +658,17 @@
                 </action>
                 <action id="5" name="Push" type="tutorialInfo">
                     <param id="0" name="Where">0</param>
-                    <param id="1" name="Value">&quot;Zaradi načina postopka vemo, da je število iteracij eno manj od števila elementov.&quot;</param>
+                    <param id="1" name="Value">&quot;Zaradi načina postopka vemo, da je število iteracij za eno manjše od števila elementov.&quot;</param>
                     <param id="2" name="Axis">0</param>
                 </action>
                 <action id="5" name="Push" type="tutorialInfo">
                     <param id="0" name="Where">0</param>
-                    <param id="1" name="Value">&quot;Deluje tako, da v vsaki izmed iteracij poišče najmanjši element ter ga vstavi na začetek neurejenega dela.&quot;</param>
+                    <param id="1" name="Value">&quot;Deluje tako, da v vsaki izmed iteracij poišče najmanjši element in ga postavi na začetek neurejenega dela.&quot;</param>
                     <param id="2" name="Axis">0</param>
                 </action>
                 <action id="5" name="Push" type="tutorialInfo">
                     <param id="0" name="Where">0</param>
-                    <param id="1" name="Value">&quot;Eden izmed načinov sortiranja je sortiranje z izbiranjem&quot;</param>
+                    <param id="1" name="Value">&quot;Eden izmed načinov urejanja je sortiranje z izbiranjem&quot;</param>
                     <param id="2" name="Axis">0</param>
                 </action>
                 <action id="5" name="Push" type="stack">
