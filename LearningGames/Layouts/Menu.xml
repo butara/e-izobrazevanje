@@ -548,8 +548,8 @@
                         <initial-visibility>Visible</initial-visibility>
                         <font>Berlin Sans FB,-19,400,0</font>
                         <color>0,0,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
@@ -557,11 +557,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>643</x>
-                        <y>99</y>
+                        <x>612</x>
+                        <y>80</y>
                         <z>0</z>
-                        <width>261</width>
-                        <height>144</height>
+                        <width>286</width>
+                        <height>169</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

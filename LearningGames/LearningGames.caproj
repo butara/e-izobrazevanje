@@ -7,15 +7,15 @@
     <unique-id>nblx4rw9lntq</unique-id>
     <saved-with-version>11400</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Function" version="1">Function</plugin>
-        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
-        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
-        <plugin author="Scirra" id="Button" version="1">Button</plugin>
-        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
-        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="ken@appMobi" id="appMobi" version="1">appMobi</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
@@ -26,9 +26,9 @@
     </used-behaviors>
     <used-effects>
         <effect author="Scirra" id="screen">Screen</effect>
-        <effect author="Brad Larson" id="sketch">Sketch</effect>
-        <effect author="Scirra" id="hardlight">Hard Light</effect>
         <effect author="Scirra" id="overlay">Overlay</effect>
+        <effect author="Scirra" id="hardlight">Hard Light</effect>
+        <effect author="Brad Larson" id="sketch">Sketch</effect>
     </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -1805,7 +1805,7 @@
             <layout>Sorting-game.xml</layout>
             <layout>Sorting-Completed.xml</layout>
         </layout-folder>
-        <layout-folder expanded="0" name="CardGame">
+        <layout-folder expanded="1" name="CardGame">
             <layout>Games-Cards.xml</layout>
         </layout-folder>
         <layout-folder expanded="0" name="Menu">

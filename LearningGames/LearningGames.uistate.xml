@@ -12,7 +12,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout>ErrorCorrection</layout>
         <layout>Sorting-game</layout>
-        <layout>Menu</layout>
+        <layout active="1">Menu</layout>
         <layout>Sorting-menu</layout>
         <layout>Games-Cards</layout>
         <event-sheet>DogodkiErrorCorrection</event-sheet>
@@ -26,7 +26,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet>Functions</event-sheet>
         <event-sheet>InsertionSort</event-sheet>
         <event-sheet>SelectionSort</event-sheet>
-        <event-sheet active="1">TutorialSort</event-sheet>
+        <event-sheet>TutorialSort</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="Project settings" />
